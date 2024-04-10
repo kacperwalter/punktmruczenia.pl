@@ -1,15 +1,15 @@
-import { defineConfig } from "sanity"
-import { deskTool } from "sanity/desk"
-import schemas from "@/sanity/schemas"
+import { defineConfig } from 'sanity'
+import { structureTool } from 'sanity/structure'
 
 const config = defineConfig({
-  projectId: "",
-  dataset: "production",
-  title: "",
-  apiVersion: "2024-03-24",
-  basePath: "/admin",
-  plugins: [deskTool()],
-  schema: { types: schemas }
+  projectId: 'alrke5ve',
+  dataset: 'production',
+  title: 'punktmruczenia.pl',
+  apiVersion: '2024-04-10',
+  basePath: '/admin',
+  plugins: [
+    structureTool(),
+  ]
 })
 
 export default config
