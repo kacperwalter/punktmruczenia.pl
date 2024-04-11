@@ -1,11 +1,6 @@
 import type { Metadata } from "next"
 import { Poppins } from 'next/font/google'
 
-import "@/app/common/styles/colors.scss"
-import "@/app/common/styles/fonts.scss"
-import "@/app/common/styles/globals.scss"
-import "@/app/common/styles/spacings.scss"
-
 const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
@@ -14,7 +9,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "page title",
+  title: "Admin",
   description: "",
 }
 

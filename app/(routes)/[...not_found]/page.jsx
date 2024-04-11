@@ -6,7 +6,7 @@ export const metadata = {
 const NotFound = () => {
   return (
     <section>
-      <p></p>
+      <p>404</p>
     </section>
   )
 }
