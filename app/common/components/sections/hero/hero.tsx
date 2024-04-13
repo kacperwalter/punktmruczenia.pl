@@ -26,7 +26,7 @@ const Hero = ({ content }: HeroProps) => {
             alt=""
           />
 
-          <div className="hero__header">
+          <div className="header">
             <Heading
               type="h1"
               text={content.homepageHeroHeading}
