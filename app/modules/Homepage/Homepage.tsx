@@ -1,4 +1,8 @@
-const Home = () => {
+import { HomepageProps } from '@/app/types'
+
+const Homepage = ({ content }: HomepageProps) => {
+  console.log("Homepage", content )
+
   return (
     <main>
       <section>Home</section>
@@ -6,4 +10,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Homepage

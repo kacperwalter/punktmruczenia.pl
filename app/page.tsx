@@ -14,11 +14,10 @@ export const metadata: Metadata = {
 
 const Home = async () => {
   const homepageData = await getHomepageData()
-  console.log(homepageData)
 
   return (
     <>
-      <Homepage />
+      <Homepage content={homepageData} />
     </>
   )
 }
