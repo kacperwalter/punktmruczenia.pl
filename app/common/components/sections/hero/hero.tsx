@@ -3,6 +3,7 @@ import "./hero.scss"
 import type { HeroProps } from "./hero.types"
 import { PortableText } from "next-sanity"
 import Heading from "../../partials/heading/heading"
+import Button from "../../partials/button/button"
 
 const Hero = ({ content }: HeroProps) => {
   return (
@@ -30,7 +31,7 @@ const Hero = ({ content }: HeroProps) => {
         <PortableText value={content.homepageHeroContent} />
       </div>
 
-      
+      <Button arrow arrowDirection="down" text={content.homepageHeroButton}/>
     </section>
   )
 }
