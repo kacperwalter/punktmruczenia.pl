@@ -1,7 +1,8 @@
 import Image from "next/image"
 import "./hero.scss"
 import type { HeroProps } from "./hero.types"
-import Header from "../../partials/header/header"
+import { PortableText } from "next-sanity"
+import Heading from "../../partials/heading/heading"
 
 const Hero = ({ content }: HeroProps) => {
   return (
@@ -20,11 +21,16 @@ const Hero = ({ content }: HeroProps) => {
         alt=""
       />
 
-      {/* <Header
-        headingType="h1"
-        heading={content.homepageHeroHeading}
-        // caption={content.homepageHeroContent}
-        /> */}
+      <div className="hero__header">
+        <Heading
+          type="h1"
+          text={content.homepageHeroHeading}
+        />
+
+        <PortableText value={content.homepageHeroContent} />
+      </div>
+
+      
     </section>
   )
 }

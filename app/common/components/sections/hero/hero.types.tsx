@@ -1,5 +1,6 @@
+import { PortableTextBlock } from "next-sanity"
 interface HeroContent {
-  homepageHeroContent: string[]
+  homepageHeroContent: PortableTextBlock[]
   homepageHeroHeading: string
   homepageHeroButton: string
   homepageHeroImage: string

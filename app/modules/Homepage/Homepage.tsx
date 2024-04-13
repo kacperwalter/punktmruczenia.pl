@@ -5,7 +5,7 @@ const Homepage = ({ content }: HomepageProps) => {
   const homepageData = content[0] || {}
 
   const {
-    homepageHeroContent = [],
+    homepageHeroContent,
     homepageHeroHeading = '',
     homepageHeroButton = '',
     homepageHeroImage = '',
