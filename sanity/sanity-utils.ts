@@ -7,21 +7,19 @@ const client = createClient({
 })
 
 export async function getHomepageData() {
-  client.fetch(
+  return client.fetch(
     groq`
       *[_type == "page"] {
-        slug,
-        SEO {
-          title,
-          description
-        },
-        hero {
-          homepageHeroImage,
-          homepageHeroLogo,
-          homepageHeroHeading,
-          homepageHeroContent,
-          homepageHeroButton
-        }
+        _id,
+        _createdAt,
+        "slug": slug.current,
+        title,
+        description,
+        "homepageHeroImage": homepageHeroImage.asset->url,
+        "homepageHeroLogo": homepageHeroLogo.asset->url,
+        homepageHeroHeading,
+        homepageHeroContent,
+        homepageHeroButton,
       }
     `
   )
