@@ -1,4 +1,4 @@
-import './Wrapper.scss'
+import './wrapper.scss'
 import { type WrapperProps } from './wrapper.types'
 
 const Wrapper = ({ children, isWide, additionalClass = "" }: WrapperProps) => {
