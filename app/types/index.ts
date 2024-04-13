@@ -4,7 +4,7 @@ export type Color = 'dark' | 'white'
 
 export type ButtonType = 'button' | 'link'
 
-interface HomepageData {
+export interface HomepageData {
   _id: string
   _createdAt: string
   slug: string
@@ -17,6 +17,6 @@ interface HomepageData {
   homepageHeroButton: string
 }
 
-interface HomepageProps {
+export interface HomepageProps {
   content: HomepageData[]
 }

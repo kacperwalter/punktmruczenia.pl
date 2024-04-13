@@ -1,5 +1,5 @@
 import { HomepageProps } from '@/app/types'
-import Hero from '@/app/common/components/hero/hero'
+import Hero from '@/app/common/components/sections/hero/hero'
 
 const Homepage = ({ content }: HomepageProps) => {
   const homepageData = content[0] || {}
