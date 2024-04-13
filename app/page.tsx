@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Homepage from "@/app/modules/Homepage/Homepage"
+import { getHomepageData } from "@/sanity/sanity-utils"
 
 import "@/app/common/styles/colors.scss"
 import "@/app/common/styles/fonts.scss"
@@ -11,8 +12,10 @@ export const metadata: Metadata = {
   description: "",
 }
 
+const Home = async () => {
+  const homepageData = await getHomepageData()
+  console.log(homepageData)
 
-const Home = () => {
   return (
     <>
       <Homepage />
