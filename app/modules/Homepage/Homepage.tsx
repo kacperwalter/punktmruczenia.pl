@@ -22,7 +22,7 @@ const Homepage = ({ content }: HomepageProps) => {
 
   return (
     <main>
-      <Hero />
+      <Hero content={homepageHeroData}/>
     </main>
   )
 }
