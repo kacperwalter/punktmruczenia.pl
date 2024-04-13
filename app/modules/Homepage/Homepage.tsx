@@ -1,7 +1,15 @@
 import { HomepageProps } from '@/app/types'
 
 const Homepage = ({ content }: HomepageProps) => {
-  console.log("Homepage", content )
+  const homepageData = content[0] || {}
+
+  const {
+    homepageHeroContent = [],
+    homepageHeroHeading = '',
+    homepageHeroButton = '',
+    homepageHeroImage = '',
+    homepageHeroLogo = ''
+  } = homepageData
 
   return (
     <main>
