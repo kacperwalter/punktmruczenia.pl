@@ -1,11 +1,18 @@
 import type { Metadata } from "next"
-import { Poppins } from 'next/font/google'
+import { Open_Sans, Quattrocento } from 'next/font/google'
 
-const poppins = Poppins({
+const openSans = Open_Sans({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-poppins',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
+  variable: '--font-open-sans',
+  weight: ['300', '400', '500', '600', '700', '800']
+})
+
+const quattrocento = Quattrocento({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-quattrocento',
+  weight: ['400', '700']
 })
 
 export const metadata: Metadata = {
@@ -20,7 +27,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body className={poppins.variable}>
+      <body
+        className={`
+          ${openSans.variable}
+          ${quattrocento.variable}
+        `}
+      >
         {children}
       </body>
     </html>

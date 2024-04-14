@@ -7,6 +7,8 @@ import "@/app/common/styles/fonts.scss"
 import "@/app/common/styles/globals.scss"
 import "@/app/common/styles/spacings.scss"
 
+import "@/app/common/components/partials/header/header.scss" // just temporary
+
 export const metadata: Metadata = {
   title: "Strona główna",
   description: "",
@@ -14,11 +16,10 @@ export const metadata: Metadata = {
 
 const Home = async () => {
   const homepageData = await getHomepageData()
-  console.log(homepageData)
 
   return (
     <>
-      <Homepage />
+      <Homepage content={homepageData} />
     </>
   )
 }
