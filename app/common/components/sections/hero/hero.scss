@@ -10,6 +10,7 @@
   }
 
   &__content {
+    color: var(--color-lososiowy);
     display: flex;
     gap: 3rem;
     flex-direction: column;
@@ -19,6 +20,17 @@
     img {
       width: 100%;
       max-width: 18rem;
+    }
+
+    .header {
+      .heading {
+        font-family: var(--font-quattrocento);
+        font-weight: bold;
+      }
+
+      p {
+        font-weight: 700;
+      }
     }
   }
 }

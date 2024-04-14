@@ -1,13 +1,8 @@
 import type { HeadingProps } from "./heading.types"
 import "./heading.scss"
 
-const Heading = ({ type = 'h2', text, color = 'dark' }: HeadingProps) => {
+const Heading = ({ type = 'h2', text }: HeadingProps) => {
   const Tag = type
-
-  const colorClassMap = {
-    dark: 'heading--dark',
-    white: 'heading--white',
-  }
 
   const typeClassMap = {
     h1: 'h1',
@@ -18,7 +13,7 @@ const Heading = ({ type = 'h2', text, color = 'dark' }: HeadingProps) => {
     h6: 'h6',
   }
 
-  const className = `heading ${colorClassMap[color] || ''} ${typeClassMap[type] || ''}`
+  const className = `heading ${typeClassMap[type] || ''}`
 
   return (
     <Tag
