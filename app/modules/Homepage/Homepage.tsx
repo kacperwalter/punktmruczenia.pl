@@ -1,15 +1,23 @@
 import { HomepageProps } from '@/app/types'
 import Hero from '@/app/common/components/sections/hero/hero'
+import AboutMe from '@/app/common/components/sections/about-me/about-me'
 
 const Homepage = ({ content }: HomepageProps) => {
   const homepageData = content[0] || {}
+  console.log(homepageData)
 
   const {
     homepageHeroContent,
     homepageHeroHeading = '',
     homepageHeroButton = '',
     homepageHeroImage = '',
-    homepageHeroLogo = ''
+    homepageHeroLogo = '',
+    aboutMeTopImage = '',
+    aboutMeHeading = '',
+    aboutMeCaption = '',
+    aboutMeFirstContentImage = '',
+    aboutMeContent = '',
+    aboutMeSecondContentImage = ''
   } = homepageData
 
   const homepageHeroData = {
@@ -20,9 +28,19 @@ const Homepage = ({ content }: HomepageProps) => {
     homepageHeroLogo
   }
 
+  const homepageAboutMeData = {
+    aboutMeTopImage,
+    aboutMeHeading,
+    aboutMeCaption,
+    aboutMeFirstContentImage,
+    aboutMeContent,
+    aboutMeSecondContentImage
+  }
+
   return (
     <main>
       <Hero content={homepageHeroData}/>
+      <AboutMe content={homepageAboutMeData} />
     </main>
   )
 }
