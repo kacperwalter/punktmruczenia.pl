@@ -15,6 +15,12 @@ const calistoga = localFont({
   variable: '--font-calistoga',
 })
 
+const freshMango = localFont({
+  src: '../public/fonts/fresh-mango.woff2',
+  display: 'swap',
+  variable: '--font-fresh-mango',
+})
+
 export const metadata: Metadata = {
   title: "Admin",
   description: "",
@@ -31,6 +37,7 @@ export default function RootLayout({
         className={`
           ${openSans.variable}
           ${calistoga.variable}
+          ${freshMango.variable}
         `}
       >
         {children}
