@@ -35,7 +35,13 @@ const Hero = ({ content }: HeroProps) => {
             <PortableText value={content.homepageHeroContent} />
           </div>
 
-          <Button arrow arrowDirection="down" text={content.homepageHeroButton}/>
+          <Button 
+            arrow arrowDirection="down"
+            text={content.homepageHeroButton}
+            as="link"
+            // TODO add proper href when will be ready
+            href="#"
+          />
         </article>
       </Wrapper>
     </section>
