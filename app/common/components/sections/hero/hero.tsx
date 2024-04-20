@@ -10,14 +10,6 @@ const Hero = ({ content }: HeroProps) => {
   return (
     <section className="hero">
       <Wrapper>
-        <Image
-          className="hero__hero-image"
-          src={content.homepageHeroImage}
-          width={100}
-          height={100}
-          alt=""
-        />
-
         <article className="hero__content">
           <Image
             src={content.homepageHeroLogo}
@@ -43,6 +35,14 @@ const Hero = ({ content }: HeroProps) => {
             href="#"
           />
         </article>
+
+        <Image
+          className="hero__hero-image"
+          src={content.homepageHeroImage}
+          width={100}
+          height={100}
+          alt=""
+        />
       </Wrapper>
     </section>
   )
