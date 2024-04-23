@@ -4,6 +4,7 @@
 .about-me {
   color: var(--color-brazowy);
   text-align: center;
+  margin-bottom: 8rem;
 
   @include media($min: tablet-h) {
     text-align: left
