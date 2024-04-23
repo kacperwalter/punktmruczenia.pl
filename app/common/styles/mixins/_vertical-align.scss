@@ -1,0 +1,5 @@
+@mixin vertical-align {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}

@@ -15,6 +15,7 @@ const AboutMe = ({ content }: AboutMeProps) => {
             alt="Top image"
             width={200} 
             height={200}
+            className="about-me__image"
           />
 
           <div className="header">
@@ -34,6 +35,7 @@ const AboutMe = ({ content }: AboutMeProps) => {
             alt="Top image"
             width={200} 
             height={200}
+            className="about-me__image"
           />
 
           {/* @ts-ignore */}
@@ -44,6 +46,7 @@ const AboutMe = ({ content }: AboutMeProps) => {
             alt="Top image"
             width={200} 
             height={200}
+            className="about-me__image"
           />
         </div>
       </Wrapper>

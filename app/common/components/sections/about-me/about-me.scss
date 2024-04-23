@@ -1,0 +1,41 @@
+@import 'app/common/styles/mixins/media.scss';
+@import 'app/common/styles/mixins/vertical-align.scss';
+
+.about-me {
+  color: var(--color-brazowy);
+  text-align: center;
+
+  .wrapper {
+    @include vertical-align();
+  }
+
+  &__top {
+    @include vertical-align();
+  }
+
+  &__image {
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-height: 28rem;
+    object-fit: cover;
+  }
+
+  .header {
+    gap: 0rem;
+    @include vertical-align();
+
+    .heading {
+      font-family: var(--font-fresh-mango);
+      color: var(--color-lososiowy);
+    }
+  }
+
+  &__bottom {
+    @include vertical-align();
+  }
+
+  &__bottom p,
+  p {
+    font-weight: 600;
+  }
+}
