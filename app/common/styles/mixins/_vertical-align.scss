@@ -1,5 +1,11 @@
+@import 'app/common/styles/mixins/media.scss';
+
 @mixin vertical-align {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+
+  @include media($min: tablet-h) {
+    // gap: 2rem;
+  }
 }

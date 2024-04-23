@@ -4,7 +4,6 @@ import AboutMe from '@/app/common/components/sections/about-me/about-me'
 
 const Homepage = ({ content }: HomepageProps) => {
   const homepageData = content[0] || {}
-  console.log(homepageData)
 
   const {
     homepageHeroContent,

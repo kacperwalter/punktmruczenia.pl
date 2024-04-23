@@ -52,7 +52,7 @@
       gap: 2rem;
 
       @include media($min: tablet-h) {
-        max-width: 50rem;
+        max-width: 45rem;
       }
 
       .heading {
@@ -63,6 +63,8 @@
 
       p {
         font-weight: 600;
+
+
       }
     }
 

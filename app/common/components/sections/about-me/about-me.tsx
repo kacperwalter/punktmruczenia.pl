@@ -24,8 +24,11 @@ const AboutMe = ({ content }: AboutMeProps) => {
               text={content.aboutMeHeading}
             />
 
-            {/* @ts-ignore */}
-            <p>{content.aboutMeCaption}</p>
+            <p>
+              Punkt Mruczenia powstał z miłości do zwierząt i przekonania, że bez kotów nic nie byłoby takie samo. W mojej pracy kieruję się empatią, stawiam na pozytywne wzmocnienia, korzystam z fachowej wiedzy i literatury ekspertów z zakresu zoopsychologii oraz kociego behawioru. 
+                <br /><br />
+              Jestem absolwentką studiów podyplomowych na kierunku psychologia zwierząt na Uniwersytecie SWPS w Poznaniu. Ukończyłam zaawansowany kurs dla behawiorystów kotów prowadzony przez lek. wet. Martynę Woszczyło. Biorę udział w szkoleniach i kursach, które pozwalają lepiej zrozumieć złożoność zachowania kotów.
+            </p>
           </div>
         </div>
 

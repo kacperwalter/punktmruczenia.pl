@@ -5,12 +5,22 @@
   color: var(--color-brazowy);
   text-align: center;
 
+  @include media($min: tablet-h) {
+    text-align: left
+  }
+
   .wrapper {
     @include vertical-align();
   }
 
   &__top {
     @include vertical-align();
+
+    @include media($min: tablet-h) {
+      flex-direction: row;
+      gap: 16rem;
+      justify-content: center;
+    }
   }
 
   &__image {
@@ -18,11 +28,25 @@
     width: 100%;
     max-height: 28rem;
     object-fit: cover;
+
+    @include media(tablet) {
+      max-height: 45rem;
+    }
+
+    @include media($min: tablet-h) {
+      width: 40rem;
+      height: 48rem;
+      max-height: unset;
+    }
   }
 
   .header {
     gap: 0rem;
     @include vertical-align();
+    
+    @include media($min: tablet-h) {
+      max-width: 44rem;    
+    }
 
     .heading {
       font-family: var(--font-fresh-mango);
