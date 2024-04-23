@@ -51,9 +51,9 @@
     .header {
       gap: 2rem;
 
-      @include media($min: tablet-h) {
-        max-width: 45rem;
-      }
+      // @include media($min: tablet-h) {
+      //   max-width: 45rem;
+      // }
 
       .heading {
         font-family: var(--font-calistoga);

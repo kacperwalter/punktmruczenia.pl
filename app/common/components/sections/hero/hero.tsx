@@ -9,7 +9,7 @@ import Wrapper from "../../partials/wrapper/wrapper"
 const Hero = ({ content }: HeroProps) => {
   return (
     <section className="hero">
-      <Wrapper>
+      <Wrapper isWide>
         <article className="hero__content">
           <Image
             src={content.homepageHeroLogo}

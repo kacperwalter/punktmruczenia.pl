@@ -3,7 +3,6 @@ import Wrapper from "../../partials/wrapper/wrapper"
 import Heading from "../../partials/heading/heading"
 import "./about-me.scss"
 import type { AboutMeProps } from "./about-me.types"
-import { PortableText } from "next-sanity"
 
 const AboutMe = ({ content }: AboutMeProps) => {
   return (
@@ -41,8 +40,13 @@ const AboutMe = ({ content }: AboutMeProps) => {
             className="about-me__image"
           />
 
-          {/* @ts-ignore */}
-          <p>{content.aboutMeContent}</p>
+          <p>
+            Kocham wszystkie zwierzęta, ale to właśnie kotom oddałam największy kawałek mojego futrzastego serca. Przez moje ręce przewinęło się sporo bezdomnych kotów i psów. Nie wszystkim udało się pomóc na czas, ale każdy z nich odcisnął swoją łapkę na ścieżce, która prowadzi tutaj, do Punktu Mruczenia.
+
+            <br /><br />
+
+            Na co dzień jestem kocią mamą Uli, adoptowanej, niesłyszącej trikolorki ze zwyrodnieniem kręgosłupa szyjnego. To Ula dała mi najważniejszą lekcję życia ze zwierzakiem: nie wychodź z oczekiwaniami, daj przestrzeń, wesprzyj w zapewnieniu komfortu, a być może wydarzy się magia.
+          </p>
 
           <Image 
             src={content.aboutMeSecondContentImage}

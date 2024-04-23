@@ -19,7 +19,6 @@
     @include media($min: tablet-h) {
       flex-direction: row;
       gap: 16rem;
-      justify-content: center;
     }
   }
 
@@ -56,6 +55,33 @@
 
   &__bottom {
     @include vertical-align();
+
+    @include media($min: tablet-h) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10rem;
+    }
+
+    img {
+      &:first-child {
+        @include media($min: tablet-h) {
+          max-height: 24rem;
+          max-width: 33rem;
+        }
+      }
+
+      &:nth-child(3) {
+        @include media($min: tablet-h) {
+          width: 48rem;
+        }
+      }
+    }
+
+    p {
+      @include media($min: tablet-h) {
+        align-self: center;
+      }
+    }
   }
 
   &__bottom p,
