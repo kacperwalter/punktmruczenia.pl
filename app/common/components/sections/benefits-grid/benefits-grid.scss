@@ -2,5 +2,21 @@
 @import 'app/common/styles/mixins/vertical-align.scss';
 
 .benefits-grid {
-  
+  .wrapper {
+    @include vertical-align();
+  }
+
+  .heading {
+    text-align: center;
+    color: var(--color-lososiowy);
+  }
+
+  &__list {
+    @include media($min: tablet-h) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 14rem;
+      row-gap: 4rem;
+    }
+  }
 }
