@@ -3,6 +3,7 @@
 
 .qualifications {
   color: var(--color-white);
+  margin-bottom: 5rem;
 
   @include media($min: tablet-h) {
     display: flex;
