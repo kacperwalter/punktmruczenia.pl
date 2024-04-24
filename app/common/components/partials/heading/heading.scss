@@ -1,5 +1,11 @@
 .heading {
+  font-family: var(--font-fresh-mango);
+  
   &.h1 {
     font-size: var(--font-size-h1);
+  }
+
+  &.h3 {
+    font-size: var(--font-size-h3);
   }
 }
