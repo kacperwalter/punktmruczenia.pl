@@ -1,0 +1,96 @@
+@import 'app/common/styles/mixins/media.scss';
+@import 'app/common/styles/mixins/vertical-align.scss';
+
+.qualifications {
+  color: var(--color-white);
+  margin-bottom: 5rem;
+
+  @include media($min: tablet-h) {
+    display: flex;
+    width: 100%;
+    padding-left: var(--wrapper-padding);
+    padding-right: var(--wrapper-padding);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(var(--wrapper-max-width) + 2 * var(--wrapper-padding));
+  }
+
+  .heading {
+    @include media(tablet) {
+      text-align: center;
+    }
+  }
+
+  &__img-container {
+    @include media(tablet) {
+      padding-left: var(--wrapper-padding);
+      padding-right: var(--wrapper-padding);
+      margin-bottom: -15rem;
+    }
+
+    @include media($min: tablet-h) {
+      margin-right: -15rem;
+      z-index: 10;
+    }
+  }
+
+  &__image {
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-height: 28rem;
+    object-fit: cover;
+
+    @include media(tablet) {
+      max-height: 45rem;
+    }
+
+    @include media($min: tablet-h) {
+      width: 68rem;
+      height: 60rem;
+      max-height: unset;
+    }
+  }
+
+  &__content {
+    @include vertical-align();
+    padding-left: var(--wrapper-padding);
+    padding-right: var(--wrapper-padding);
+    padding-bottom: 4rem;
+    background-color: var(--color-lososiowy);
+
+    @include media(tablet) {
+      padding-top: 20rem;
+    }
+
+    @include media($min: tablet-h) {
+      border-radius: var(--border-radius);
+      padding: 7rem;
+      padding-left: 23rem;
+      margin-top: 10rem;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h3 {
+      font-size: var(--font-size-h3);
+      font-family: var(--font-fresh-mango);
+
+      @include media(tablet) {
+        text-align: center;
+      }
+    }
+
+    ul {
+      list-style: initial;
+    }
+
+    li {
+      font-size: var(--font-size-body-regular);
+      font-weight: 600;
+    }
+  }
+}

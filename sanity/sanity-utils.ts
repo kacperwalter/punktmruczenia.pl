@@ -20,6 +20,12 @@ export async function getHomepageData() {
         homepageHeroHeading,
         homepageHeroContent,
         homepageHeroButton,
+        "aboutMeTopImage": aboutMeTopImage.asset->url,
+        aboutMeHeading,
+        aboutMeCaption,
+        "aboutMeFirstContentImage": aboutMeFirstContentImage.asset->url,
+        aboutMeContent,
+        "aboutMeSecondContentImage": aboutMeSecondContentImage.asset->url
       }
     `
   )

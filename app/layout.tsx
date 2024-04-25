@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
-import { Open_Sans, Quattrocento } from 'next/font/google'
+import { Open_Sans } from 'next/font/google'
+import localFont from 'next/font/local'
 
 const openSans = Open_Sans({
   subsets: ['latin'],
@@ -8,11 +9,16 @@ const openSans = Open_Sans({
   weight: ['300', '400', '500', '600', '700', '800']
 })
 
-const quattrocento = Quattrocento({
-  subsets: ['latin'],
+const calistoga = localFont({
+  src: '../public/fonts/Calistoga-Regular.ttf',
   display: 'swap',
-  variable: '--font-quattrocento',
-  weight: ['400', '700']
+  variable: '--font-calistoga',
+})
+
+const freshMango = localFont({
+  src: '../public/fonts/fresh-mango.woff2',
+  display: 'swap',
+  variable: '--font-fresh-mango',
 })
 
 export const metadata: Metadata = {
@@ -30,7 +36,8 @@ export default function RootLayout({
       <body
         className={`
           ${openSans.variable}
-          ${quattrocento.variable}
+          ${calistoga.variable}
+          ${freshMango.variable}
         `}
       >
         {children}

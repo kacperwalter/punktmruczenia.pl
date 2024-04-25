@@ -18,6 +18,12 @@ export interface HomepageData {
   homepageHeroHeading: string
   homepageHeroContent: PortableTextBlock[]
   homepageHeroButton: string
+  aboutMeTopImage: string;
+  aboutMeHeading: string;
+  aboutMeCaption: string;
+  aboutMeFirstContentImage: string;
+  aboutMeContent: any;  // Use a more specific type if available
+  aboutMeSecondContentImage: string;
 }
 
 export interface HomepageProps {

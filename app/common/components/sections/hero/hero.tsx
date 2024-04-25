@@ -9,15 +9,7 @@ import Wrapper from "../../partials/wrapper/wrapper"
 const Hero = ({ content }: HeroProps) => {
   return (
     <section className="hero">
-      <Wrapper>
-        <Image
-          className="hero__hero-image"
-          src={content.homepageHeroImage}
-          width={100}
-          height={100}
-          alt=""
-        />
-
+      <Wrapper isWide>
         <article className="hero__content">
           <Image
             src={content.homepageHeroLogo}
@@ -35,8 +27,22 @@ const Hero = ({ content }: HeroProps) => {
             <PortableText value={content.homepageHeroContent} />
           </div>
 
-          <Button arrow arrowDirection="down" text={content.homepageHeroButton}/>
+          <Button 
+            arrow arrowDirection="down"
+            text={content.homepageHeroButton}
+            as="link"
+            // TODO add proper href when will be ready
+            href="#"
+          />
         </article>
+
+        <Image
+          className="hero__hero-image"
+          src={content.homepageHeroImage}
+          width={100}
+          height={100}
+          alt=""
+        />
       </Wrapper>
     </section>
   )
