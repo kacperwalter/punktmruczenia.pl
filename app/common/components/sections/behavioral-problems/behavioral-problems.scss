@@ -1,13 +1,16 @@
 @import 'app/common/styles/mixins/media.scss';
 @import 'app/common/styles/mixins/vertical-align.scss';
 
-.about-me {
+.behavioral-problems {
+  margin-top: 14rem;
   color: var(--color-brazowy);
   text-align: center;
-  margin-bottom: 8rem;
-  display: flex; // dodano
-  justify-content: center; // dodano
-  align-items: center; // dodano
+  margin-bottom: 18rem;
+
+  ul {
+    list-style-type: disc; 
+    padding-left: 1em; 
+  }
 
   @include media($min: tablet-h) {
     text-align: left
@@ -44,8 +47,8 @@
     }
 
     @include media($min: tablet-h) {
-      width: 40rem;
-      height: 48rem;
+      width: 50rem;
+      height: 50rem;
       max-height: unset;
     }
   }
@@ -55,7 +58,7 @@
     @include vertical-align();
     
     @include media($min: tablet-h) {
-      max-width: 44rem;    
+      max-width: 50rem;    
     }
 
     .heading {
@@ -70,7 +73,7 @@
     @include media($min: tablet-h) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 8rem;
+      gap: 4rem;
     }
 
     img {

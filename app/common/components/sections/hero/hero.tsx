@@ -1,10 +1,10 @@
-import Image from "next/image"
-import "./hero.scss"
-import type { HeroProps } from "./hero.types"
-import { PortableText } from "next-sanity"
-import Heading from "../../partials/heading/heading"
-import Button from "../../partials/button/button"
-import Wrapper from "../../partials/wrapper/wrapper"
+import Image from 'next/image'
+import './hero.scss'
+import type { HeroProps } from './hero.types'
+import { PortableText } from 'next-sanity'
+import Heading from '../../partials/heading/heading'
+import Button from '../../partials/button/button'
+import Wrapper from '../../partials/wrapper/wrapper'
 
 const Hero = ({ content }: HeroProps) => {
   return (
@@ -19,16 +19,14 @@ const Hero = ({ content }: HeroProps) => {
           />
 
           <div className="header">
-            <Heading
-              type="h1"
-              text={content.homepageHeroHeading}
-            />
+            <Heading type="h1" text={content.homepageHeroHeading} />
 
             <PortableText value={content.homepageHeroContent} />
           </div>
 
-          <Button 
-            arrow arrowDirection="down"
+          <Button
+            arrow
+            arrowDirection="down"
             text={content.homepageHeroButton}
             as="link"
             // TODO add proper href when will be ready

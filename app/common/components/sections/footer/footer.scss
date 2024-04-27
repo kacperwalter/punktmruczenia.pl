@@ -1,0 +1,19 @@
+@import 'app/common/styles/mixins/media.scss';
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: var(--color-lososiowy);
+  max-height: 12rem;
+
+  .contact-me__image {
+    max-height: 12rem;
+    margin: 0; /* Dodano */
+    padding: 0; /* Dodano */
+
+    @include media($max: mobile) { /* Dodano */
+      max-height: 6rem; /* Dodano */
+    }
+  }
+}

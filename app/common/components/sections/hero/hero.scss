@@ -3,12 +3,12 @@
 .hero {
   position: relative;
   overflow: hidden;
-  margin-bottom: 8rem;
+  margin: 5rem 0 2rem;
 
   .wrapper {
     display: flex;
     flex-direction: column-reverse;
-    gap: 4rem;
+    gap: 2rem;
 
     @include media($min: tablet-h) {
       display: grid;
@@ -16,7 +16,11 @@
       align-items: center;
     }
   }
+  &__hero-line {
+    position: relative;
+    left: 14rem;
 
+  }
   &__hero-image {
     position: relative;
     
@@ -64,8 +68,6 @@
 
       p {
         font-weight: 600;
-
-
       }
     }
 

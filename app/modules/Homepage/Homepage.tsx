@@ -3,6 +3,10 @@ import Hero from '@/app/common/components/sections/hero/hero'
 import AboutMe from '@/app/common/components/sections/about-me/about-me'
 import Qualifications from '@/app/common/components/sections/qualifications/qualifications'
 import BenefitsGrid from '@/app/common/components/sections/benefits-grid/benefits-grid'
+import BehavioralProblems from '@/app/common/components/sections/behavioral-problems/behavioral-problems'
+import Consultations from '@/app/common/components/sections/consultation/consultation'
+import Pricing from '@/app/common/components/sections/pricing/pricing'
+import Contact from '@/app/common/components/sections/contact/contact'
 
 const Homepage = ({ content }: HomepageProps) => {
   const homepageData = content[0] || {}
@@ -18,7 +22,7 @@ const Homepage = ({ content }: HomepageProps) => {
     aboutMeCaption = '',
     aboutMeFirstContentImage = '',
     aboutMeContent = '',
-    aboutMeSecondContentImage = ''
+    aboutMeSecondContentImage = '',
   } = homepageData
 
   const homepageHeroData = {
@@ -26,7 +30,7 @@ const Homepage = ({ content }: HomepageProps) => {
     homepageHeroHeading,
     homepageHeroButton,
     homepageHeroImage,
-    homepageHeroLogo
+    homepageHeroLogo,
   }
 
   const homepageAboutMeData = {
@@ -35,15 +39,20 @@ const Homepage = ({ content }: HomepageProps) => {
     aboutMeCaption,
     aboutMeFirstContentImage,
     aboutMeContent,
-    aboutMeSecondContentImage
+    aboutMeSecondContentImage,
   }
 
   return (
     <main>
-      <Hero content={homepageHeroData}/>
+      <Hero content={homepageHeroData} />
+      {/* @ts-ignore */}
       <AboutMe content={homepageAboutMeData} />
       <Qualifications />
+      <BehavioralProblems />
       <BenefitsGrid />
+      <Consultations />
+      <Pricing />
+      <Contact />
     </main>
   )
 }
