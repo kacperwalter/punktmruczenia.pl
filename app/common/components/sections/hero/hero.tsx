@@ -8,8 +8,8 @@ import Wrapper from '../../partials/wrapper/wrapper'
 
 const Hero = ({ content }: HeroProps) => {
   return (
-    <section className="hero">
-      <Wrapper isWide>
+    <section className="hero pt-14 ">
+      <Wrapper>
         <article className="hero__content">
           <Image
             src={content.homepageHeroLogo}
@@ -34,13 +34,15 @@ const Hero = ({ content }: HeroProps) => {
           />
         </article>
 
-        <Image
-          className="hero__hero-image"
-          src={content.homepageHeroImage}
-          width={100}
-          height={100}
-          alt=""
-        />
+        <div className="relative">
+          <Image
+            className="hero__hero-image"
+            src={content.homepageHeroImage}
+            width={100}
+            height={100}
+            alt=""
+          />
+        </div>
       </Wrapper>
     </section>
   )

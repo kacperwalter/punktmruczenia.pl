@@ -18,8 +18,8 @@
     }
 
     @include media($max: mobile) {
-      width: 80%; // zmniejsza szerokość kontenera na tekst na urządzeniach mobilnych
-      margin: 0 auto; // centruje kontener na tekst
+      width: 80%; 
+      margin: 0 -14px; 
     }
   }
 

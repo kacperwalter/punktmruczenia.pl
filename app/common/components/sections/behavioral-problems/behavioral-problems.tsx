@@ -9,7 +9,14 @@ const BehavioralProblems = () => {
       <Wrapper>
         <div className="behavioral-problems__top">
           <div className="header">
-            <Heading type="h3" text={'Problemy behawioralne'} />
+            <Image
+              src={'/images/cat.png'}
+              alt="Top image"
+              width={200}
+              height={200}
+              className="behavioral-problems__image block -mt-36 lg:hidden"
+            />
+            <Heading type="h1" text={'Problemy behawioralne'} />
 
             <p>
               Co na pewno wiemy o kotach? To, że każdy jest zupełnie inny – od
@@ -19,27 +26,38 @@ const BehavioralProblems = () => {
               Zdarza się, że opiekunowie nie potrafią ich zrozumieć.
               <br />
               <br />Z jakimi problemami można się do mnie zgłosić?
-              <br />
-              <br />
-              <ul>
-                <li>Załatwianie się i znakowanie poza kuwetą</li>
-                <li>Zachowania agresywne</li>
-                <li>Konflikty z innymi kotami lub zwierzętami</li>
-                <li>
+            </p>
+            <ul className="text-left mx-12">
+              <li>
+                <p>Załatwianie się i znakowanie poza kuwetą</p>
+              </li>
+              <li>
+                <p>Zachowania agresywne</p>
+              </li>
+              <li>
+                <p>Konflikty z innymi kotami lub zwierzętami</p>
+              </li>
+              <li>
+                <p>
+                  {' '}
                   Zmiany w otoczeniu kota (dokocenie, remont, przeprowadzka,
                   nowy członek rodziny)
-                </li>
-                <li>Lęk, stres, fobie</li>
-                <li>Inne zaburzenia zachowania</li>
-              </ul>
-            </p>
+                </p>
+              </li>
+              <li>
+                <p>Lęk, stres, fobie</p>
+              </li>
+              <li>
+                <p>Inne zaburzenia zachowania</p>
+              </li>
+            </ul>
           </div>
           <Image
             src={'/images/cat.png'}
             alt="Top image"
             width={200}
             height={200}
-            className="behavioral-problems__image"
+            className="behavioral-problems__image hidden lg:block"
           />
         </div>
       </Wrapper>

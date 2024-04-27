@@ -6,14 +6,18 @@ const Consultations = () => {
     <section className="consultations">
       <div className="consultations__content">
         <div className="heading-container">
-          <Heading type="h3" text="Konsultacja behawioralna" />
-          <img src="/icons/quali-line.svg" alt="Line" />
+          <Heading type="h1" text="Konsultacja behawioralna" />
+          <img
+            src="/icons/quali-line.svg"
+            alt="Line"
+            className="hidden lg:block ml-64 w-[300px]"
+          />
         </div>
         <div className="consultations__text">
           <ol>
             <li>
               <div className="list-item">
-                <span className="number">1</span>
+                <span className="number text-center lg:text-left">1</span>
                 <p>
                   Przed konsultacją proszę opiekuna o nakreślenie celu
                   konsultacji / przedstawienie problemu behawioralnego, który
@@ -27,7 +31,7 @@ const Consultations = () => {
 
             <li>
               <div className="list-item">
-                <span className="number">2</span>
+                <span className="number text-center lg:text-left">2</span>
                 <p>
                   Zbieram szczegółowy wywiad dotyczący kota, jego otoczenia,
                   aktywności, przyzwyczajeń, żywienia.
@@ -37,7 +41,7 @@ const Consultations = () => {
 
             <li>
               <div className="list-item">
-                <span className="number">3</span>
+                <span className="number text-center lg:text-left">3</span>
                 <p>
                   Obserwuję kota. Wspólnie z opiekunem próbujemy rozpoznać
                   przyczynę niepożądanego zachowania.
@@ -47,7 +51,7 @@ const Consultations = () => {
 
             <li>
               <div className="list-item">
-                <span className="number">4</span>
+                <span className="number text-center lg:text-left">4</span>
                 <p>
                   Ustalamy plan działania. Na tym etapie staram się informować o
                   rokowaniach oraz przewidywanym czasie potrzebnym na uzyskanie
@@ -58,7 +62,7 @@ const Consultations = () => {
 
             <li>
               <div className="list-item">
-                <span className="number">5</span>
+                <span className="number text-center lg:text-left">5</span>
                 <p>
                   Po konsultacji przesyłam pisemny raport z konsultacji z
                   zaleceniami dla opiekuna i kota.

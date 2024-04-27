@@ -6,14 +6,17 @@ footer {
   align-items: flex-end;
   background-color: var(--color-lososiowy);
   max-height: 12rem;
+  @include media($max: mobile) {
+    padding: 2rem;
+  }
 
   .contact-me__image {
     max-height: 12rem;
-    margin: 0; /* Dodano */
-    padding: 0; /* Dodano */
+    margin: 0; 
+    padding: 0; 
 
-    @include media($max: mobile) { /* Dodano */
-      max-height: 6rem; /* Dodano */
+    @include media($max: mobile) {
+      max-height: 8rem;    
     }
   }
 }

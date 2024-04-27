@@ -1,15 +1,15 @@
-import logoNav from '@/public/icons/logo-nav.svg'
+import logoWhite from '@/public/icons/logo-footer.svg'
 import Image from 'next/image'
 
 type BrandLogoProps = {
   className?: string
 }
 
-const BrandLogo = ({ className }: BrandLogoProps) => {
+const BrandLogoWhite = ({ className }: BrandLogoProps) => {
   return (
     <Image
       className={className}
-      src={logoNav}
+      src={logoWhite}
       alt="logo"
       width={120}
       height={40}
@@ -17,4 +17,4 @@ const BrandLogo = ({ className }: BrandLogoProps) => {
   )
 }
 
-export default BrandLogo
+export default BrandLogoWhite

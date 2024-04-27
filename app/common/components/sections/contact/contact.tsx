@@ -13,12 +13,23 @@ const Contact = () => {
           alt="Top image"
           width={200}
           height={200}
-          className="contact-me__image"
+          className="contact-me__image hidden lg:block"
         />
-        <div className="header">
-          <Heading type="h3" text="Kontakt" />
-          <p> Punkt Mruczenia</p>
-          <span> Natalia Szajowska-Tomczak</span>
+        <div className="header flex items-center justify-center">
+          <Heading type="h1" text="Kontakt" />
+          <Image
+            src={'/icons/logo2.svg'}
+            alt="Top image"
+            width={200}
+            height={200}
+            className="contact-me__image block lg:hidden"
+          />
+          <div className="hidden lg:block">
+            {' '}
+            <p className="mb-16">Punkt Mruczenia</p>
+            <span> Natalia Szajowska-Tomczak</span>
+          </div>
+
           <ul>
             <li>
               <Image

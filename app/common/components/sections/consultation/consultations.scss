@@ -21,10 +21,6 @@
 
   .heading-container {
    text-align: center;
-
-    // img {
-    //   // margin-right: 24rem;
-    // }
   }
   &__content {
     @include vertical-align();
@@ -33,6 +29,10 @@
     padding-bottom: 4rem;
     background-color: var(--color-lososiowy);
     border-radius: var(--border-radius);
+
+    @include media($max: mobile) {
+      border-radius: 0; 
+    }
   
     @include media(tablet) {
       margin-top: 10rem;

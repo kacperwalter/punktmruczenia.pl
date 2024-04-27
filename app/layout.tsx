@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
 import localFont from 'next/font/local'
 import Navbar from './common/components/sections/navbar/navbar'
-import Wrapper from './common/components/partials/wrapper/wrapper'
+import './common/styles/globals.scss'
 import Footer from './common/components/sections/footer/footer'
 
 const openSans = Open_Sans({
@@ -43,10 +43,9 @@ export default function RootLayout({
           ${freshMango.variable}
         `}
       >
-        <Wrapper>
-          <Navbar />
-          {children}
-        </Wrapper>
+        <Navbar />
+        {children}
+
         <Footer />
       </body>
     </html>

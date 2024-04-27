@@ -25,7 +25,7 @@ const BenefitsGrid = () => {
   ]
 
   return (
-    <section className="benefits-grid">
+    <section className="benefits-grid -mt-48 sm:mt-0">
       <Wrapper>
         <Heading type="h1" text="Z moim wsparciem:" />
 
