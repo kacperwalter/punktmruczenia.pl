@@ -6,7 +6,7 @@ import image from '@/public/images/qualifications.png'
 
 const Qualifications = () => {
   return (
-    <section className="qualifications">
+    <section className="qualifications" id="kwalifikacje">
       <div className="qualifications__img-container">
         <Image
           src={image}

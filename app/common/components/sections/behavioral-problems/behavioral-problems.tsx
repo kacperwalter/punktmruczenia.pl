@@ -7,7 +7,7 @@ const BehavioralProblems = () => {
   return (
     <section className="behavioral-problems">
       <Wrapper>
-        <div className="behavioral-problems__top">
+        <div className="behavioral-problems__top" id="problemy-behawioralne">
           <div className="header">
             <Image
               src={'/images/cat.png'}

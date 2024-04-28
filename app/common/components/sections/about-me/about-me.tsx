@@ -14,7 +14,7 @@ const AboutMe = ({ content }: AboutMeProps) => {
     setIsContentVisible(!isContentVisible)
   }
   return (
-    <section className="about-me">
+    <section className="about-me" id="o-mnie">
       <Wrapper>
         <div className="about-me__top">
           <Image
@@ -39,8 +39,28 @@ const AboutMe = ({ content }: AboutMeProps) => {
               Jestem absolwentką studiów podyplomowych na kierunku psychologia
               zwierząt na Uniwersytecie SWPS w Poznaniu. Ukończyłam zaawansowany
               kurs dla behawiorystów kotów prowadzony przez lek. wet. Martynę
-              Woszczyło. Biorę udział w szkoleniach i kursach, które pozwalają
-              lepiej zrozumieć złożoność zachowania kotów.
+              Woszczyło.{' '}
+              <span
+                className={`opacity-30 ${
+                  isContentVisible ? 'opacity-100' : ''
+                }`}
+              >
+                Biorę udział w szkoleniach i kursach,{' '}
+              </span>
+              <span
+                className={`opacity-20 ${
+                  isContentVisible ? 'opacity-100' : ''
+                }`}
+              >
+                które pozwalają lepiej zrozumieć złożoność{' '}
+              </span>
+              <span
+                className={`opacity-10 ${
+                  isContentVisible ? 'opacity-100' : ''
+                }`}
+              >
+                zachowania kotów.
+              </span>
             </p>
           </div>
         </div>
@@ -84,7 +104,7 @@ const AboutMe = ({ content }: AboutMeProps) => {
         )}
         <button
           onClick={handleButtonClick}
-          className="md:hidden text-2xl -mt-12"
+          className="md:hidden text-2xl -mt-12 z-50"
         >
           {isContentVisible ? 'Zobacz mniej' : 'Zobacz więcej'}
           <Image

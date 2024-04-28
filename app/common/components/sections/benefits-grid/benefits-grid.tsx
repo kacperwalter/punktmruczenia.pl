@@ -37,7 +37,8 @@ const BenefitsGrid = () => {
             >
               <Benefit
                 key={index}
-                icon={(icons as any)[benefit.icon]}
+                // @ts-ignore
+                icon={icons[benefit.icon]}
                 text={benefit.text}
               />
             </div>

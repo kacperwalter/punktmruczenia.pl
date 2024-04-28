@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const Contact = () => {
   return (
-    <section className="contact-me">
+    <section className="contact-me" id="kontakt">
       <div className="contact-me__top">
         <Image
           src={'/icons/footer-logo.svg'}
@@ -24,14 +24,14 @@ const Contact = () => {
             height={200}
             className="contact-me__image block lg:hidden"
           />
-          <div className="hidden lg:block">
+          <div className="hidden lg:block items-start">
             {' '}
             <p className="mb-16">Punkt Mruczenia</p>
             <span> Natalia Szajowska-Tomczak</span>
           </div>
 
-          <ul>
-            <li>
+          <ul className="flex flex-col items-center md:items-start text-center md:text-left">
+            <li className="flex items-center">
               <Image
                 src={'/icons/phone-icon.svg'}
                 alt="phone icon"
@@ -40,7 +40,7 @@ const Contact = () => {
               />{' '}
               +48 609 198 974
             </li>
-            <li>
+            <li className="flex items-center">
               {' '}
               <Image
                 src={'/icons/mail.svg'}
@@ -51,25 +51,28 @@ const Contact = () => {
               kontakt@punktmruczenia.pl
             </li>
           </ul>
-          <p>
+          <p className="flex flex-col ">
             {' '}
-            Znajdziesz mnie:{' '}
-            <Link href={'#'}>
-              <Image
-                src={'/icons/facebook.svg'}
-                alt="facebook"
-                width={50}
-                height={50}
-              />
-            </Link>
-            <Link href={'#'}>
-              <Image
-                src={'/icons/instagram.svg'}
-                alt="instagram"
-                width={50}
-                height={50}
-              />
-            </Link>
+            Znajdziesz mnie:
+            <br />
+            <div className="mt-4">
+              <Link href={'#'}>
+                <Image
+                  src={'/icons/facebook.svg'}
+                  alt="facebook"
+                  width={50}
+                  height={50}
+                />
+              </Link>
+              <Link href={'#'}>
+                <Image
+                  src={'/icons/instagram.svg'}
+                  alt="instagram"
+                  width={50}
+                  height={50}
+                />
+              </Link>
+            </div>
           </p>
         </div>
       </div>

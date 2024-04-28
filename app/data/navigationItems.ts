@@ -1,12 +1,12 @@
 export const linksLeft = [
-  { href: '#about', label: 'O mnie' },
-  { href: '#qualifications', label: 'Kwalifikacje' },
-  { href: '#behavioral', label: 'Problemy behawioralne' },
+  { href: '#o-mnie', label: 'O mnie' },
+  { href: '#kwalifikacje', label: 'Kwalifikacje' },
+  { href: '#problemy-behawioralne', label: 'Problemy behawioralne' },
 ]
 
 export const linksRight = [
-  { href: '#consultation', label: 'Konsultacja behawioralna' },
-  { href: '#contact', label: 'Kontakt' },
+  { href: '#konsultacja-behawioralna', label: 'Konsultacja behawioralna' },
+  { href: '#kontakt', label: 'Kontakt' },
   { href: 'tel:+48609198974', label: '+48 609 198 974', isPhone: true },
 ]
 

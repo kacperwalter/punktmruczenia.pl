@@ -16,7 +16,7 @@ footer {
     padding: 0; 
 
     @include media($max: mobile) {
-      max-height: 8rem;    
+      max-height: 4rem;    
     }
   }
 }
