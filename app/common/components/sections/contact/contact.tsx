@@ -53,25 +53,30 @@ const Contact = () => {
           </ul>
           <div className="flex flex-col ">
             {' '}
-            <p>Znajdziesz mnie:</p>
-            <br />
-            <div className="mt-4 flex justify-center" aria-hidden>
-              <Link href={'#'}>
-                <Image
-                  src={'/icons/facebook.svg'}
-                  alt="facebook"
-                  width={50}
-                  height={50}
-                />
-              </Link>
-              <Link href={'#'}>
-                <Image
-                  src={'/icons/instagram.svg'}
-                  alt="instagram"
-                  width={50}
-                  height={50}
-                />
-              </Link>
+            <div
+              className="mt-4 flex justify-center flex-col md:flex-row"
+              aria-hidden
+            >
+              <p className="md:mr-4">Znajdziesz mnie:</p>
+              <br />
+              <div>
+                <Link href={'#'}>
+                  <Image
+                    src={'/icons/facebook.svg'}
+                    alt="facebook"
+                    width={50}
+                    height={50}
+                  />
+                </Link>
+                <Link href={'#'}>
+                  <Image
+                    src={'/icons/instagram.svg'}
+                    alt="instagram"
+                    width={50}
+                    height={50}
+                  />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
