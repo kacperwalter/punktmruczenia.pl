@@ -30,7 +30,7 @@ const NavbarMobile = () => {
     <motion.header
       initial={false}
       animate={isMenuVisible ? 'open' : 'closed'}
-      className={`fixed flex w-full items-center z-50 justify-between p-4 lg:hidden  ${
+      className={`fixed flex w-full items-center z-50 justify-between p-4 xl:hidden  ${
         isMenuVisible ? 'bg-[#B96645]' : 'bg-[#FFF8EF]'
       }`}
     >
