@@ -32,12 +32,12 @@ const BenefitsGrid = () => {
         <div className="benefits-grid__list">
           {benefits.map((benefit, index) => (
             <div
-              className={`benefit ${index === activeIndex ? 'active' : ''}`} // dodano klasę 'active', jeśli obrazek jest aktywny
-              onTouchStart={() => setActiveIndex(index)} // ustawia aktywny indeks na dotknięty obrazek
+              className={`benefit ${index === activeIndex ? 'active' : ''}`}
+              onTouchStart={() => setActiveIndex(index)}
             >
               <Benefit
                 key={index}
-                icon={icons[benefit.icon]}
+                icon={(icons as any)[benefit.icon]}
                 text={benefit.text}
               />
             </div>
