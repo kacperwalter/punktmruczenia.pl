@@ -50,23 +50,17 @@ const AboutMe = ({ content }: AboutMeProps) => {
               kurs dla behawiorystów kotów prowadzony przez lek. wet. Martynę
               Woszczyło.{' '}
               <span
-                className={`opacity-30 md:opacity-100 ${
-                  isContentVisible ? 'opacity-100' : ''
-                }`}
+                className={`${isContentVisible ? 'opacity-100' : 'opacity-30'}`}
               >
                 Biorę udział w szkoleniach i kursach,{' '}
               </span>
               <span
-                className={`opacity-20 md:opacity-100 ${
-                  isContentVisible ? 'opacity-100' : ''
-                }`}
+                className={`${isContentVisible ? 'opacity-100' : 'opacity-20'}`}
               >
                 które pozwalają lepiej zrozumieć złożoność{' '}
               </span>
               <span
-                className={`opacity-10 md:opacity-100 ${
-                  isContentVisible ? 'opacity-100' : ''
-                }`}
+                className={`${isContentVisible ? 'opacity-100' : 'opacity-10'}`}
               >
                 zachowania kotów.
               </span>
@@ -88,7 +82,7 @@ const AboutMe = ({ content }: AboutMeProps) => {
                 alt=""
               />
               <Image
-                src={'/images/cat-2.png'}
+                src={content.aboutMeFirstContentImage}
                 alt="Top image"
                 width={200}
                 height={200}

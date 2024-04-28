@@ -43,15 +43,8 @@ const Hero = ({ content }: HeroProps) => {
             alt=""
           />
           <Image
-            className="hero__hero-image relative z-10 hidden md:block"
+            className="hero__hero-image relative z-10"
             src={content.homepageHeroImage}
-            width={700}
-            height={500}
-            alt=""
-          />
-          <Image
-            className="hero__hero-image relative z-10 md:hidden"
-            src={'/images/banner.png'}
             width={700}
             height={500}
             alt=""

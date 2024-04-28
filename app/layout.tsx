@@ -35,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pl" className="scroll-smooth">
+    <html lang="pl" className="md:scroll-smooth">
       <body
         className={`
           ${openSans.variable}
