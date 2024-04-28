@@ -5,9 +5,9 @@
   color: var(--color-brazowy);
   text-align: center;
   margin-bottom: 8rem;
-  display: flex; // dodano
-  justify-content: center; // dodano
-  align-items: center; // dodano
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
 
   @include media($min: tablet-h) {
     text-align: left
@@ -76,15 +76,15 @@
     img {
       &:first-child {
         @include media($min: tablet-h) {
-          max-height: 24rem;
-          max-width: 33rem;
+          max-height: 38rem;
+          max-width: 47rem;
         }
       }
 
       &:nth-child(3) {
         @include media($min: tablet-h) {
           margin-top: 4rem;
-          width: 48rem;
+          width: 68rem;
         }
       }
     }

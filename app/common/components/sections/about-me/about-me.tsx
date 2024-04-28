@@ -14,16 +14,25 @@ const AboutMe = ({ content }: AboutMeProps) => {
     setIsContentVisible(!isContentVisible)
   }
   return (
-    <section className="about-me">
+    <section className="about-me" id="o-mnie">
       <Wrapper>
         <div className="about-me__top">
-          <Image
-            src={content.aboutMeTopImage}
-            alt="Top image"
-            width={200}
-            height={200}
-            className="about-me__image"
-          />
+          <div className="relative">
+            <Image
+              className="hidden xl:block absolute z-0 transform translate-x-1/3 translate-y-1/4"
+              src={'/icons/gradient-img.svg'}
+              width={1000}
+              height={1000}
+              alt=""
+            />
+            <Image
+              src={content.aboutMeTopImage}
+              alt="Top image"
+              width={200}
+              height={200}
+              className="about-me__image relative z-10"
+            />
+          </div>
 
           <div className="header">
             <Heading type="h1" text={content.aboutMeHeading} />
@@ -39,8 +48,28 @@ const AboutMe = ({ content }: AboutMeProps) => {
               Jestem absolwentką studiów podyplomowych na kierunku psychologia
               zwierząt na Uniwersytecie SWPS w Poznaniu. Ukończyłam zaawansowany
               kurs dla behawiorystów kotów prowadzony przez lek. wet. Martynę
-              Woszczyło. Biorę udział w szkoleniach i kursach, które pozwalają
-              lepiej zrozumieć złożoność zachowania kotów.
+              Woszczyło.{' '}
+              <span
+                className={`${
+                  isContentVisible ? 'opacity-100' : 'opacity-30 md:opacity-100'
+                }`}
+              >
+                Biorę udział w szkoleniach i kursach,{' '}
+              </span>
+              <span
+                className={`${
+                  isContentVisible ? 'opacity-100' : 'opacity-20 md:opacity-100'
+                }`}
+              >
+                które pozwalają lepiej zrozumieć złożoność{' '}
+              </span>
+              <span
+                className={`${
+                  isContentVisible ? 'opacity-100' : 'opacity-10 md:opacity-100'
+                }`}
+              >
+                zachowania kotów.
+              </span>
             </p>
           </div>
         </div>
@@ -50,13 +79,22 @@ const AboutMe = ({ content }: AboutMeProps) => {
 
         {isContentVisible && (
           <div className="about-me__bottom md:-mt-32">
-            <Image
-              src={content.aboutMeFirstContentImage}
-              alt="Top image"
-              width={200}
-              height={200}
-              className="about-me__image"
-            />
+            <div className="relative">
+              <Image
+                className="hidden xl:block absolute z-0 transform translate-x-1/3 translate-y-1/4"
+                src={'/icons/gradient-img.svg'}
+                width={1000}
+                height={1000}
+                alt=""
+              />
+              <Image
+                src={content.aboutMeFirstContentImage}
+                alt="Top image"
+                width={200}
+                height={200}
+                className="about-me__image relative z-10"
+              />
+            </div>
 
             <p>
               Kocham wszystkie zwierzęta, ale to właśnie kotom oddałam
@@ -84,20 +122,24 @@ const AboutMe = ({ content }: AboutMeProps) => {
         )}
         <button
           onClick={handleButtonClick}
-          className="md:hidden text-2xl -mt-12"
+          className="md:hidden text-2xl -mt-12 z-50"
         >
           {isContentVisible ? 'Zobacz mniej' : 'Zobacz więcej'}
           <Image
+            className="ml-4"
             src="/icons/chevron-down.svg"
             alt="hero"
-            width={20}
-            height={20}
+            width={14}
+            height={14}
+            style={{
+              transform: isContentVisible ? 'rotate(180deg)' : 'rotate(0deg)',
+            }}
           />
         </button>
         <div className="md:block hidden">
           <div className="about-me__bottom md:mt-12 ">
             <Image
-              src={content.aboutMeFirstContentImage}
+              src={'/images/about-c.png'}
               alt="Top image"
               width={200}
               height={200}
@@ -119,13 +161,22 @@ const AboutMe = ({ content }: AboutMeProps) => {
               być może wydarzy się magia.
             </p>
 
-            <Image
-              src={content.aboutMeSecondContentImage}
-              alt="Top image"
-              width={200}
-              height={200}
-              className="about-me__image mt-12"
-            />
+            <div className="relative">
+              <Image
+                className="absolute hidden xl:block z-0 transform translate-x-7 "
+                src={'/images/gradient-2.png'}
+                width={1500}
+                height={1500}
+                alt=""
+              />
+              <Image
+                src={content.aboutMeSecondContentImage}
+                alt="Top image"
+                width={200}
+                height={200}
+                className="about-me__image relative z-10"
+              />
+            </div>
           </div>
         </div>
       </Wrapper>

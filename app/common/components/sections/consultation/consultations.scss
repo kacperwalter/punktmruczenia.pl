@@ -57,9 +57,10 @@
         border: 2px solid var(--color-white);
         padding: 2rem; 
         margin-bottom: 1.5rem;
-        font-family: var(--font-opensans);
+        font-family: var(--font-open-sans);
         p {
           margin-top: 0.5rem; 
+          font-family: var(--font-open-sans);
         }
         .list-item {
           display: flex;
@@ -69,7 +70,8 @@
 
           .number {
             font-size: 3.5em;
-            font-family: var(--font-abel);
+            font-family: var(--font-fresh-mango);
+            font-weight: bold;
           }
 
           @include media($min: tablet-h) {

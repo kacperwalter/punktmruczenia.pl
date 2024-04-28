@@ -7,7 +7,7 @@ const BehavioralProblems = () => {
   return (
     <section className="behavioral-problems">
       <Wrapper>
-        <div className="behavioral-problems__top">
+        <div className="behavioral-problems__top" id="problemy-behawioralne">
           <div className="header">
             <Image
               src={'/images/cat.png'}
@@ -52,13 +52,22 @@ const BehavioralProblems = () => {
               </li>
             </ul>
           </div>
-          <Image
-            src={'/images/cat.png'}
-            alt="Top image"
-            width={200}
-            height={200}
-            className="behavioral-problems__image hidden lg:block"
-          />
+          <div className="relative">
+            <Image
+              className="hidden xl:block absolute z-0 transform md:translate-x-1/3 md:translate-y-1/4"
+              src={'/icons/gradient-img.svg'}
+              width={1000}
+              height={1000}
+              alt=""
+            />
+            <Image
+              src={'/images/cat.png'}
+              alt="Top image"
+              width={700}
+              height={700}
+              className="behavioral-problems__image hidden lg:block relative z-10"
+            />
+          </div>
         </div>
       </Wrapper>
     </section>

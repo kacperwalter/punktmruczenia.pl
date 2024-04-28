@@ -2,6 +2,7 @@
 @import 'app/common/styles/mixins/vertical-align.scss';
 
 .pricing {
+  
   display: flex;
   @include vertical-align();
   margin-top: 10rem;
@@ -12,7 +13,8 @@
 
   .image-container {
     position: relative;
-    text-align: center;
+    text-align: left;
+   
 
     .image-text {
       position: absolute;
@@ -24,6 +26,7 @@
       color: var(--color-white);
     }
   }
+  
 
   @include media($min: tablet-h) {
     text-align: left
@@ -39,16 +42,17 @@
 
     @include media($min: tablet-h) {
       flex-direction: row;
-      gap: 1rem;
+      gap: 2rem;
     }
   }
 
   &__image {
     border-radius: var(--border-radius);
-    width: 296px; // zmieniono na 100%
-    height: 264px; // zmieniono na auto, aby zachować proporcje obrazka
+    width: 296px; 
+    height: 264px; 
     max-height: 28rem;
     object-fit: cover;
+    
 
     @include media(tablet) {
       max-height: 45rem;
@@ -68,4 +72,8 @@
       max-width: 50rem;    
     }
   }
+  ul {
+    font-family: var(--font-open-sans);
+   }
+  
 }

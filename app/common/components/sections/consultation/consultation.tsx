@@ -3,7 +3,7 @@ import './consultations.scss'
 
 const Consultations = () => {
   return (
-    <section className="consultations">
+    <section className="consultations" id="konsultacja-behawioralna">
       <div className="consultations__content">
         <div className="heading-container">
           <Heading type="h1" text="Konsultacja behawioralna" />
@@ -18,7 +18,7 @@ const Consultations = () => {
             <li>
               <div className="list-item">
                 <span className="number text-center lg:text-left">1</span>
-                <p>
+                <p className="text-center md:text-left">
                   Przed konsultacją proszę opiekuna o nakreślenie celu
                   konsultacji / przedstawienie problemu behawioralnego, który
                   będzie przedmiotem spotkania. Na tym etapie upewniam się,
@@ -32,7 +32,7 @@ const Consultations = () => {
             <li>
               <div className="list-item">
                 <span className="number text-center lg:text-left">2</span>
-                <p>
+                <p className="text-center md:text-left">
                   Zbieram szczegółowy wywiad dotyczący kota, jego otoczenia,
                   aktywności, przyzwyczajeń, żywienia.
                 </p>
@@ -42,7 +42,7 @@ const Consultations = () => {
             <li>
               <div className="list-item">
                 <span className="number text-center lg:text-left">3</span>
-                <p>
+                <p className="text-center md:text-left">
                   Obserwuję kota. Wspólnie z opiekunem próbujemy rozpoznać
                   przyczynę niepożądanego zachowania.
                 </p>
@@ -52,7 +52,7 @@ const Consultations = () => {
             <li>
               <div className="list-item">
                 <span className="number text-center lg:text-left">4</span>
-                <p>
+                <p className="text-center md:text-left">
                   Ustalamy plan działania. Na tym etapie staram się informować o
                   rokowaniach oraz przewidywanym czasie potrzebnym na uzyskanie
                   postępów. 
@@ -63,7 +63,7 @@ const Consultations = () => {
             <li>
               <div className="list-item">
                 <span className="number text-center lg:text-left">5</span>
-                <p>
+                <p className="text-center md:text-left">
                   Po konsultacji przesyłam pisemny raport z konsultacji z
                   zaleceniami dla opiekuna i kota.
                 </p>

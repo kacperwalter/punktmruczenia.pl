@@ -4,58 +4,62 @@
 .benefits-grid {
   .wrapper {
     @include vertical-align();
+ 
   }
 
   .heading {
-    text-align: center;
-    color: var(--color-lososiowy);
+    text-align: center !important;
+    color: var(--color-lososiowy) !important;
   }
   .benefit {
-    position: relative; 
+    position: relative !important; 
 
     img {
-      margin: 0; 
+      margin: 0 !important; 
     }
 
     @include media($max: mobile) {
-      width: 80%; 
-      margin: 0 -14px; 
+      width: 80% !important; 
+      margin: 0 -14px !important; 
     }
   }
 
   .dot-container {
-    display: flex; 
-    margin: 0 auto; 
-    gap: 2rem; 
-    align-items: center; 
-    height: 2rem; 
+    z-index: 999;
+    display: flex !important; 
+    margin: 0 auto !important; 
+    gap: 2rem !important; 
+    align-items: center !important; 
+    height: 2rem !important; 
 
     @include media($min: tablet-h) {
-      visibility: hidden; 
-      height: 0; 
+      visibility: hidden !important; 
+      height: 0 !important; 
     }
   }
 
   &__list {
-    display: flex;
-    overflow-x: auto; 
-    scrollbar-width: none;
-    -ms-overflow-style: none; 
+    z-index: 999;
+    padding-left: -10;
+    display: flex !important;
+    overflow-x: auto !important; 
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important; 
     &::-webkit-scrollbar {
-      display: none; 
+      display: none !important; 
     }
 
     & > * {
-      flex: 0 0 auto;
-      scroll-snap-align: start; 
+      flex: 0 0 auto !important;
+      
     }
 
     @include media($min: tablet-h) {
-      overflow: visible; 
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 14rem;
-      row-gap: 4rem;
+      overflow: visible !important; 
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      column-gap: 14rem !important;
+      row-gap: 4rem !important;
     }
   }
 }

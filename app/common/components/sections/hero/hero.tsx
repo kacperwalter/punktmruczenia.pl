@@ -8,7 +8,7 @@ import Wrapper from '../../partials/wrapper/wrapper'
 
 const Hero = ({ content }: HeroProps) => {
   return (
-    <section className="hero pt-14 ">
+    <section className="hero pt-20 xl:pt-14">
       <Wrapper>
         <article className="hero__content">
           <Image
@@ -29,18 +29,35 @@ const Hero = ({ content }: HeroProps) => {
             arrowDirection="down"
             text={content.homepageHeroButton}
             as="link"
-            // TODO add proper href when will be ready
-            href="#"
+            href="#o-mnie"
           />
         </article>
 
         <div className="relative">
-          <Image
-            className="hero__hero-image"
-            src={content.homepageHeroImage}
-            width={100}
-            height={100}
+          <img
+            className="hidden xl:block md:absolute z-0 pb-4"
+            src={'/icons/gradient-img.svg'}
             alt=""
+            style={{ width: '300px', height: '300px', right: 30, bottom: -28 }}
+          />
+
+          <img
+            className="hero__hero-image relative z-10"
+            src={content.homepageHeroImage}
+            width={700}
+            height={500}
+            alt=""
+          />
+          <img
+            className="block xl:hidden absolute z-0 pb-4"
+            src={'/icons/gradient-img.svg'}
+            alt=""
+            style={{
+              width: '120px',
+              height: '130px',
+              right: '-5px',
+              bottom: '-1px',
+            }}
           />
         </div>
       </Wrapper>
