@@ -126,10 +126,14 @@ const AboutMe = ({ content }: AboutMeProps) => {
         >
           {isContentVisible ? 'Zobacz mniej' : 'Zobacz więcej'}
           <Image
+            className="ml-4"
             src="/icons/chevron-down.svg"
             alt="hero"
-            width={20}
-            height={20}
+            width={14}
+            height={14}
+            style={{
+              transform: isContentVisible ? 'rotate(180deg)' : 'rotate(0deg)',
+            }}
           />
         </button>
         <div className="md:block hidden">

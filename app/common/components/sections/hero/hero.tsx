@@ -48,6 +48,17 @@ const Hero = ({ content }: HeroProps) => {
             height={500}
             alt=""
           />
+          <img
+            className="block xl:hidden absolute z-0 pb-4"
+            src={'/icons/gradient-img.svg'}
+            alt=""
+            style={{
+              width: '120px',
+              height: '130px',
+              right: '-5px',
+              bottom: '-1px',
+            }}
+          />
         </div>
       </Wrapper>
     </section>
