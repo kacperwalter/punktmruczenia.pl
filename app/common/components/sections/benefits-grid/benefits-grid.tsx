@@ -29,7 +29,7 @@ const BenefitsGrid = () => {
       <Wrapper>
         <Heading type="h1" text="Z moim wsparciem:" />
 
-        <div className="benefits-grid__list -mr-24 lg:mx-0">
+        <div className="benefits-grid__list -mr-12 lg:mx-0">
           {benefits.map((benefit, index) => (
             <div
               className={`benefit ${index === activeIndex ? 'active' : ''}`}
