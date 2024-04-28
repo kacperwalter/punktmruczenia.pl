@@ -10,9 +10,48 @@
     text-align: center;
     color: var(--color-lososiowy);
   }
+  .benefit {
+    position: relative; 
+
+    img {
+      margin: 0; 
+    }
+
+    @include media($max: mobile) {
+      width: 80%; 
+      margin: 0 -14px; 
+    }
+  }
+
+  .dot-container {
+    display: flex; 
+    margin: 0 auto; 
+    gap: 2rem; 
+    align-items: center; 
+    height: 2rem; 
+
+    @include media($min: tablet-h) {
+      visibility: hidden; 
+      height: 0; 
+    }
+  }
 
   &__list {
+    display: flex;
+    overflow-x: auto; 
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
+    &::-webkit-scrollbar {
+      display: none; 
+    }
+
+    & > * {
+      flex: 0 0 auto;
+      scroll-snap-align: start; 
+    }
+
     @include media($min: tablet-h) {
+      overflow: visible; 
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       column-gap: 14rem;

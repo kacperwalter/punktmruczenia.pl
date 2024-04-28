@@ -1,0 +1,71 @@
+@import 'app/common/styles/mixins/media.scss';
+@import 'app/common/styles/mixins/vertical-align.scss';
+
+.pricing {
+  display: flex;
+  @include vertical-align();
+  margin-top: 10rem;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-abel);
+  margin-bottom: 5rem;
+
+  .image-container {
+    position: relative;
+    text-align: center;
+
+    .image-text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 4rem;
+      background-color: transparent; 
+      color: var(--color-white);
+    }
+  }
+
+  @include media($min: tablet-h) {
+    text-align: left
+  }
+
+  .wrapper {
+    @include vertical-align();
+  }
+
+  &__top {
+    @include vertical-align();
+    justify-content: center;
+
+    @include media($min: tablet-h) {
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+
+  &__image {
+    border-radius: var(--border-radius);
+    width: 296px; // zmieniono na 100%
+    height: 264px; // zmieniono na auto, aby zachować proporcje obrazka
+    max-height: 28rem;
+    object-fit: cover;
+
+    @include media(tablet) {
+      max-height: 45rem;
+    }
+
+    @include media($min: tablet-h) {
+      width: 60rem;
+      height: 50rem;
+      max-height: unset;
+    }
+  }
+  .header {
+    gap: 0rem;
+    @include vertical-align();
+    
+    @include media($min: tablet-h) {
+      max-width: 50rem;    
+    }
+  }
+}

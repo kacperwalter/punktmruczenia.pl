@@ -1,12 +1,15 @@
-import type { Metadata } from "next"
+import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
 import localFont from 'next/font/local'
+import Navbar from './common/components/sections/navbar/navbar'
+import './common/styles/globals.scss'
+import Footer from './common/components/sections/footer/footer'
 
 const openSans = Open_Sans({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-open-sans',
-  weight: ['300', '400', '500', '600', '700', '800']
+  weight: ['300', '400', '500', '600', '700', '800'],
 })
 
 const calistoga = localFont({
@@ -22,8 +25,8 @@ const freshMango = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Admin",
-  description: "",
+  title: 'Admin',
+  description: '',
 }
 
 export default function RootLayout({
@@ -40,7 +43,10 @@ export default function RootLayout({
           ${freshMango.variable}
         `}
       >
+        <Navbar />
         {children}
+
+        <Footer />
       </body>
     </html>
   )
