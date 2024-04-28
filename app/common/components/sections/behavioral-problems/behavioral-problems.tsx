@@ -54,7 +54,7 @@ const BehavioralProblems = () => {
           </div>
           <div className="relative">
             <Image
-              className="hidden md:block absolute z-0 transform md:translate-x-1/3 md:translate-y-1/4"
+              className="hidden xl:block absolute z-0 transform md:translate-x-1/3 md:translate-y-1/4"
               src={'/icons/gradient-img.svg'}
               width={1000}
               height={1000}

@@ -19,7 +19,7 @@ const AboutMe = ({ content }: AboutMeProps) => {
         <div className="about-me__top">
           <div className="relative">
             <Image
-              className="hidden md:block absolute z-0 transform translate-x-1/3 translate-y-1/4"
+              className="hidden xl:block absolute z-0 transform translate-x-1/3 translate-y-1/4"
               src={'/icons/gradient-img.svg'}
               width={1000}
               height={1000}
@@ -81,7 +81,7 @@ const AboutMe = ({ content }: AboutMeProps) => {
           <div className="about-me__bottom md:-mt-32">
             <div className="relative">
               <Image
-                className="hidden md:block absolute z-0 transform translate-x-1/3 translate-y-1/4"
+                className="hidden xl:block absolute z-0 transform translate-x-1/3 translate-y-1/4"
                 src={'/icons/gradient-img.svg'}
                 width={1000}
                 height={1000}
@@ -159,7 +159,7 @@ const AboutMe = ({ content }: AboutMeProps) => {
 
             <div className="relative">
               <Image
-                className="absolute z-0 transform translate-x-7 "
+                className="absolute hidden xl:block z-0 transform translate-x-7 "
                 src={'/images/gradient-2.png'}
                 width={1500}
                 height={1500}

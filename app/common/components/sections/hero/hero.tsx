@@ -36,7 +36,7 @@ const Hero = ({ content }: HeroProps) => {
 
         <div className="relative">
           <Image
-            className="hidden md:block md:absolute z-0 translate-x-1/4"
+            className="hidden xl:block md:absolute z-0 translate-x-1/4"
             src={'/icons/gradient-img.svg'}
             width={1000}
             height={1000}
