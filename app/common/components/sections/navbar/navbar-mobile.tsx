@@ -22,15 +22,15 @@ const NavbarMobile = () => {
     closed: { opacity: 0, y: '-100%' },
   }
   const navVariants = {
-    open: { opacity: 1 },
-    closed: { opacity: 0 },
+    open: { opacity: 1, height: '100vh' },
+    closed: { opacity: 0, height: '0' },
   }
 
   return (
     <motion.header
       initial={false}
       animate={isMenuVisible ? 'open' : 'closed'}
-      className={`fixed flex w-full items-center z-50 justify-between p-4 xl:hidden  ${
+      className={`fixed flex w-full items-center z-30 justify-between p-4 xl:hidden  ${
         isMenuVisible ? 'bg-[#B96645]' : 'bg-[#FFF8EF]'
       }`}
     >
@@ -55,7 +55,6 @@ const NavbarMobile = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          minHeight: '100vh',
         }}
       >
         <motion.ul

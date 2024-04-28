@@ -30,6 +30,7 @@ const Hero = ({ content }: HeroProps) => {
             text={content.homepageHeroButton}
             as="link"
             href="#o-mnie"
+            className="text-white"
           />
         </article>
 
