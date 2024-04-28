@@ -41,21 +41,21 @@ const AboutMe = ({ content }: AboutMeProps) => {
               kurs dla behawiorystów kotów prowadzony przez lek. wet. Martynę
               Woszczyło.{' '}
               <span
-                className={`opacity-30 ${
+                className={`opacity-30 md:opacity-100 ${
                   isContentVisible ? 'opacity-100' : ''
                 }`}
               >
                 Biorę udział w szkoleniach i kursach,{' '}
               </span>
               <span
-                className={`opacity-20 ${
+                className={`opacity-20 md:opacity-100 ${
                   isContentVisible ? 'opacity-100' : ''
                 }`}
               >
                 które pozwalają lepiej zrozumieć złożoność{' '}
               </span>
               <span
-                className={`opacity-10 ${
+                className={`opacity-10 md:opacity-100 ${
                   isContentVisible ? 'opacity-100' : ''
                 }`}
               >

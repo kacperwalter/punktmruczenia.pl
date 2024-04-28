@@ -55,7 +55,7 @@ const Contact = () => {
             {' '}
             Znajdziesz mnie:
             <br />
-            <div className="mt-4">
+            <ul className="mt-4" aria-hidden>
               <Link href={'#'}>
                 <Image
                   src={'/icons/facebook.svg'}
@@ -72,7 +72,7 @@ const Contact = () => {
                   height={50}
                 />
               </Link>
-            </div>
+            </ul>
           </p>
         </div>
       </div>

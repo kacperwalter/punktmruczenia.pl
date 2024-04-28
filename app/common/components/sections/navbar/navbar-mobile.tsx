@@ -26,12 +26,12 @@ const NavbarMobile = () => {
     <motion.header
       initial={false}
       animate={isMenuVisible ? 'open' : 'closed'}
-      className={`fixed z-50 flex w-full items-center justify-between p-4 lg:hidden  ${
+      className={` flex w-full items-center justify-between p-4 lg:hidden  ${
         isMenuVisible ? 'bg-[#B96645]' : 'bg-[#FFF8EF]'
       }`}
     >
       {isMenuVisible ? <BrandLogoWhite /> : <BrandLogo />}
-      <div className="ml-5 flex items-center">
+      <div className=" flex items-center">
         <button onClick={toggleMenu}>
           <span className="sr-only">Open main menu</span>
           <Image
@@ -46,7 +46,7 @@ const NavbarMobile = () => {
         variants={navVariants}
         initial="closed"
         animate={isMenuVisible ? 'open' : 'closed'}
-        className="fixed inset-0 top-24 w-full text-4xl lg:hidden bg-[#B96645]"
+        className="fixed inset-0 z-50 top-24 w-full text-4xl lg:hidden bg-[#B96645]"
         style={{
           display: 'flex',
           justifyContent: 'center',

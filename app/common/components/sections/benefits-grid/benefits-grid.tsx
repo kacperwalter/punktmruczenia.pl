@@ -25,18 +25,18 @@ const BenefitsGrid = () => {
   ]
 
   return (
-    <section className="benefits-grid -mt-48 sm:mt-0">
+    <section className="benefits-grid -mt-48 sm:mt-0 ">
       <Wrapper>
         <Heading type="h1" text="Z moim wsparciem:" />
 
-        <div className="benefits-grid__list">
+        <div className="benefits-grid__list -mr-24 lg:mx-0">
           {benefits.map((benefit, index) => (
             <div
               className={`benefit ${index === activeIndex ? 'active' : ''}`}
               onTouchStart={() => setActiveIndex(index)}
             >
               <Benefit
-                key={index}
+                key={benefit.text}
                 // @ts-ignore
                 icon={icons[benefit.icon]}
                 text={benefit.text}
