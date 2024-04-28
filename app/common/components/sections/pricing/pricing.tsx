@@ -31,7 +31,7 @@ const Pricing = () => {
                 className="cursor-pointer self-end z-50"
               >
                 <Image
-                  src={'/icons/arrow-up.svg'}
+                  src={'/icons/arrow-down.svg'}
                   alt="arrow up"
                   width={50}
                   height={50}
@@ -82,7 +82,7 @@ const Pricing = () => {
                 className="cursor-pointer self-end z-50"
               >
                 <Image
-                  src={'/icons/arrow-up.svg'}
+                  src={'/icons/arrow-down.svg'}
                   alt="arrow up"
                   width={50}
                   height={50}
