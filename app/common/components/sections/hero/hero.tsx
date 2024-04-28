@@ -36,10 +36,24 @@ const Hero = ({ content }: HeroProps) => {
 
         <div className="relative">
           <Image
-            className="hero__hero-image"
+            className="hidden md:block md:absolute z-0 translate-x-1/4"
+            src={'/icons/gradient-img.svg'}
+            width={1000}
+            height={1000}
+            alt=""
+          />
+          <Image
+            className="hero__hero-image relative z-10 hidden md:block"
             src={content.homepageHeroImage}
-            width={100}
-            height={100}
+            width={700}
+            height={500}
+            alt=""
+          />
+          <Image
+            className="hero__hero-image relative z-10 md:hidden"
+            src={'/images/banner.png'}
+            width={700}
+            height={500}
             alt=""
           />
         </div>

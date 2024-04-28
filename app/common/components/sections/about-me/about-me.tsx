@@ -17,13 +17,22 @@ const AboutMe = ({ content }: AboutMeProps) => {
     <section className="about-me" id="o-mnie">
       <Wrapper>
         <div className="about-me__top">
-          <Image
-            src={content.aboutMeTopImage}
-            alt="Top image"
-            width={200}
-            height={200}
-            className="about-me__image"
-          />
+          <div className="relative">
+            <Image
+              className="hidden md:block absolute z-0 transform translate-x-1/3 translate-y-1/4"
+              src={'/icons/gradient-img.svg'}
+              width={1000}
+              height={1000}
+              alt=""
+            />
+            <Image
+              src={content.aboutMeTopImage}
+              alt="Top image"
+              width={200}
+              height={200}
+              className="about-me__image relative z-10"
+            />
+          </div>
 
           <div className="header">
             <Heading type="h1" text={content.aboutMeHeading} />
@@ -70,13 +79,22 @@ const AboutMe = ({ content }: AboutMeProps) => {
 
         {isContentVisible && (
           <div className="about-me__bottom md:-mt-32">
-            <Image
-              src={content.aboutMeFirstContentImage}
-              alt="Top image"
-              width={200}
-              height={200}
-              className="about-me__image"
-            />
+            <div className="relative">
+              <Image
+                className="hidden md:block absolute z-0 transform translate-x-1/3 translate-y-1/4"
+                src={'/icons/gradient-img.svg'}
+                width={1000}
+                height={1000}
+                alt=""
+              />
+              <Image
+                src={'/images/cat-2.png'}
+                alt="Top image"
+                width={200}
+                height={200}
+                className="about-me__image relative z-10"
+              />
+            </div>
 
             <p>
               Kocham wszystkie zwierzęta, ale to właśnie kotom oddałam
@@ -117,7 +135,7 @@ const AboutMe = ({ content }: AboutMeProps) => {
         <div className="md:block hidden">
           <div className="about-me__bottom md:mt-12 ">
             <Image
-              src={content.aboutMeFirstContentImage}
+              src={'/images/about-c.png'}
               alt="Top image"
               width={200}
               height={200}
@@ -139,13 +157,22 @@ const AboutMe = ({ content }: AboutMeProps) => {
               być może wydarzy się magia.
             </p>
 
-            <Image
-              src={content.aboutMeSecondContentImage}
-              alt="Top image"
-              width={200}
-              height={200}
-              className="about-me__image mt-12"
-            />
+            <div className="relative">
+              <Image
+                className="absolute z-0 transform translate-x-7 "
+                src={'/images/gradient-2.png'}
+                width={1500}
+                height={1500}
+                alt=""
+              />
+              <Image
+                src={content.aboutMeSecondContentImage}
+                alt="Top image"
+                width={200}
+                height={200}
+                className="about-me__image relative z-10"
+              />
+            </div>
           </div>
         </div>
       </Wrapper>

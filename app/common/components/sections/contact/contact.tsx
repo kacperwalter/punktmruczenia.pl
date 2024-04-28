@@ -51,11 +51,11 @@ const Contact = () => {
               kontakt@punktmruczenia.pl
             </li>
           </ul>
-          <p className="flex flex-col ">
+          <div className="flex flex-col ">
             {' '}
-            Znajdziesz mnie:
+            <p>Znajdziesz mnie:</p>
             <br />
-            <ul className="mt-4" aria-hidden>
+            <div className="mt-4 flex justify-center" aria-hidden>
               <Link href={'#'}>
                 <Image
                   src={'/icons/facebook.svg'}
@@ -72,8 +72,8 @@ const Contact = () => {
                   height={50}
                 />
               </Link>
-            </ul>
-          </p>
+            </div>
+          </div>
         </div>
       </div>
 
