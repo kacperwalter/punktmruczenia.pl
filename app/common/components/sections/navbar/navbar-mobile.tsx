@@ -13,6 +13,10 @@ const NavbarMobile = () => {
     setIsMenuVisible(!isMenuVisible)
   }
 
+  const closeMenu = () => {
+    setIsMenuVisible(false)
+  }
+
   const variants = {
     open: { opacity: 1, y: 0 },
     closed: { opacity: 0, y: '-100%' },
@@ -26,7 +30,7 @@ const NavbarMobile = () => {
     <motion.header
       initial={false}
       animate={isMenuVisible ? 'open' : 'closed'}
-      className={` flex w-full items-center justify-between p-4 lg:hidden  ${
+      className={`fixed flex w-full items-center z-50 justify-between p-4 lg:hidden  ${
         isMenuVisible ? 'bg-[#B96645]' : 'bg-[#FFF8EF]'
       }`}
     >
@@ -64,6 +68,7 @@ const NavbarMobile = () => {
             <Link
               href="#o-mnie"
               className="block leading-standard mb-4 w-full  px-4 py-4 text-center  md:px-[34px]"
+              onClick={closeMenu}
             >
               O mnie
             </Link>
@@ -72,6 +77,7 @@ const NavbarMobile = () => {
             <Link
               href="#kwalifikacje"
               className="block leading-standard mb-4 w-full  px-4 py-4 text-center  md:px-[34px]"
+              onClick={closeMenu}
             >
               Kwalifikacje
             </Link>
@@ -80,6 +86,7 @@ const NavbarMobile = () => {
             <Link
               href="#problemy-behawioralne"
               className="block leading-standard mb-4 w-full  px-4 py-4 text-center  md:px-[34px]"
+              onClick={closeMenu}
             >
               Problemy behawioralne
             </Link>
@@ -88,6 +95,7 @@ const NavbarMobile = () => {
             <Link
               href="#konsultacja-behawioralna"
               className="block leading-standard mb-4 w-full  px-4 py-4 text-center  md:px-[34px]"
+              onClick={closeMenu}
             >
               Konsultacja behawioralna
             </Link>
@@ -96,6 +104,7 @@ const NavbarMobile = () => {
             <Link
               href="#kontakt"
               className="block leading-standard mb-4 w-full  px-4 py-4 text-center  md:px-[34px]"
+              onClick={closeMenu}
             >
               Kontakt
             </Link>
@@ -111,6 +120,7 @@ const NavbarMobile = () => {
                 width={34}
                 height={34}
                 className="mr-4"
+                onClick={closeMenu}
               />
               +48 609 198 974
             </a>
