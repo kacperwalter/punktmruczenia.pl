@@ -30,7 +30,7 @@ const Contact = () => {
             <span className="-ml-12"> Natalia Szajowska-Tomczak</span>
           </div>
 
-          <ul className="flex flex-col items-center md:items-start md:-ml-4">
+          <ul className="flex flex-col items-center md:items-start md:-ml-4 md:space-y-6">
             <li className="flex items-center">
               <Image
                 src={'/icons/phone-icon.svg'}
