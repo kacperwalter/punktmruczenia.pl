@@ -16,7 +16,7 @@ const BehavioralProblems = () => {
               height={200}
               className="behavioral-problems__image block -mt-36 lg:hidden"
             />
-            <h2 className="font-[400] text-xl md:text-[48px]">
+            <h2 className="font-[400] text-[48px] md:text-[56px]">
               Problemy behawioralne
             </h2>
 

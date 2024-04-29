@@ -35,7 +35,7 @@ const AboutMe = ({ content }: AboutMeProps) => {
           </div>
 
           <div className="header">
-            <h2 className="font-[400] text-xl md:text-[48px]">
+            <h2 className="font-[400] text-[48px] md:text-[56px]">
               {content.aboutMeHeading}
             </h2>
 

@@ -49,9 +49,11 @@ const BenefitsGrid = () => {
   ]
 
   return (
-    <section className="benefits-grid -mt-48 sm:mt-0 ">
+    <section className="benefits-grid -mt-48 sm:mt-12 ">
       <Wrapper>
-        <Heading type="h2" text="Z moim wsparciem:" />
+        <h2 className="font-[400] text-xl text-[48px] md:text-[48px]">
+          Z moim wsparciem:
+        </h2>
 
         <div className="benefits-grid__list -mr-12 lg:mx-0">
           {benefits.map((benefit, index) => (

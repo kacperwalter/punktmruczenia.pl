@@ -15,7 +15,9 @@ const Contact = () => {
           className="contact-me__image hidden lg:block"
         />
         <div className="header flex items-center justify-center">
-          <h2 className="font-[400] text-xl md:text-[48px]">Kontakt</h2>
+          <h2 className="font-[400] text-xl text-[48px] md:text-[56px]">
+            Kontakt
+          </h2>
           <Image
             src={'/icons/logo2.svg'}
             alt="Top image"
@@ -36,6 +38,7 @@ const Contact = () => {
                 alt="phone icon"
                 width={50}
                 height={50}
+                className="w-[40px] h-[40px]"
               />{' '}
               +48 609 198 974
             </li>
@@ -46,6 +49,7 @@ const Contact = () => {
                 alt="phone icon"
                 width={50}
                 height={50}
+                className="w-[40px] h-[40px]"
               />{' '}
               kontakt@punktmruczenia.pl
             </li>
@@ -69,6 +73,7 @@ const Contact = () => {
                     alt="facebook"
                     width={50}
                     height={50}
+                    className="w-[40px] h-[40px]"
                   />
                 </Link>
                 <Link href={'https://www.instagram.com/punktmruczenia'}>
@@ -77,6 +82,7 @@ const Contact = () => {
                     alt="instagram"
                     width={50}
                     height={50}
+                    className="w-[40px] h-[40px]"
                   />
                 </Link>
               </div>

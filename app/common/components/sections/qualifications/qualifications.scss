@@ -2,11 +2,11 @@
 @import 'app/common/styles/mixins/vertical-align.scss';
 
 .qualifications {
-  color: var(--color-white);
+  color: var(--color-bezowy);
   margin-bottom: 5rem;
   h2 {
     font-family: var(--font-fresh-mango);
-    color: var(--color-white);
+    color: var(--color-bezowy);
   }
 
   @include media($min: tablet-h) {
