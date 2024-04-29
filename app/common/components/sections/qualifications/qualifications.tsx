@@ -18,7 +18,7 @@ const Qualifications = () => {
       </div>
 
       <div className="qualifications__content">
-        <Heading type="h1" text="Kwalifikacje" />
+        <h2 className="font-[400] text-xl md:text-[48px]">Kwalifikacje</h2>
 
         <div className="qualifications__text">
           <h3>2024</h3>

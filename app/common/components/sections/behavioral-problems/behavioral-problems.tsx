@@ -16,7 +16,9 @@ const BehavioralProblems = () => {
               height={200}
               className="behavioral-problems__image block -mt-36 lg:hidden"
             />
-            <Heading type="h1" text={'Problemy behawioralne'} />
+            <h2 className="font-[400] text-xl md:text-[48px]">
+              Problemy behawioralne
+            </h2>
 
             <p>
               Co na pewno wiemy o kotach? To, że każdy jest zupełnie inny – od

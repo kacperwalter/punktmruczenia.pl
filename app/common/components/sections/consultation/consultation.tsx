@@ -6,7 +6,9 @@ const Consultations = () => {
     <section className="consultations" id="konsultacja-behawioralna">
       <div className="consultations__content">
         <div className="heading-container">
-          <Heading type="h1" text="Konsultacja behawioralna" />
+          <h2 className="font-[400] text-xl md:text-[48px]">
+            Konsultacja behawioralna
+          </h2>
           <img
             src="/icons/quali-line.svg"
             alt="Line"

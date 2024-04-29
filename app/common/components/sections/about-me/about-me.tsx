@@ -35,7 +35,9 @@ const AboutMe = ({ content }: AboutMeProps) => {
           </div>
 
           <div className="header">
-            <Heading type="h1" text={content.aboutMeHeading} />
+            <h2 className="font-[400] text-xl md:text-[48px]">
+              {content.aboutMeHeading}
+            </h2>
 
             <p>
               Punkt Mruczenia powstał z miłości do zwierząt i przekonania, że

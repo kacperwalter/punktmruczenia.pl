@@ -4,4 +4,5 @@ export type HeadingProps = {
   type?: HeadingType
   text: string
   color?: string
+  className?: string
 }

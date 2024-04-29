@@ -51,7 +51,7 @@ const BenefitsGrid = () => {
   return (
     <section className="benefits-grid -mt-48 sm:mt-0 ">
       <Wrapper>
-        <Heading type="h1" text="Z moim wsparciem:" />
+        <Heading type="h2" text="Z moim wsparciem:" />
 
         <div className="benefits-grid__list -mr-12 lg:mx-0">
           {benefits.map((benefit, index) => (

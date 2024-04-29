@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Wrapper from '../../partials/wrapper/wrapper'
 import Heading from '../../partials/heading/heading'
 import './contact.scss'
 import Link from 'next/link'
@@ -16,7 +15,7 @@ const Contact = () => {
           className="contact-me__image hidden lg:block"
         />
         <div className="header flex items-center justify-center">
-          <Heading type="h1" text="Kontakt" />
+          <h2 className="font-[400] text-xl md:text-[48px]">Kontakt</h2>
           <Image
             src={'/icons/logo2.svg'}
             alt="Top image"

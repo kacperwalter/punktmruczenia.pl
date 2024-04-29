@@ -9,6 +9,11 @@
   justify-content: center; 
   align-items: center; 
 
+  h2 {
+    font-family: var(--font-fresh-mango);
+    color: var(--color-lososiowy);
+  }
+
   @include media($min: tablet-h) {
     text-align: left
   }
