@@ -4,6 +4,7 @@ import localFont from 'next/font/local'
 import Navbar from './common/components/sections/navbar/navbar'
 import './common/styles/globals.scss'
 import Footer from './common/components/sections/footer/footer'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const openSans = Open_Sans({
   subsets: ['latin'],
@@ -48,6 +49,7 @@ export default function RootLayout({
 
         <Footer />
       </body>
+      <GoogleAnalytics gaId="G-JHQ7327M1J" />
     </html>
   )
 }
