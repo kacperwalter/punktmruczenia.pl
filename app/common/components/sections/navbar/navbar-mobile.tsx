@@ -128,7 +128,11 @@ const NavbarMobile = () => {
           </li>
           <li className="w-full text-center justify-center items-center flex pt-36">
             Znajdziesz mnie :
-            <a href="https://www.facebook.com" className="ml-4" target="_blank">
+            <a
+              href="https://www.facebook.com/profile.php?id=61558144896025"
+              className="ml-4"
+              target="_blank"
+            >
               <Image
                 src={'/icons/facebook-mobile.svg'}
                 alt="Facebook"
@@ -137,7 +141,7 @@ const NavbarMobile = () => {
               />
             </a>
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/punktmruczenia"
               className="ml-4"
               target="_blank"
             >

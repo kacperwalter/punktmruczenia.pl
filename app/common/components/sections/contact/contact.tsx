@@ -60,7 +60,11 @@ const Contact = () => {
               <p className="md:mr-4">Znajdziesz mnie:</p>
               <br />
               <div>
-                <Link href={'#'}>
+                <Link
+                  href={
+                    'https://www.facebook.com/profile.php?id=61558144896025'
+                  }
+                >
                   <Image
                     src={'/icons/facebook.svg'}
                     alt="facebook"
@@ -68,7 +72,7 @@ const Contact = () => {
                     height={50}
                   />
                 </Link>
-                <Link href={'#'}>
+                <Link href={'https://www.instagram.com/punktmruczenia'}>
                   <Image
                     src={'/icons/instagram.svg'}
                     alt="instagram"
