@@ -54,11 +54,17 @@ const BehavioralProblems = () => {
           </div>
           <div className="relative">
             <Image
-              className="hidden xl:block absolute z-0 transform md:translate-x-1/3 md:translate-y-1/4"
+              className="hidden xl:block absolute z-0"
               src={'/icons/gradient-img.svg'}
               width={1000}
               height={1000}
               alt=""
+              style={{
+                width: '150px',
+                height: '150px',
+                right: -50,
+                bottom: 70,
+              }}
             />
             <Image
               src={'/images/cat.png'}
