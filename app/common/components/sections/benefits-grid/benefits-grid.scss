@@ -7,10 +7,12 @@
  
   }
 
-  .heading {
+  h2 {
     text-align: center !important;
-    color: var(--color-lososiowy) !important;
+    font-family: var(--font-fresh-mango);
+    color: var(--color-lososiowy);
   }
+
   .benefit {
     position: relative !important; 
 

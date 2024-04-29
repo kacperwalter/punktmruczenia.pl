@@ -68,7 +68,7 @@ const Homepage = ({ content }: HomepageProps) => {
           height={300}
         />
       </div>
-      <div className="hidden md:-mt-64 md:flex md:justify-center md:items-center">
+      <div className="hidden md:-mt-48 md:flex md:justify-center md:items-center">
         <Image src="/icons/line-3.svg" alt="hero" width={300} height={240} />
       </div>
       <Qualifications />
@@ -104,4 +104,3 @@ const Homepage = ({ content }: HomepageProps) => {
 }
 
 export default Homepage
-

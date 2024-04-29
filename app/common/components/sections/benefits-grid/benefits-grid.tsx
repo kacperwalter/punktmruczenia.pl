@@ -4,10 +4,34 @@ import Heading from '../../partials/heading/heading'
 import Wrapper from '../../partials/wrapper/wrapper'
 import icons from '@/public/icons'
 import './benefits-grid.scss'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const BenefitsGrid = () => {
   const [activeIndex, setActiveIndex] = useState(0)
+  const benefitRefs = useRef([])
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // @ts-ignore
+            const benefitIndex = benefitRefs.current.indexOf(entry.target)
+            setActiveIndex(benefitIndex)
+          }
+        })
+      },
+      { threshold: 0.7 }
+    )
+
+    benefitRefs.current.forEach((benefitRef) => observer.observe(benefitRef))
+
+    return () => {
+      benefitRefs.current.forEach((benefitRef) =>
+        observer.unobserve(benefitRef)
+      )
+    }
+  }, [])
 
   const benefits = [
     { icon: 'icon-1', text: 'nauczysz się rozumieć koci język' },
@@ -25,15 +49,20 @@ const BenefitsGrid = () => {
   ]
 
   return (
-    <section className="benefits-grid -mt-48 sm:mt-0 ">
+    <section className="benefits-grid -mt-48 sm:mt-12 ">
       <Wrapper>
-        <Heading type="h1" text="Z moim wsparciem:" />
+        <h2 className="font-[400] text-xl text-[48px] md:text-[48px]">
+          Z moim wsparciem:
+        </h2>
 
         <div className="benefits-grid__list -mr-12 lg:mx-0">
           {benefits.map((benefit, index) => (
             <div
-              className={`benefit ${index === activeIndex ? 'active' : ''}`}
-              onTouchStart={() => setActiveIndex(index)}
+              // @ts-ignore
+              ref={(el) => (benefitRefs.current[index] = el)}
+              className={`benefit px-2 ${
+                index === activeIndex ? 'active' : ''
+              }`}
             >
               <Benefit
                 key={benefit.text}

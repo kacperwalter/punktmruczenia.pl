@@ -16,7 +16,9 @@ const BehavioralProblems = () => {
               height={200}
               className="behavioral-problems__image block -mt-36 lg:hidden"
             />
-            <Heading type="h1" text={'Problemy behawioralne'} />
+            <h2 className="font-[400] text-[48px] md:text-[56px]">
+              Problemy behawioralne
+            </h2>
 
             <p>
               Co na pewno wiemy o kotach? To, że każdy jest zupełnie inny – od
@@ -54,11 +56,17 @@ const BehavioralProblems = () => {
           </div>
           <div className="relative">
             <Image
-              className="hidden xl:block absolute z-0 transform md:translate-x-1/3 md:translate-y-1/4"
+              className="hidden xl:block absolute z-0"
               src={'/icons/gradient-img.svg'}
               width={1000}
               height={1000}
               alt=""
+              style={{
+                width: '150px',
+                height: '150px',
+                right: -50,
+                bottom: 70,
+              }}
             />
             <Image
               src={'/images/cat.png'}

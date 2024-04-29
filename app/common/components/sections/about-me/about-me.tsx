@@ -35,7 +35,9 @@ const AboutMe = ({ content }: AboutMeProps) => {
           </div>
 
           <div className="header">
-            <Heading type="h1" text={content.aboutMeHeading} />
+            <h2 className="font-[400] text-[48px] md:text-[56px]">
+              {content.aboutMeHeading}
+            </h2>
 
             <p>
               Punkt Mruczenia powstał z miłości do zwierząt i przekonania, że
@@ -163,11 +165,17 @@ const AboutMe = ({ content }: AboutMeProps) => {
 
             <div className="relative">
               <Image
-                className="absolute hidden xl:block z-0 transform translate-x-7 "
+                className="hidden xl:block absolute z-0"
                 src={'/images/gradient-2.png'}
-                width={1500}
-                height={1500}
+                width={1000}
+                height={1000}
                 alt=""
+                style={{
+                  width: '250px',
+                  height: '250px',
+                  right: -50,
+                  bottom: 50,
+                }}
               />
               <Image
                 src={content.aboutMeSecondContentImage}

@@ -11,12 +11,17 @@ footer {
   }
 
   .contact-me__image {
-    max-height: 12rem;
-    margin: 0; 
-    padding: 0; 
+    max-height: 10rem;
+    margin: 2rem; 
+    
 
     @include media($max: mobile) {
-      max-height: 4rem;    
+      height: 50.43px;
+      width: 200px;
+    }
+    @include media($min: tablet-h) {
+      height: 50.43px;
+      width: 200px;
     }
   }
 }

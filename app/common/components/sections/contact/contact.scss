@@ -10,6 +10,12 @@
   margin-bottom: 8rem;
   margin-top: 18rem;
 
+  h2 {
+    font-family: var(--font-fresh-mango);
+    color: var(--color-lososiowy);
+  }
+
+
   @include media($min: tablet-h) {
     text-align: left
   }
@@ -37,7 +43,7 @@
   &__image {
     border-radius: var(--border-radius);
     width: 100%;
-    max-height: 15rem;
+    max-height: 4rem;
     object-fit: contain;
 
     @include media(tablet) {
@@ -99,10 +105,10 @@
     }
   }
   span {
-    display: block; // dodano
-    margin-top: -5rem; // dodano
+    display: block; 
+    margin-top: -5rem; 
     color: var(--color-brazowy);
-    font-size: 2rem; // dostosuj do swoich potrzeb
+    font-size: 2rem; 
   }
   ul {
     list-style: none;
@@ -115,7 +121,7 @@
       font-weight: 600;
       color: var(--color-lososiowy);
       img {
-        margin-right: 1rem; // dostosuj do swoich potrzeb
+        margin-right: 1rem; 
       }
     }
   }
