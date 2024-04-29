@@ -8,7 +8,7 @@ import Wrapper from '../../partials/wrapper/wrapper'
 
 const Hero = ({ content }: HeroProps) => {
   return (
-    <section className="hero pt-20 xl:pt-14">
+    <section className="hero pt-20 xl:pt-14" id="top">
       <Wrapper>
         <article className="hero__content">
           <Image
