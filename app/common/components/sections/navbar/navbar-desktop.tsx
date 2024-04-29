@@ -16,7 +16,7 @@ const NavbarDesktop = () => {
       </div>
 
       <div>
-        <Link href="#" className="navbar-desktop__logo">
+        <Link href="#top" className="navbar-desktop__logo">
           <Image src={logo} alt="logo" width={140} height={120} />
         </Link>
       </div>

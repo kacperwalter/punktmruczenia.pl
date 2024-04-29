@@ -34,7 +34,9 @@ const NavbarMobile = () => {
         isMenuVisible ? 'bg-[#B96645]' : 'bg-[#FFF8EF]'
       }`}
     >
-      {isMenuVisible ? <BrandLogoWhite /> : <BrandLogo />}
+      <Link href="#top">
+        {isMenuVisible ? <BrandLogoWhite /> : <BrandLogo />}
+      </Link>
       <div className=" flex items-center">
         <button onClick={toggleMenu}>
           <span className="sr-only">Open main menu</span>
