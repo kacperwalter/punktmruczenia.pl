@@ -24,13 +24,13 @@ const Contact = () => {
             height={200}
             className="contact-me__image block lg:hidden"
           />
-          <div className="hidden lg:block items-start">
+          <div className="hidden lg:block md:flex flex-start items-start">
             {' '}
-            <p className="mb-16">Punkt Mruczenia</p>
-            <span> Natalia Szajowska-Tomczak</span>
+            <p className="mb-16 -ml-12">Punkt Mruczenia</p>
+            <span className="-ml-12"> Natalia Szajowska-Tomczak</span>
           </div>
 
-          <ul className="flex flex-col items-center md:items-start text-center md:text-left">
+          <ul className="flex flex-col items-center md:items-start md:-ml-4">
             <li className="flex items-center">
               <Image
                 src={'/icons/phone-icon.svg'}
@@ -51,10 +51,10 @@ const Contact = () => {
               kontakt@punktmruczenia.pl
             </li>
           </ul>
-          <div className="flex flex-col ">
+          <div className="flex flex-col md:mb-12 ">
             {' '}
             <div
-              className="mt-4 flex justify-center flex-col md:flex-row"
+              className="mt-4 flex justify-center ml-12 flex-col md:flex-row"
               aria-hidden
             >
               <p className="md:mr-4">Znajdziesz mnie:</p>
@@ -85,8 +85,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
-      <div className="contact-me__bottom"></div>
     </section>
   )
 }

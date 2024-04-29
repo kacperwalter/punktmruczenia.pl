@@ -32,7 +32,9 @@ const BenefitsGrid = () => {
         <div className="benefits-grid__list -mr-12 lg:mx-0">
           {benefits.map((benefit, index) => (
             <div
-              className={`benefit ${index === activeIndex ? 'active' : ''}`}
+              className={`benefit px-2 ${
+                index === activeIndex ? 'active' : ''
+              }`}
               onTouchStart={() => setActiveIndex(index)}
             >
               <Benefit
