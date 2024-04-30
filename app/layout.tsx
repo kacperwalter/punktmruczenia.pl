@@ -37,6 +37,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl" className="md:scroll-smooth">
+      <GoogleAnalytics gaId="G-JHQ7327M1J" />
+      
       <body
         className={`
           ${openSans.variable}
@@ -49,7 +51,6 @@ export default function RootLayout({
 
         <Footer />
       </body>
-      <GoogleAnalytics gaId="G-JHQ7327M1J" />
     </html>
   )
 }
