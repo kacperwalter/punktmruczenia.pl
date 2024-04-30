@@ -15,7 +15,7 @@ const Contact = () => {
           className="contact-me__image hidden lg:block"
         />
         <div className="header flex items-center justify-center">
-          <h2 className="font-[400] text-xl text-[48px] md:text-[56px]">
+          <h2 className="font-[400] text-xl text-[42px] md:text-[56px]">
             Kontakt
           </h2>
           <Image
@@ -38,7 +38,7 @@ const Contact = () => {
                 alt="phone icon"
                 width={50}
                 height={50}
-                className="w-[40px] h-[40px]"
+                className="w-[32px] h-[32px]"
               />{' '}
               +48 609 198 974
             </li>
@@ -49,7 +49,7 @@ const Contact = () => {
                 alt="phone icon"
                 width={50}
                 height={50}
-                className="w-[40px] h-[40px]"
+                className="w-[32px] h-[32px]"
               />{' '}
               kontakt@punktmruczenia.pl
             </li>
@@ -57,7 +57,7 @@ const Contact = () => {
           <div className="flex flex-col md:mb-12 ">
             {' '}
             <div
-              className="mt-4 flex justify-center ml-12 flex-col md:flex-row"
+              className="mt-4 flex justify-center md:ml-12 flex-col md:flex-row"
               aria-hidden
             >
               <p className="md:mr-4">Znajdziesz mnie:</p>
