@@ -10,9 +10,9 @@ import '@/app/common/styles/spacings.scss'
 import '@/app/common/components/partials/header/header.scss' // just temporary
 
 export const metadata: Metadata = {
-  title: 'Punkt Mruczenia',
+  title: 'Punkt Mruczenia - kocia behawiorystka',
   description:
-    'Wspieram opiekunów w zrozumieniu kociego języka i budowaniu relacji opartych na wzajemnym zaufaniu. Pomagam w znalezieniu punktu mruczenia i wyeliminowaniu problemów behawioralnych u kotów',
+    'Jestem Natalia i jestem kocią behawiorystką. Pomogę Ci rozwiązać problem behawioralny u Twojego kota. ',
 }
 
 const Home = async () => {
