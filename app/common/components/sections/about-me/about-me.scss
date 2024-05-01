@@ -69,7 +69,7 @@
   &__bottom {
     @include vertical-align();
 
-    @include media($min: tablet-h) {
+    @include media($min: laptop) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 8rem;
@@ -77,7 +77,7 @@
 
     img {
       &:first-child {
-        @include media($min: tablet-h) {
+        @include media($min: laptop) {
           max-height: 38rem;
           max-width: 47rem;
         }
