@@ -27,7 +27,10 @@
 
     @include media($min: tablet-h) {
       flex-direction: row;
-      gap: 25rem;
+    }
+
+    @include media($min: laptop) {
+      gap: 10rem;
     }
   }
 
@@ -69,15 +72,14 @@
   &__bottom {
     @include vertical-align();
 
-    @include media($min: laptop) {
+    @include media($min: tablet-h) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 8rem;
     }
 
     img {
       &:first-child {
-        @include media($min: laptop) {
+        @include media($min: tablet-h) {
           max-height: 38rem;
           max-width: 47rem;
         }
