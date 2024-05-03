@@ -19,7 +19,7 @@
 
     @include media($min: tablet-h) {
       flex-direction: row;
-      gap: 16rem;
+      gap: 18rem;
     }
   }
 
@@ -34,15 +34,15 @@
     }
 
     @include media($min: tablet-h) {
-      width: 40rem;
+      width: 44rem;
       height: 48rem;
       max-height: unset;
     }
   }
 
   .header {
-    gap: 0rem;
     @include vertical-align();
+    gap: 1.5rem;
     
     @include media($min: tablet-h) {
       max-width: 44rem;    
@@ -59,21 +59,22 @@
 
     @include media($min: tablet-h) {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 45rem 1fr;
       gap: 10rem;
     }
 
     img {
       &:first-child {
         @include media($min: tablet-h) {
-          max-height: 24rem;
-          max-width: 33rem;
+          max-height: 23rem;
+          max-width: 28rem;
         }
       }
 
       &:nth-child(3) {
         @include media($min: tablet-h) {
-          width: 48rem;
+          max-width: unset;
+          width: 43rem;
         }
       }
     }

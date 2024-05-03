@@ -4,6 +4,7 @@ import Heading from "../../partials/heading/heading"
 import "./about-me.scss"
 import type { AboutMeProps } from "./about-me.types"
 
+// TODO CMS - content from CMS
 const AboutMe = ({ content }: AboutMeProps) => {
   return (
     <section className="about-me">
@@ -12,8 +13,8 @@ const AboutMe = ({ content }: AboutMeProps) => {
           <Image
             src={content.aboutMeTopImage}
             alt="Top image"
-            width={200} 
-            height={200}
+            width={1000} 
+            height={1000}
             className="about-me__image"
           />
 
@@ -35,8 +36,8 @@ const AboutMe = ({ content }: AboutMeProps) => {
           <Image 
             src={content.aboutMeFirstContentImage}
             alt="Top image"
-            width={200} 
-            height={200}
+            width={1000} 
+            height={1000}
             className="about-me__image"
           />
 
@@ -51,8 +52,8 @@ const AboutMe = ({ content }: AboutMeProps) => {
           <Image 
             src={content.aboutMeSecondContentImage}
             alt="Top image"
-            width={200} 
-            height={200}
+            width={1000} 
+            height={1000}
             className="about-me__image"
           />
         </div>
