@@ -10,6 +10,7 @@ const Header = ({ heading, headingType, caption, color = 'dark', id }: HeaderPro
       <Heading
         type={headingType}
         text={heading}
+        // @ts-ignore - TODO when CMS typing
         color={color}
       />
       <RichText

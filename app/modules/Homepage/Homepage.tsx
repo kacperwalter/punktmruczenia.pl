@@ -41,6 +41,7 @@ const Homepage = ({ content }: HomepageProps) => {
   return (
     <main>
       <Hero content={homepageHeroData}/>
+      {/* @ts-ignore */}
       <AboutMe content={homepageAboutMeData} />
       <Qualifications />
       <BenefitsGrid />
