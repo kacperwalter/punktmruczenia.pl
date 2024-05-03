@@ -6,6 +6,9 @@ import Heading from "../../partials/heading/heading"
 import Button from "../../partials/button/button"
 import Wrapper from "../../partials/wrapper/wrapper"
 
+// TODO CMS
+import heroImage from '@/public/images/hero-image.png'
+
 const Hero = ({ content }: HeroProps) => {
   return (
     <section className="hero">
@@ -13,8 +16,8 @@ const Hero = ({ content }: HeroProps) => {
         <article className="hero__content">
           <Image
             src={content.homepageHeroLogo}
-            width={100}
-            height={100}
+            width={400}
+            height={400}
             alt=""
           />
 
@@ -38,9 +41,11 @@ const Hero = ({ content }: HeroProps) => {
 
         <Image
           className="hero__hero-image"
-          src={content.homepageHeroImage}
-          width={100}
-          height={100}
+          // TODO CMS
+          // src={content.homepageHeroImage}
+          src={heroImage}
+          width={1000}
+          height={1000}
           alt=""
         />
       </Wrapper>
