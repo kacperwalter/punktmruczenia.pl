@@ -74,6 +74,10 @@
       &:nth-child(3) {
         @include media($min: tablet-h) {
           max-width: unset;
+          width: 30rem;
+        }
+
+        @include media($min: laptop) {
           width: 43rem;
         }
       }
