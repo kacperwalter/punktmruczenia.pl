@@ -21,16 +21,25 @@
       flex-direction: row;
       gap: 18rem;
     }
+
+    .about-me__image {
+      @include media(mobile) {
+        max-height: 33rem;
+      }
+    }
   }
 
   &__image {
     border-radius: var(--border-radius);
     width: 100%;
-    max-height: 28rem;
     object-fit: cover;
 
     @include media(tablet) {
       max-height: 45rem;
+    }
+
+    @include media(mobile) {
+      max-height: 33rem;
     }
 
     @include media($min: tablet-h) {
@@ -65,6 +74,10 @@
 
     img {
       &:first-child {
+        @include media(mobile) {
+          max-height: 25rem;
+        }
+
         @include media($min: tablet-h) {
           max-height: 23rem;
           max-width: 28rem;
