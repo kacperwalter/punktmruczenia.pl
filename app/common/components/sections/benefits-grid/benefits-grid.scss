@@ -4,6 +4,7 @@
 .benefits-grid {
   .wrapper {
     @include vertical-align();
+    align-items: center;
   }
 
   .heading {
@@ -12,11 +13,16 @@
   }
 
   &__list {
-    @include media($min: tablet-h) {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 14rem;
-      row-gap: 4rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    row-gap: 5rem;
+    width: 100%;
+
+    @include media($min: tablet) {
+      flex-flow: row wrap;
+      justify-content: center;
+      column-gap: 2rem;
     }
   }
 }
