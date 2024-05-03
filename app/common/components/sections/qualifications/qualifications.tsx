@@ -11,8 +11,8 @@ const Qualifications = () => {
         <Image
           src={image}
           alt="Top image"
-          width={200} 
-          height={200}
+          width={1000} 
+          height={1000}
           className="qualifications__image"
         />
       </div>
