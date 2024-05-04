@@ -1,0 +1,42 @@
+@import 'app/common/styles/mixins/media.scss';
+@import 'app/common/styles/mixins/vertical-align.scss';
+
+.rich-numbered-list {
+  margin-bottom: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  
+  @include media(tablet) {
+    background-color: var(--color-lososiowy)
+  }
+
+  .wrapper {
+    @include vertical-align();
+  }
+
+  .heading {
+    // TODO heading styles to unify (find other instances)
+    text-align: center;
+    color: var(--color-white);
+  }
+
+  &__list {
+    @include vertical-align();
+  }
+
+  &__element {
+    border: 1px solid var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 2.4rem;
+
+    .heading {
+      font-size: var(--font-size-h2);
+    }
+
+    p {
+      color: var(--color-white);
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+}

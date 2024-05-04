@@ -2,12 +2,15 @@
 @import 'app/common/styles/mixins/vertical-align.scss';
 
 .benefits-grid {
+  margin-bottom: 5rem;
+
   .wrapper {
     @include vertical-align();
     align-items: center;
   }
 
   .heading {
+    // TODO heading styles to unify (find other instances)
     text-align: center;
     color: var(--color-lososiowy);
   }

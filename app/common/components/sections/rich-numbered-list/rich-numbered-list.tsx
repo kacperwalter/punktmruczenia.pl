@@ -23,10 +23,10 @@ const RichNumberedList = () => {
         <div className="rich-numbered-list__list">
           {sections.map((section, index) => (
             // TODO maybe separate component when refactoring
-            <article key={index}>
+            <article className="rich-numbered-list__element" key={index}>
               <Heading
                 type="h3"
-                text={index.toString()}
+                text={(index + 1).toString()}
               />
 
               <p>{section.text}</p>
