@@ -3,15 +3,27 @@
 
 .rich-numbered-list {
   margin-bottom: 5rem;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  
-  @include media(tablet) {
-    background-color: var(--color-lososiowy)
+
+  @include media(mobile) {
+    background-color: var(--color-lososiowy);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .wrapper {
     @include vertical-align();
+
+    @include media($min: tablet) {
+      background-color: var(--color-lososiowy);
+      border-radius: var(--border-radius);
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    @include media($min: tablet-h) {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
   }
 
   .heading {
@@ -22,12 +34,26 @@
 
   &__list {
     @include vertical-align();
+    align-items: center;
+    gap: 2rem;
+
+    @include media($min: tablet) {
+      gap: 1rem;
+    }
   }
 
   &__element {
     border: 1px solid var(--color-white);
     border-radius: var(--border-radius);
     padding: 2.4rem;
+    max-width: 77rem;
+    display: flex;
+    flex-direction: column;
+
+    @include media($min: tablet-h) {
+      flex-direction: row;
+      gap: 4rem;
+    }
 
     .heading {
       font-size: var(--font-size-h2);
@@ -37,6 +63,10 @@
       color: var(--color-white);
       text-align: center;
       font-weight: 600;
+
+      @include media($min: tablet-h) {
+        text-align: left;
+      }
     }
   }
 }
