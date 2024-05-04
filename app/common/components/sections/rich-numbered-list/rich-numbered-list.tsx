@@ -1,4 +1,5 @@
 import Wrapper from "../../partials/wrapper/wrapper"
+import Heading from "../../partials/heading/heading"
 import "./rich-numbered-list.scss"
 
 const RichNumberedList = () => {
@@ -14,7 +15,24 @@ const RichNumberedList = () => {
   return (
     <section className="rich-numbered-list">
       <Wrapper>
-        
+        <Heading
+          type="h2" // TODO CMS
+          text="Konsultacja behawioralna" // TODO CMS
+        />
+
+        <div className="rich-numbered-list__list">
+          {sections.map((section, index) => (
+            // TODO maybe separate component when refactoring
+            <article key={index}>
+              <Heading
+                type="h3"
+                text={index.toString()}
+              />
+
+              <p>{section.text}</p>
+            </article>
+          ))}
+        </div>
       </Wrapper>
     </section>
   )
