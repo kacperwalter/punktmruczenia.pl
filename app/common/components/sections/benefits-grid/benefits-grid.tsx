@@ -5,6 +5,7 @@ import icons from "@/public/icons"
 import "./benefits-grid.scss"
 
 const BenefitsGrid = () => {
+  // TODO that should come from CMS
   const benefits = [
     { icon: 'icon-1', text: 'nauczysz się rozumieć koci język' },
     { icon: 'icon-2', text: 'dowiesz się, jak zaspokoić kluczowe potrzeby Twojego kota' },
