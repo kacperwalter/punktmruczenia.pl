@@ -1,0 +1,15 @@
+@import 'app/common/styles/mixins/media.scss';
+@import 'app/common/styles/mixins/vertical-align.scss';
+
+.tiles {
+
+}
+
+// TODO move to separate (partial) component when refactoring
+.tile {
+  border-radius: var(--border-radius);
+  
+  &__content {
+    display: none;
+  }
+}

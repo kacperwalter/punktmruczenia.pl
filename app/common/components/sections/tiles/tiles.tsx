@@ -1,5 +1,7 @@
 import Wrapper from "../../partials/wrapper/wrapper"
 import Heading from "../../partials/heading/heading"
+import arrow from "@/public/utils/arrow.svg"
+import Image from 'next/image'
 import "./tiles.scss"
 
 const Tiles = () => {
@@ -37,14 +39,29 @@ const Tiles = () => {
         {tiles.map((tile, index) => (
           // TODO move to separate (partial) component when refactoring
           <article className="tile" key={index}>
-            <div className="tile__cover">
+            <div
+              className="tile__cover"
+              // @ts-ignore go to hell with this TS
+              style={{ '--background-image-url': `url(${tile.image})` }}
+            >
               <Heading 
                 type="h3"
                 text={tile.heading}
               />
+
+              <Image
+                className="tile__arrow"
+                src={arrow}
+                alt="arrow"
+                width={100}
+                height={100}
+              />
             </div>
             
-            <p dangerouslySetInnerHTML={{ __html: tile.additionalInfo }} />
+            <div 
+              className="tile__content"
+              dangerouslySetInnerHTML={{ __html: tile.additionalInfo }}
+            />
           </article>
         ))}
       </Wrapper>
