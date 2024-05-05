@@ -36,7 +36,7 @@ const Tiles = () => {
     }
   ]
 
-  const [isTileActive, setIsTileActive] = useState(false)
+  const [isTileActive, setIsTileActive] = useState(true)
   const toggleContent = () => setIsTileActive(!isTileActive) 
 
   return (
@@ -44,7 +44,7 @@ const Tiles = () => {
       <Wrapper>
         {tiles.map((tile, index) => (
           // TODO move to separate (partial) component when refactoring
-          <article className="tile" key={index}>
+          <article className={`tile ${isTileActive ? 'tile--active' : ''}`} key={index}>
             <div
               className="tile__cover"
               // @ts-ignore go to hell with this TS
