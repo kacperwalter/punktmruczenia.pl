@@ -2,7 +2,10 @@
 @import 'app/common/styles/mixins/vertical-align.scss';
 
 .tiles {
-
+  .wrapper {
+    @include vertical-align();
+    gap: 2rem;
+  }
 }
 
 // TODO move to separate (partial) component when refactoring
@@ -36,6 +39,7 @@
   &__arrow {
     width: 3rem;
     height: 3rem;
+    transform: rotate(180deg);
   }
 
   &__content {
