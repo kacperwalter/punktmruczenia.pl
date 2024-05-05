@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react'
 import Wrapper from "../../partials/wrapper/wrapper"
 import Heading from "../../partials/heading/heading"
 import arrow from "@/public/utils/arrow.svg"
@@ -33,6 +36,9 @@ const Tiles = () => {
     }
   ]
 
+  const [isTileActive, setIsTileActive] = useState(false)
+  const toggleContent = () => setIsTileActive(!isTileActive) 
+
   return (
     <section className="tiles">
       <Wrapper>
@@ -43,6 +49,7 @@ const Tiles = () => {
               className="tile__cover"
               // @ts-ignore go to hell with this TS
               style={{ '--background-image-url': `url(${tile.image})` }}
+              onClick={toggleContent}
             >
               <Heading 
                 type="h3"
@@ -58,8 +65,8 @@ const Tiles = () => {
               />
             </div>
             
-            <div 
-              className="tile__content"
+            <div
+              className={`tile__content ${isTileActive ? 'tile__content--active' : ''}`}
               dangerouslySetInnerHTML={{ __html: tile.additionalInfo }}
             />
           </article>
