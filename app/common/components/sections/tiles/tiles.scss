@@ -10,11 +10,32 @@
   &__cover {
     border-radius: var(--border-radius);
     color: var(--color-white);
-    background-image: var(--background-image-url);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), var(--background-image-url);
     background-position: center;
     background-size: cover;
     height: 30rem;
     padding: 2.4rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 10%;
+    grid-template-rows: 1fr auto;
+
+    .heading {
+      grid-row: 2;
+      align-self: end; 
+    }
+
+    .tile__arrow {
+      grid-column: 2;
+      grid-row: 2;
+      align-self: end; 
+      justify-self: end;
+    }
+  }
+
+  &__arrow {
+    width: 3rem;
+    height: 3rem;
   }
 
   &__content {
