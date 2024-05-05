@@ -7,8 +7,16 @@
 
 // TODO move to separate (partial) component when refactoring
 .tile {
-  border-radius: var(--border-radius);
-  
+  &__cover {
+    border-radius: var(--border-radius);
+    color: var(--color-white);
+    background-image: var(--background-image-url);
+    background-position: center;
+    background-size: cover;
+    height: 30rem;
+    padding: 2.4rem;
+  }
+
   &__content {
     display: none;
   }
