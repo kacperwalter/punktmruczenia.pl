@@ -33,17 +33,21 @@ const Tiles = () => {
 
   return (
     <section className="tiles">
-      {tiles.map((tile, index) => (
-        // TODO move to separate compojnent when refactoring
-        <article className="tile" key={index}>
-          <Heading 
-            type="h3"
-            text={tile.heading}
-          />
-
-          <p dangerouslySetInnerHTML={{ __html: tile.additionalInfo }} />
-        </article>
-      ))}
+      <Wrapper>
+        {tiles.map((tile, index) => (
+          // TODO move to separate (partial) component when refactoring
+          <article className="tile" key={index}>
+            <div className="tile__cover">
+              <Heading 
+                type="h3"
+                text={tile.heading}
+              />
+            </div>
+            
+            <p dangerouslySetInnerHTML={{ __html: tile.additionalInfo }} />
+          </article>
+        ))}
+      </Wrapper>
     </section>
   )
 }
