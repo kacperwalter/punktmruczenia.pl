@@ -1,10 +1,5 @@
-'use client'
-
-import { useState } from 'react'
 import Wrapper from "../../partials/wrapper/wrapper"
-import Heading from "../../partials/heading/heading"
-import arrow from "@/public/utils/arrow.svg"
-import Image from 'next/image'
+import Tile from '../../partials/tile/tile'
 import "./tiles.scss"
 
 const Tiles = () => {
@@ -26,7 +21,7 @@ const Tiles = () => {
       heading: "Konsultacja <br> online <br> 150 zł",
       additionalInfo: `
         <ul>
-          <li>Konsultacja online za pomocą wybranej platformy (Skype, WhatsApp, Zoom lub Google Meet); spotkanie trwa ok. 45 minut, zazwyczaj proszę opiekuna o wirtualny spacer po miejscu zamieszkania kota, chcę zobaczyć, jak wygląda jego codzienne środowisko</li>
+          <li>Konsultacja online za pomocą wybranej platformy (Skype, WhatsApp, Zoom lub Google Meet) spotkanie trwa ok. 45 minut, zazwyczaj proszę opiekuna o wirtualny spacer po miejscu zamieszkania kota, chcę zobaczyć, jak wygląda jego codzienne środowisko</li>
           <li>Analiza zachowania kota na podstawie wypełnionego wcześniej formularza i przesłanych materiałów (zdjęcia, filmy)</li>
           <li>Przesłanie pisemnego raportu z konsultacji wraz z zaleceniami</li>
           <li>Telefoniczna lub mailowa kontrola po konsultacji</li>
@@ -36,40 +31,16 @@ const Tiles = () => {
     }
   ]
 
-  const [isTileActive, setIsTileActive] = useState(true)
-  const toggleContent = () => setIsTileActive(!isTileActive) 
-
   return (
     <section className="tiles">
       <Wrapper>
         {tiles.map((tile, index) => (
-          // TODO move to separate (partial) component when refactoring
-          <article className={`tile ${isTileActive ? 'tile--active' : ''}`} key={index}>
-            <div
-              className="tile__cover"
-              // @ts-ignore go to hell with this TS
-              style={{ '--background-image-url': `url(${tile.image})` }}
-              onClick={toggleContent}
-            >
-              <Heading 
-                type="h3"
-                text={tile.heading}
-              />
-
-              <Image
-                className="tile__arrow"
-                src={arrow}
-                alt="arrow"
-                width={100}
-                height={100}
-              />
-            </div>
-            
-            <div
-              className={`tile__content ${isTileActive ? 'tile__content--active' : ''}`}
-              dangerouslySetInnerHTML={{ __html: tile.additionalInfo }}
-            />
-          </article>
+          <Tile 
+            key={index}
+            heading={tile.heading}
+            additionalInfo={tile.additionalInfo}
+            image={tile.image}
+          />
         ))}
       </Wrapper>
     </section>
