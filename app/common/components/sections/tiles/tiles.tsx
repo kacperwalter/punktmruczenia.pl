@@ -18,7 +18,7 @@ const Tiles = () => {
       image: '/images/kot-1.jpeg',
     },
     {
-      heading: "Konsultacja <br> online <br> 150 zł",
+      heading: "Konsultacja online <br> 150 zł",
       additionalInfo: `
         <ul>
           <li>Konsultacja online za pomocą wybranej platformy (Skype, WhatsApp, Zoom lub Google Meet) spotkanie trwa ok. 45 minut, zazwyczaj proszę opiekuna o wirtualny spacer po miejscu zamieszkania kota, chcę zobaczyć, jak wygląda jego codzienne środowisko</li>
