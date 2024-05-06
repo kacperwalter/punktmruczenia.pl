@@ -4,23 +4,26 @@
   position: relative;
 
   &:hover {
-    .tile__cover {
-      border: 1px solid var(--color-lososiowy);
-      position: relative;
-
-      &::after {
+    @include media($min: tablet-h) {
+      .tile__cover {
+        border: 1px solid var(--color-lososiowy);
+        position: relative;
+  
+        &::after {
+          opacity: 1;
+        }
+  
+        .heading {
+          color: var(--color-lososiowy);
+          transform: translateY(-30rem);
+        }
+      }
+  
+      .tile__content {
         opacity: 1;
       }
-
-      .heading {
-        color: var(--color-lososiowy);
-        transform: translateY(-30rem);
-      }
     }
 
-    .tile__content {
-      opacity: 1;
-    }
   }
 
   @include media($min: tablet-h) {
