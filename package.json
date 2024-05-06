@@ -11,6 +11,7 @@
     "ts": "tsc --noEmit"
   },
   "dependencies": {
+    "@next/third-parties": "^14.2.3",
     "@portabletext/react": "^3.0.18",
     "next": "14.1.0",
     "next-sanity": "^9.0.0",
