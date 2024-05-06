@@ -1,7 +1,7 @@
 // @ts-nocheck
 "use client"
 
-import { useState } from "react"
+import { useState, useCallback } from "react"
 import Heading from "../../partials/heading/heading"
 import Image from "next/image"
 import arrow from "@/public/utils/arrow.svg"
@@ -10,7 +10,11 @@ import "./tile.scss"
 // TODO typing
 const Tile = ({ heading, additionalInfo, image }) => {
   const [isActive, setIsActive] = useState(false)
-  const toggleContent = () => setIsActive(!isActive)
+
+  const toggleContent = useCallback(() => {
+    if (window.innerWidth > 1024) return
+    setIsActive(!isActive)
+  }, [isActive])
 
   return (
     <article className={`tile ${isActive ? "tile--active" : ""}`}>

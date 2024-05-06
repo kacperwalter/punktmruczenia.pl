@@ -1,6 +1,8 @@
 @import 'app/common/styles/mixins/media.scss';
 
 .tile {
+  position: relative;
+
   &:hover {
     .tile__cover {
       border: 1px solid var(--color-lososiowy);
@@ -14,6 +16,10 @@
         color: var(--color-lososiowy);
         transform: translateY(-30rem);
       }
+    }
+
+    .tile__content {
+      opacity: 1;
     }
   }
 
@@ -42,16 +48,18 @@
     grid-template-rows: 1fr auto;
     border: 1px solid transparent;
     transition: transform 0.3s ease-in, border 0.3s ease-in;
+    will-change: transform;
 
     &::after {
       position: absolute;
       content: '';
       height: 100%;
       width: 100%;
-      background-color: white;
+      background-color: var(--color-bezowy);
       opacity: 0;
       transition: opacity 0.3s ease-in;
       border-radius: var(--border-radius);
+      will-change: opacity;
     }
 
     @include media($min: tablet-h) {
@@ -98,10 +106,23 @@
     padding-top: 8rem;
     margin-top: -4.5rem;
     font-size: var(--font-size-body-regular);
-    border: 1px solid var(--color-lososiowy);
-    border-radius: var(--border-radius);
     color: var(--color-brazowy);
 
+    @include media(tablet-h) {
+      border: 1px solid var(--color-lososiowy);
+      border-radius: var(--border-radius);
+    }
+
+    @include media($min: tablet-h) {
+      position: absolute;
+      top: 10rem;
+      display: block;
+      opacity: 0;
+      transition: opacity 0.3s ease-in;
+      will-change: opacity;
+    }
+
+    
     ul {
       list-style: initial;
       font-weight: 600;
