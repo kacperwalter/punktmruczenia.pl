@@ -5,5 +5,9 @@
   .wrapper {
     @include vertical-align();
     gap: 2rem;
+
+    @include media($min: tablet-h) {
+      flex-direction: row;
+    }
   }
 }
