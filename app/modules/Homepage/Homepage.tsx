@@ -6,6 +6,7 @@ import BenefitsGrid from '@/app/common/components/sections/benefits-grid/benefit
 import RichNumberedList from '@/app/common/components/sections/rich-numbered-list/rich-numbered-list'
 import Tiles from '@/app/common/components/sections/tiles/tiles'
 import Contact from '@/app/common/components/sections/contact/contact'
+import Footer from '@/app/common/components/sections/footer/footer'
 
 const Homepage = ({ content }: HomepageProps) => {
   const homepageData = content[0] || {}
@@ -51,6 +52,7 @@ const Homepage = ({ content }: HomepageProps) => {
       <RichNumberedList />
       <Tiles />
       <Contact />
+      <Footer />
     </main>
   )
 }

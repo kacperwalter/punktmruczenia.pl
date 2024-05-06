@@ -1,0 +1,13 @@
+.footer {
+  min-height: 12rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: var(--color-lososiowy);
+
+  img {
+    max-width: 20rem;
+  }
+}
