@@ -12,14 +12,41 @@
   .wrapper {
     @include vertical-align();
     gap: 2rem;
+
+    @include media($min: tablet-h) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 10rem;
+      row-gap: 4rem;
+    }
   }
 
   .heading {
     text-align: center;
+
+    @include media($min: tablet-h) {
+      grid-column: 2;
+      text-align: left;
+    }
+  }
+
+  &__big-logo {
+    max-width: 50rem;
+    align-self: center;
+
+    @include media(mobile) {
+      max-width: 100%;
+    }
+
+    @include media($min: tablet-h) {
+      display: none;
+    }
   }
 
   &__small-logo {
     display: none;
+    max-width: 23rem;
+    justify-self: end;
 
     @include media($min: tablet-h) {
       display: block;
@@ -37,12 +64,21 @@
     @include media($min: tablet-h) {
       display: block;
     }
+
+    p {
+      color: var(--color-brazowy);
+      font-weight: 600;
+    }
   }
 
   &__info {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    @include media($min: tablet-h) {
+      align-items: start;
+    }
   }
 
   &__info-element {
@@ -65,6 +101,12 @@
     @include vertical-align();
     gap: 1rem;
     align-items: center;
+
+    @include media($min: tablet-h) {
+      align-items: start;
+      flex-direction: row;
+      align-items: center;
+    }
 
     p {
       font-size: var(--font-size-body-enlarged);
