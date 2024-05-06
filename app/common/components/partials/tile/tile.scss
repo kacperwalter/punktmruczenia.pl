@@ -1,6 +1,18 @@
 @import 'app/common/styles/mixins/media.scss';
 
 .tile {
+  &:hover {
+    cursor: pointer;
+
+    .tile__cover {
+      border: 1px solid var(--color-lososiowy);
+
+      .heading {
+        transform: translateY(-30rem);
+      }
+    }
+  }
+
   @include media($min: tablet-h) {
     width: 100%;
     min-height: 45rem;
@@ -24,6 +36,8 @@
     display: grid;
     grid-template-columns: 1fr 10%;
     grid-template-rows: 1fr auto;
+    border: 1px solid transparent; // Initial border state
+    transition: transform 0.3s ease-in, border 0.3s ease-in; // Transition both transform and border
 
     @include media($min: tablet-h) {
       min-height: 45rem;
@@ -32,6 +46,8 @@
     .heading {
       grid-row: 2;
       align-self: end;
+      transition: transform .3s ease-in;
+      will-change: transform;
 
       @include media($min: tablet-h) {
         grid-column: span 2;
