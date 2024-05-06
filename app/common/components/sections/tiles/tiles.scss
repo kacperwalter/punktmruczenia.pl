@@ -2,6 +2,12 @@
 @import 'app/common/styles/mixins/vertical-align.scss';
 
 .tiles {
+  padding-bottom: 5rem;
+
+  @include media(mobile) {
+    padding-bottom: 5rem;
+  }
+
   .wrapper {
     @include vertical-align();
     gap: 2rem;
