@@ -19,7 +19,7 @@ const BenefitsGrid = () => {
     <section className="benefits-grid">
       <Wrapper>
         <Heading
-          type="h1"
+          type="h2"
           text="Z moim wsparciem:"
         />
 

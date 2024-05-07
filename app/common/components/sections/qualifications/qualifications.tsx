@@ -19,7 +19,7 @@ const Qualifications = () => {
 
       <div className="qualifications__content">
         <Heading
-          type="h1"
+          type="h2"
           text="Kwalifikacje"
         />
 

@@ -20,7 +20,7 @@ const AboutMe = ({ content }: AboutMeProps) => {
 
           <div className="header">
             <Heading
-              type="h1"
+              type="h2"
               text={content.aboutMeHeading}
             />
 
