@@ -65,11 +65,11 @@ const Navigation = () => {
 
           <div className="mobile-navigation__dropdown-menu">
             <ul>
-              <li><a href="#id">O mnie</a></li>
-              <li><a href="#id">Kwalifikacje</a></li>
-              <li><a href="#id">Problemy behawioralne</a></li>
-              <li><a href="#id">Konsultacja behawioralna</a></li>
-              <li><a href="#id">Kontakt</a></li>
+              <li><a onClick={toggleDropdownVisibility} href="#about-me">O mnie</a></li>
+              <li><a onClick={toggleDropdownVisibility} href="#qualifications">Kwalifikacje</a></li>
+              <li><a onClick={toggleDropdownVisibility} href="#behavioral-problems">Problemy behawioralne</a></li>
+              <li><a onClick={toggleDropdownVisibility} href="#consultation">Konsultacja behawioralna</a></li>
+              <li><a onClick={toggleDropdownVisibility} href="#contact">Kontakt</a></li>
             </ul>
 
             <div className='mobile-navigation__dropdown-contact'>
@@ -114,12 +114,12 @@ const Navigation = () => {
       <nav className="desktop-navigation">
         <Wrapper>
           <ul>
-            <li><a href="#id">O mnie</a></li>
-            <li><a href="#id">Kwalifikacje</a></li>
-            <li><a href="#id">Problemy behawioralne</a></li>
+            <li><a href="#about-me">O mnie</a></li>
+            <li><a href="#qualifications">Kwalifikacje</a></li>
+            <li><a href="#behavioral-problems">Problemy behawioralne</a></li>
           </ul>
 
-          <Link href="#" className='desktop-navigation__home'>
+          <Link href="#hero" className='desktop-navigation__home'>
             <Image
                src={regularLogo}
                width={1000}
@@ -129,8 +129,8 @@ const Navigation = () => {
           </Link>
 
           <ul>
-            <li><a href="#id">Konsultacja behawioralna</a></li>
-            <li><a href="#id">Kontakt</a></li>
+            <li><a href="#consultation">Konsultacja behawioralna</a></li>
+            <li><a href="#contact">Kontakt</a></li>
           </ul>
 
           <div className="desktop-navigation__contact">

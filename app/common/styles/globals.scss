@@ -1,3 +1,5 @@
+@import 'app/common/styles/mixins/media.scss';
+
 *,
 *:before,
 *:after {
@@ -8,6 +10,10 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
+
+  @include media($min: tablet-h) {
+  scroll-padding-top: 20rem;
+  }
 }
 
 body {

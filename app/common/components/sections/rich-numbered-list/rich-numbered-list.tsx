@@ -13,7 +13,7 @@ const RichNumberedList = () => {
   ]
 
   return (
-    <section className="rich-numbered-list">
+    <section className="rich-numbered-list" id="consultation">
       <Wrapper>
         <Heading
           type="h2" // TODO CMS

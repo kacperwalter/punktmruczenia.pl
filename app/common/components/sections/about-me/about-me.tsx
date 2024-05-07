@@ -7,7 +7,7 @@ import type { AboutMeProps } from "./about-me.types"
 // TODO CMS - content from CMS
 const AboutMe = ({ content }: AboutMeProps) => {
   return (
-    <section className="about-me">
+    <section className="about-me" id="about-me">
       <Wrapper>
         <div className="about-me__top">
           <Image

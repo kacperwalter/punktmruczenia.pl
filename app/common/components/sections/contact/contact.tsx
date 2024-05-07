@@ -32,7 +32,7 @@ const Contact = () => {
   ]
   
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
       <Wrapper>
         <Heading
           type="h2"

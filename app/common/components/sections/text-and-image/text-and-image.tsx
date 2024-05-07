@@ -6,7 +6,7 @@ import "./text-and-image.scss"
 
 const TextAndImage = () => {
   return (
-    <section className="text-and-image">
+    <section className="text-and-image" id="behavioral-problems">
       <Wrapper>
         <div className="text-and-image__top">
             <Image
