@@ -21,20 +21,23 @@
   &__hamburger {
     width: 4rem;
     height: 4rem;
+    cursor: pointer;
   }
 
   &__cross {
     width: 2rem;
     height: 2rem;
     margin: 1rem;
+    cursor: pointer;
   }
 
   &__dropdown {
     overflow: hidden;
     position: absolute;
     top: -101vh;
+    left: 0;
     background-color: var(--color-brazowy);
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     z-index: 110;
     transition: top 0.3s ease-in;
