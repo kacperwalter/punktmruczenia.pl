@@ -1,7 +1,9 @@
 .mobile-navigation {
+  position: relative;
   min-height: 5rem;
   
   .wrapper {
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding-top: 1.5rem;
@@ -15,5 +17,23 @@
   &__hamburger {
     width: 4rem;
     height: 4rem;
+  }
+
+  &__cross {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 0;
+    background-color: var(--color-brazowy);
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+
+    &--open {
+      
+    }
   }
 }
