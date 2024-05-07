@@ -27,7 +27,7 @@ const Tiles = () => {
           <li>Telefoniczna lub mailowa kontrola po konsultacji</li>
         </ul>
       `,
-      image: '/images/kot-1.jpeg',
+      image: '/images/kot-3.jpeg',
     }
   ]
 
