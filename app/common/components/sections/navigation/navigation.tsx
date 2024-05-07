@@ -81,7 +81,9 @@ const Navigation = () => {
                 alt="White phone icon"
               />
 
-              <p>+48 609 198 974</p>
+              <a href="tel:+48609198974" className="mobile-navigation__dropdown-contact-link">
+                <p>+48 609 198 974</p>
+              </a>
             </div>
           </div>
 
@@ -141,7 +143,9 @@ const Navigation = () => {
               alt='Phone icon'
             />
 
-            <p>+48 609 198 974</p>
+            <a href="tel:+48609198974" className="desktop-navigation__contact-link">
+              <p>+48 609 198 974</p>
+            </a>
           </div>
         </Wrapper>
       </nav>
