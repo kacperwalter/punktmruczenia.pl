@@ -14,7 +14,7 @@ import whiteFacebookIcon from "@/public/icons/social/facebook-white.svg"
 import './navigation.scss'
 
 const Navigation = () => {
-  const [isDropdownVisible, setIsDropdownVisible] = useState(true)
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false)
 
   const toggleDropdownVisibility = () => {
     setIsDropdownVisible(!isDropdownVisible)
