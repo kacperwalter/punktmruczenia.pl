@@ -73,6 +73,7 @@ const Navigation = () => {
           <div className='mobile-navigation__dropdown-contact'>
             <Image
               src={whitePhoneIcon}
+              className="white-phone"
               width={500}
               height={500}
               alt="White phone icon"
@@ -85,23 +86,25 @@ const Navigation = () => {
         <div className='mobile-navigation__dropdown-socials'>
           <p>Znajdziesz mnie:</p>
 
-          <Link href="https://www.facebook.com/profile.php?id=61558144896025">
-            <Image
-              src={whiteFacebookIcon}
-              width={500}
-              height={500}
-              alt="White facebook icon"
-            />
-          </Link>
+          <div className="mobile-navigation__dropdown-socials-links">
+            <Link href="https://www.facebook.com/profile.php?id=61558144896025">
+              <Image
+                src={whiteFacebookIcon}
+                width={500}
+                height={500}
+                alt="White facebook icon"
+              />
+            </Link>
 
-          <Link href="https://www.instagram.com/punktmruczenia/">
-            <Image
-              src={whiteInstagramIcon}
-              width={500}
-              height={500}
-              alt="White instagram icon"
-            />
-          </Link>
+            <Link href="https://www.instagram.com/punktmruczenia/">
+              <Image
+                src={whiteInstagramIcon}
+                width={500}
+                height={500}
+                alt="White instagram icon"
+              />
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

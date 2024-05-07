@@ -1,6 +1,9 @@
 .mobile-navigation {
-  position: relative;
+  position: sticky;
+  z-index: 200;
+  top: 0;
   min-height: 5rem;
+  background-color: var(--color-bezowy);
   
   .wrapper {
     position: relative;
@@ -8,6 +11,7 @@
     justify-content: space-between;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    background-color: var(--color-bezowy);
   }
 
   &__logo {
@@ -34,10 +38,77 @@
     height: 100vh;
     z-index: 110;
     transition: top 0.3s ease-in;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 4rem;
 
     .wrapper {
       padding-top: 1.5rem;
       padding-bottom: 1.5rem;
+      background-color: transparent;
+    }
+
+    &-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        li {
+          color: var(--color-white);
+          text-align: center;
+          font-size: var(--font-size-body-enlarged);
+          font-weight: 600;
+          
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    &-contact {
+      display: flex;
+      gap: 1rem;
+      align-self: center;
+      align-items: center;
+
+      .white-phone {
+        height: 3rem;
+        width: 3rem;
+      }
+
+      p {
+        font-weight: bold;
+        color: var(--color-white);
+      }
+    }
+
+    &-socials {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+      p {
+        font-weight: 600;
+        color: var(--color-white);
+      }
+
+      &-links {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      img {
+        width: 4rem;
+        height: 4rem;
+      }
     }
 
     &--open {
