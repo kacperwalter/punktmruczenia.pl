@@ -1,0 +1,19 @@
+.mobile-navigation {
+  min-height: 5rem;
+  
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &__logo {
+    max-width: 10rem;
+  }
+
+  &__hamburger {
+    width: 4rem;
+    height: 4rem;
+  }
+}

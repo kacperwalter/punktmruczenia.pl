@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Navigation from "./common/components/sections/navigation/navigation"
 import Homepage from "@/app/modules/Homepage/Homepage"
 import { getHomepageData } from "@/sanity/sanity-utils"
 
@@ -19,6 +20,7 @@ const Home = async () => {
 
   return (
     <>
+      <Navigation />
       <Homepage content={homepageData} />
     </>
   )
