@@ -13,10 +13,12 @@ const Contact = () => {
     {
       icon: "/icons/contact/phone.svg",
       text: "+48 609 198 974",
+      href: "tel:+48609198974", // Phone number link
     },
     {
       icon: "/icons/contact/email.svg",
       text: "kontakt@punktmruczenia.pl",
+      href: "mailto:kontakt@punktmruczenia.pl", // Email link
     },
   ]
 
@@ -59,7 +61,7 @@ const Contact = () => {
           <div className="contact__hardwritten-logo">
             <Heading
               type="h3"
-              text="Punk Mruczenia"
+              text="Punkt Mruczenia"
             />
 
             <p>Natalia Szajowska-Tomczak</p>
@@ -74,8 +76,10 @@ const Contact = () => {
                   width={200}
                   height={200}
                 />
-
-                <p>{element.text}</p>
+                
+                <a href={element.href} className="contact__link">
+                  <p>{element.text}</p>
+                </a>
               </div>
             ))}
           </div>
