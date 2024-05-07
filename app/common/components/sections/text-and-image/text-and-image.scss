@@ -6,18 +6,51 @@
 
   &__top {
     @include vertical-align();
+
+    @include media($min: tablet-h) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      gap: 16rem;
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+
+    @include media($min: tablet-h) {
+      width: 55rem;
+    }
+
+    @include media($min: laptop) {
+      margin-right: -15rem;
+    }
   }
 
   .header {
+    gap: 3rem;
+    max-width: 60rem;
+
     .heading {
       text-align: center;
       color: var(--color-lososiowy);
+
+      @include media($min: tablet-h) {
+        text-align: left;
+      }
     }
   }
 
   p {
     text-align: center;
     font-weight: 600;
+
+    @include media($min: tablet-h) {
+      text-align: left;
+    }
+
+    &:nth-child(3) {
+      text-align: left;
+    }
   }
 
   p,
