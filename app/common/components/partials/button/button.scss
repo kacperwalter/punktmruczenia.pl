@@ -16,7 +16,7 @@
     border: 1px solid transparent;
 
     &:visited {
-      color: var(--color-white);
+      color: var(--color-white) !important;
     }
 
     .button__arrow {
