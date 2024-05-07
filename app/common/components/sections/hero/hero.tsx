@@ -32,7 +32,7 @@ const Hero = ({ content }: HeroProps) => {
             text={content.homepageHeroButton}
             as="link"
             // TODO add proper href when will be ready
-            href="#"
+            href="#about-me"
           />
         </article>
 
