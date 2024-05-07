@@ -1,9 +1,16 @@
+@import 'app/common/styles/mixins/media.scss';
+
 .mobile-navigation {
   position: sticky;
   z-index: 200;
   top: 0;
   min-height: 5rem;
   background-color: var(--color-bezowy);
+  width: 100%;
+
+  @include media($min: tablet-h) {
+    display: none;
+  }
   
   .wrapper {
     position: relative;
