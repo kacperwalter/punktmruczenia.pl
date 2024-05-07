@@ -22,18 +22,26 @@
   &__cross {
     width: 2rem;
     height: 2rem;
+    margin: 1rem;
   }
 
   &__dropdown {
+    overflow: hidden;
     position: absolute;
-    top: 0;
+    top: -100vh;
     background-color: var(--color-brazowy);
     width: 100vw;
     height: 100vh;
-    z-index: 10000;
+    z-index: 110;
+    transition: top 0.3s ease-in;
+
+    .wrapper {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
 
     &--open {
-      
+      top: 0;
     }
   }
 }
