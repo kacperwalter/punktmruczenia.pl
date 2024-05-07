@@ -4,17 +4,19 @@ import './header.scss'
 import Heading from '@/app/common/components/partials/heading/heading'
 import RichText from '@/app/common/components/partials/rich-text/rich-text'
 
-const Header = ({
-  heading,
-  headingType,
-  caption,
-  color = 'dark',
-  id,
-}: HeaderProps) => {
+const Header = ({ heading, headingType, caption, color = 'dark', id }: HeaderProps) => {
   return (
     <header id={id} className="header">
-      <Heading type={headingType} text={heading} color={color} />
-      <RichText color={color} text={caption} />
+      <Heading
+        type={headingType}
+        text={heading}
+        // @ts-ignore - TODO when CMS typing
+        color={color}
+      />
+      <RichText
+        color={color}
+        text={caption}
+      />
     </header>
   )
 }

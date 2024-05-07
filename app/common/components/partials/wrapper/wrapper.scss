@@ -1,5 +1,5 @@
 :root {
-  --wrapper-max-width: 130rem;
+  --wrapper-max-width: 120rem;
   --wrapper-max-width-narrow: 106rem;
   --wrapper-max-width-wide: 148rem;
   --wrapper-max-width-tablet-h: 92rem;
@@ -38,7 +38,7 @@
   }
 
   &--wide {
-    --wrapper-max-width: 180rem;
+    --wrapper-max-width: 150rem;
 
     @media(max-width: 767px) {
       max-width: calc(var(--wrapper-max-width-wide) + 2 * var(--wrapper-padding));

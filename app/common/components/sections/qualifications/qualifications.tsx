@@ -1,48 +1,41 @@
-import Image from 'next/image'
-import Heading from '../../partials/heading/heading'
-import './qualifications.scss'
+import Image from "next/image"
+import Heading from "../../partials/heading/heading"
+import "./qualifications.scss"
 
 import image from '@/public/images/qualifications.png'
 
 const Qualifications = () => {
   return (
-    <section className="qualifications" id="kwalifikacje">
+    <section className="qualifications" id="qualifications" >
       <div className="qualifications__img-container">
         <Image
           src={image}
           alt="Top image"
-          width={200}
-          height={200}
+          width={1000} 
+          height={1000}
           className="qualifications__image"
         />
       </div>
 
       <div className="qualifications__content">
-        <h2 className="font-[400] text-xl text-[48px] md:text-[56px]">
-          Kwalifikacje
-        </h2>
+        <Heading
+          type="h2"
+          text="Kwalifikacje"
+        />
 
         <div className="qualifications__text">
           <h3>2024</h3>
           <ul>
             <li>Zaawansowany kurs dla behawiorystów kotów / PET IDEA</li>
-            <li>
-              Terapia kotów z problemami behawioralnymi – poziom zaawansowany /
-              Uniqskills
-            </li>
+            <li>Terapia kotów z problemami behawioralnymi – poziom zaawansowany / Uniqskills</li>
             <li>Opieka nad kocią rodziną / Uniqskills</li>
           </ul>
 
           <h3>2021</h3>
           <ul>
-            <li>
-              Program doskonalenia umiejętności pracy ze zwierzętami z
-              zaburzeniami behawioralnymi / Animal Expert
-            </li>
+            <li>Program doskonalenia umiejętności pracy ze zwierzętami z zaburzeniami behawioralnymi / Animal Expert</li>
             <li>Behawioryzm kotów / lek. wet. Joanna Iracka / SWPS Poznań</li>
-            <li>
-               Pierwsza pomoc przedweterynaryjna / Centrum Szkoleń Animalia
-            </li>
+            <li> Pierwsza pomoc przedweterynaryjna / Centrum Szkoleń Animalia</li>
           </ul>
 
           <h3>2020</h3>

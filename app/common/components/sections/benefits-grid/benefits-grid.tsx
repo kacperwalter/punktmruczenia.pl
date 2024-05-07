@@ -1,93 +1,37 @@
-'use client'
-import Benefit from '../../partials/benefit/benefit'
-import Heading from '../../partials/heading/heading'
-import Wrapper from '../../partials/wrapper/wrapper'
-import icons from '@/public/icons'
-import './benefits-grid.scss'
-import { useEffect, useRef, useState } from 'react'
+import Benefit from "../../partials/benefit/benefit"
+import Heading from "../../partials/heading/heading"
+import Wrapper from "../../partials/wrapper/wrapper"
+import icons from "@/public/icons"
+import "./benefits-grid.scss"
 
 const BenefitsGrid = () => {
-  const [activeIndex, setActiveIndex] = useState(0)
-  const benefitRefs = useRef([])
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // @ts-ignore
-            const benefitIndex = benefitRefs.current.indexOf(entry.target)
-            setActiveIndex(benefitIndex)
-          }
-        })
-      },
-      { threshold: 0.7 }
-    )
-
-    benefitRefs.current.forEach((benefitRef) => observer.observe(benefitRef))
-
-    return () => {
-      benefitRefs.current.forEach((benefitRef) =>
-        observer.unobserve(benefitRef)
-      )
-    }
-  }, [])
-
+  // TODO that should come from CMS
   const benefits = [
     { icon: 'icon-1', text: 'nauczysz się rozumieć koci język' },
-    {
-      icon: 'icon-2',
-      text: 'dowiesz się, jak zaspokoić kluczowe potrzeby Twojego kota',
-    },
+    { icon: 'icon-2', text: 'dowiesz się, jak zaspokoić kluczowe potrzeby Twojego kota' },
     { icon: 'icon-3', text: 'zadbasz o jego komfort i kondycję' },
-    {
-      icon: 'icon-4',
-      text: 'wyeliminujesz lub zredukujesz niepożądane zachowania',
-    },
+    { icon: 'icon-4', text: 'wyeliminujesz lub zredukujesz niepożądane zachowania' },
     { icon: 'icon-5', text: 'rozwiążesz problem behawioralny' },
     { icon: 'icon-6', text: 'odnajdziesz punkt mruczenia Twojego kota' },
   ]
 
   return (
-    <section className="benefits-grid -mt-48 sm:mt-12 ">
+    <section className="benefits-grid">
       <Wrapper>
-        <h2 className="font-[400] text-xl text-[48px] md:text-[48px]">
-          Z moim wsparciem:
-        </h2>
+        <Heading
+          type="h2"
+          text="Z moim wsparciem:"
+        />
 
-        <div className="benefits-grid__list -mr-12 lg:mx-0">
+        <div className="benefits-grid__list">
           {benefits.map((benefit, index) => (
-            <div
-              // @ts-ignore
-              ref={(el) => (benefitRefs.current[index] = el)}
-              className={`benefit px-2 ${
-                index === activeIndex ? 'active' : ''
-              }`}
-            >
-              <Benefit
-                key={benefit.text}
-                // @ts-ignore
-                icon={icons[benefit.icon]}
-                text={benefit.text}
-              />
-            </div>
-          ))}
-        </div>
-        <div className="dot-container">
-          {benefits.map((_, i) => (
-            <img
-              key={i}
-              src={
-                i === activeIndex
-                  ? '/icons/Ellipse-8.svg'
-                  : '/icons/Ellipse-9.svg'
-              }
-              alt={i === activeIndex ? 'Active icon' : 'Inactive icon'}
-            />
+            // @ts-ignore - well there is no much time for TS in low budget project
+            <Benefit key={index} icon={icons[benefit.icon]} text={benefit.text} />
           ))}
         </div>
       </Wrapper>
     </section>
   )
 }
+
 export default BenefitsGrid

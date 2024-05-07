@@ -1,0 +1,76 @@
+@import 'app/common/styles/mixins/media.scss';
+@import 'app/common/styles/mixins/vertical-align.scss';
+
+.text-and-image {
+  margin-bottom: 8rem;
+
+  &__top {
+    @include vertical-align();
+    align-items: center;
+
+    @include media($min: tablet-h) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      gap: 16rem;
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+
+    @include media($min: tablet-h) {
+      width: 55rem;
+    }
+
+    @include media($min: laptop) {
+      margin-right: -15rem;
+    }
+  }
+
+  .header {
+    gap: 3rem;
+
+    @include media($min: tablet-h) {
+      max-width: 60rem;
+    }
+
+    .heading {
+      text-align: center;
+      color: var(--color-lososiowy);
+
+      @include media($min: tablet-h) {
+        text-align: left;
+      }
+    }
+  }
+
+  p {
+    text-align: center;
+    font-weight: 600;
+
+    @include media($min: tablet-h) {
+      text-align: left;
+    }
+
+    &:nth-child(3) {
+      text-align: left;
+    }
+  }
+
+  p,
+  ul {
+    color: var(--color-brazowy);
+  }
+
+  ul {
+    font-weight: 600;
+    font-size: var(--font-size-body-regular);
+    list-style-type: disc;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  &__image {
+    border-radius: var(--border-radius);
+  }
+}

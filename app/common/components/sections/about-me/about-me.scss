@@ -5,14 +5,6 @@
   color: var(--color-brazowy);
   text-align: center;
   margin-bottom: 8rem;
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-
-  h2 {
-    font-family: var(--font-fresh-mango);
-    color: var(--color-lososiowy);
-  }
 
   @include media($min: tablet-h) {
     text-align: left
@@ -27,46 +19,48 @@
 
     @include media($min: tablet-h) {
       flex-direction: row;
+      gap: 18rem;
     }
 
-    @include media($min: laptop) {
-      gap: 10rem;
+    .about-me__image {
+      @include media(mobile) {
+        max-height: 33rem;
+      }
     }
-  }
-
-  &__line {
-    z-index: -1;
-    position: relative;
-    top: 14rem;
-    left: 17rem;
   }
 
   &__image {
     border-radius: var(--border-radius);
     width: 100%;
-    max-height: 28rem;
     object-fit: cover;
 
     @include media(tablet) {
       max-height: 45rem;
     }
 
+    @include media(mobile) {
+      max-height: 33rem;
+    }
+
     @include media($min: tablet-h) {
-      width: 40rem;
+      width: 44rem;
       height: 48rem;
       max-height: unset;
     }
   }
 
   .header {
-    gap: 0rem;
     @include vertical-align();
+    gap: 1.5rem;
     
     @include media($min: tablet-h) {
       max-width: 44rem;    
     }
 
-    
+    .heading {
+      font-family: var(--font-fresh-mango);
+      color: var(--color-lososiowy);
+    }
   }
 
   &__bottom {
@@ -74,21 +68,30 @@
 
     @include media($min: tablet-h) {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 45rem 1fr;
+      gap: 10rem;
     }
 
     img {
       &:first-child {
+        @include media(mobile) {
+          max-height: 25rem;
+        }
+
         @include media($min: tablet-h) {
-          max-height: 38rem;
-          max-width: 47rem;
+          max-height: 23rem;
+          max-width: 28rem;
         }
       }
 
       &:nth-child(3) {
         @include media($min: tablet-h) {
-          margin-top: 4rem;
-          width: 68rem;
+          max-width: unset;
+          width: 30rem;
+        }
+
+        @include media($min: laptop) {
+          width: 43rem;
         }
       }
     }

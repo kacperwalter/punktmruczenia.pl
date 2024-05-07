@@ -1,129 +1,131 @@
 @import 'app/common/styles/mixins/media.scss';
 @import 'app/common/styles/mixins/vertical-align.scss';
 
-.contact-me {
-  display: flex;
-  color: var(--color-brazowy);
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 8rem;
-  margin-top: 18rem;
+.contact {
+  padding-bottom: 5rem;
+  color: var(--color-lososiowy);
 
-  h2 {
-    font-family: var(--font-fresh-mango);
-    color: var(--color-lososiowy);
-  }
-
-
-  @include media($min: tablet-h) {
-    text-align: left
+  @include media(mobile) {
+    padding-bottom: 5rem;
   }
 
   .wrapper {
     @include vertical-align();
-  }
-
-  &__top {
-    @include vertical-align();
-
-    @include media($min: tablet-h) {
-      flex-direction: row;
-      gap: 10rem;
-    }
-  }
-
-  &__line {
-    z-index: -1;
-    position: relative;
-    top: 14rem;
-    left: 17rem;
-  }
-
-  &__image {
-    border-radius: var(--border-radius);
-    width: 100%;
-    max-height: 4rem;
-    object-fit: contain;
-
-    @include media(tablet) {
-      max-height: 15rem;
-    }
-
-    @include media($min: tablet-h) {
-      width: 30rem;
-      height: 28rem;
-      max-height: unset;
-    }
-  }
-
-  .header {
-    gap: 0rem;
-    @include vertical-align();
-    margin-top: -8.5rem; 
-
-    @include media($min: tablet-h) {
-      max-width: 44rem;    
-    }
-
-    .heading {
-      font-family: var(--font-fresh-mango);
-      color: var(--color-lososiowy);
-    }
-  }
-
-  &__bottom {
-    @include vertical-align();
+    gap: 2rem;
 
     @include media($min: tablet-h) {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 4rem;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 10rem;
+      row-gap: 4rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  .heading {
+    text-align: center;
+
+    @include media($min: tablet-h) {
+      grid-column: 2;
+      text-align: left;
+    }
+  }
+
+  &__big-logo {
+    max-width: 50rem;
+    align-self: center;
+
+    @include media(mobile) {
+      max-width: 100%;
     }
 
-  
+    @include media($min: tablet-h) {
+      display: none;
+    }
+  }
+
+  &__small-logo {
+    display: none;
+    max-width: 23rem;
+    justify-self: end;
+
+    @include media($min: tablet-h) {
+      display: block;
+    }
+  }
+
+  &__content {
+    @include vertical-align();
+    gap: 2rem;
+  }
+
+  &__hardwritten-logo {
+    display: none;
+
+    @include media($min: tablet-h) {
+      display: block;
+    }
+
     p {
-      @include media($min: tablet-h) {
-        align-self: center;
-      }
+      color: var(--color-brazowy);
+      font-weight: 600;
     }
   }
 
-  &__bottom p,
-  p {
-    font-weight: 600;
-    color: var(--color-lososiowy);
-    font-size: 2.6rem;   
-      
-  }
-  p {
+  &__info {
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include media($min: tablet-h) {
+      align-items: start;
+    }
+  }
+
+  &__info-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+
+    img {
+      height: 3.2rem;
+      width: 3.2rem;
+    }
+
+    p {
+      font-weight: 600;
+    }
+  }
+
+  &__socials {
+    @include vertical-align();
+    gap: 1rem;
     align-items: center;
 
-    a {
-      margin-left: 1rem; // dodano
-    }
-  }
-  span {
-    display: block; 
-    margin-top: -5rem; 
-    color: var(--color-brazowy);
-    font-size: 2rem; 
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-
-    li {
-      display: flex;
+    @include media($min: tablet-h) {
+      align-items: start;
+      flex-direction: row;
       align-items: center;
-      font-size: 1.6rem;
+    }
+
+    p {
+      font-size: var(--font-size-body-enlarged);
+      color: var(--color-brazowy);
       font-weight: 600;
-      color: var(--color-lososiowy);
-      img {
-        margin-right: 1rem; 
-      }
     }
   }
 
+  &__social-links {
+    display: flex;
+    gap: 1rem;
+
+    img {
+      height: 4rem;
+      width: 4rem;
+    }
+  }
 }

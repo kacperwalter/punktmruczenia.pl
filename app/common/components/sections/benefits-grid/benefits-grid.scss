@@ -2,66 +2,30 @@
 @import 'app/common/styles/mixins/vertical-align.scss';
 
 .benefits-grid {
+  margin-bottom: 5rem;
+
   .wrapper {
     @include vertical-align();
- 
+    align-items: center;
   }
 
-  h2 {
-    text-align: center !important;
-    font-family: var(--font-fresh-mango);
+  .heading {
+    // TODO heading styles to unify (find other instances)
+    text-align: center;
     color: var(--color-lososiowy);
   }
 
-  .benefit {
-    position: relative !important; 
-
-    img {
-      margin: 0 !important; 
-    }
-
-    @include media($max: mobile) {
-      width: 80% !important; 
-      margin: 0 -14px !important; 
-    }
-  }
-
-  .dot-container {
-    z-index: 999;
-    display: flex !important; 
-    margin: 0 auto !important; 
-    gap: 2rem !important; 
-    align-items: center !important; 
-    height: 2rem !important; 
-
-    @include media($min: tablet-h) {
-      visibility: hidden !important; 
-      height: 0 !important; 
-    }
-  }
-
   &__list {
-    z-index: 999;
-    padding-left: -10;
-    display: flex !important;
-    overflow-x: auto !important; 
-    scrollbar-width: none !important;
-    -ms-overflow-style: none !important; 
-    &::-webkit-scrollbar {
-      display: none !important; 
-    }
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    row-gap: 5rem;
+    width: 100%;
 
-    & > * {
-      flex: 0 0 auto !important;
-      
-    }
-
-    @include media($min: tablet-h) {
-      overflow: visible !important; 
-      display: grid !important;
-      grid-template-columns: repeat(3, 1fr) !important;
-      column-gap: 14rem !important;
-      row-gap: 4rem !important;
+    @include media($min: tablet) {
+      flex-flow: row wrap;
+      justify-content: center;
+      column-gap: 2rem;
     }
   }
 }

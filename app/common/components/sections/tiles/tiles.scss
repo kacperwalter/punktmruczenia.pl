@@ -1,0 +1,19 @@
+@import 'app/common/styles/mixins/media.scss';
+@import 'app/common/styles/mixins/vertical-align.scss';
+
+.tiles {
+  padding-bottom: 5rem;
+
+  @include media(mobile) {
+    padding-bottom: 5rem;
+  }
+
+  .wrapper {
+    @include vertical-align();
+    gap: 2rem;
+
+    @include media($min: tablet-h) {
+      flex-direction: row;
+    }
+  }
+}
