@@ -34,6 +34,10 @@
     width: 100%;
     object-fit: cover;
 
+    &--centered {
+      object-position: bottom;
+    }
+
     @include media(tablet) {
       max-height: 45rem;
     }
