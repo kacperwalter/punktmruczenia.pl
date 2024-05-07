@@ -1,0 +1,39 @@
+@import 'app/common/styles/mixins/media.scss';
+@import 'app/common/styles/mixins/vertical-align.scss';
+
+.text-and-image {
+  margin-bottom: 8rem;
+
+  &__top {
+    @include vertical-align();
+  }
+
+  .header {
+    .heading {
+      text-align: center;
+      color: var(--color-lososiowy);
+    }
+  }
+
+  p {
+    text-align: center;
+    font-weight: 600;
+  }
+
+  p,
+  ul {
+    color: var(--color-brazowy);
+  }
+
+  ul {
+    font-weight: 600;
+    font-size: var(--font-size-body-regular);
+    list-style-type: disc;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  &__image {
+    border-radius: var(--border-radius);
+  }
+}
