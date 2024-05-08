@@ -63,7 +63,7 @@
     @include vertical-align();
     padding-left: var(--wrapper-padding);
     padding-right: var(--wrapper-padding);
-    padding-bottom: 4rem;
+    padding-bottom: 5rem;
     background-color: var(--color-lososiowy);
 
     @include media(tablet) {
@@ -103,6 +103,11 @@
     li {
       font-size: var(--font-size-body-regular);
       font-weight: 600;
+
+      @include media($max: tablet) {
+        margin-left: 10%;
+        margin-right: 10%;
+      }
     }
   }
 }
