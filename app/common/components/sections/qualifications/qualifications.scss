@@ -42,12 +42,17 @@
     width: 100%;
     max-height: 28rem;
     object-fit: cover;
+    object-position: top;
 
-    @include media(tablet) {
+    @include media($max: tablet) {
+      max-height: 65rem;
+    }
+
+    @include media($max: mobile) {
       max-height: 45rem;
     }
 
-    @media (min-width: 1023px) {
+    @include media($min: 1023) {
       width: 80rem;
       // height: 60rem;
       max-height: unset;
