@@ -40,7 +40,7 @@ const AboutMe = ({ content }: AboutMeProps) => {
             alt="Top image"
             width={1000} 
             height={1000}
-            className="about-me__image about-me__image--centered about-me__image--first"
+            className="about-me__image about-me__image--centered"
           />
 
           <p>
