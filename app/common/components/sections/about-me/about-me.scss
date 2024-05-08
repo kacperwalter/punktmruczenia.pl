@@ -19,37 +19,45 @@
 
     @include media($min: tablet-h) {
       flex-direction: row;
-      gap: 18rem;
+      // gap: 18rem;
     }
 
     .about-me__image {
-      @include media(mobile) {
-        max-height: 33rem;
+      @include media($max: tablet) {
+        max-height: 45rem;
+      }
+
+      @include media($max: 550) {
+        max-height: 35rem;
+      }
+
+      @include media($max: 360) {
+        max-height: 30rem;
       }
     }
   }
 
   &__image {
     border-radius: var(--border-radius);
-    width: 100%;
+    // width: 100%;
     object-fit: cover;
 
     &--centered {
       object-position: bottom;
     }
 
-    @include media(tablet) {
-      max-height: 45rem;
-    }
+    // @include media(tablet) {
+    //   max-height: 45rem;
+    // }
 
-    @include media(mobile) {
-      max-height: 33rem;
-    }
+    // @include media(mobile) {
+    //   max-height: 33rem;
+    // }
 
     @include media($min: tablet-h) {
-      width: 44rem;
-      height: 48rem;
-      max-height: unset;
+      // width: 44rem;
+      // height: 48rem;
+      // max-height: unset;
     }
   }
 
@@ -76,29 +84,29 @@
       gap: 10rem;
     }
 
-    img {
-      &:first-child {
-        @include media(mobile) {
-          max-height: 25rem;
-        }
+    // img {
+    //   &:first-child {
+    //     @include media(mobile) {
+    //       max-height: 25rem;
+    //     }
 
-        @include media($min: tablet-h) {
-          max-height: 23rem;
-          max-width: 28rem;
-        }
-      }
+    //     @include media($min: tablet-h) {
+    //       max-height: 23rem;
+    //       max-width: 28rem;
+    //     }
+    //   }
 
-      &:nth-child(3) {
-        @include media($min: tablet-h) {
-          max-width: unset;
-          width: 30rem;
-        }
+    //   &:nth-child(3) {
+    //     @include media($min: tablet-h) {
+    //       max-width: unset;
+    //       width: 30rem;
+    //     }
 
-        @include media($min: laptop) {
-          width: 43rem;
-        }
-      }
-    }
+    //     @include media($min: laptop) {
+    //       width: 43rem;
+    //     }
+    //   }
+    // }
 
     p {
       @include media($min: tablet-h) {
