@@ -19,7 +19,16 @@
 
     @include media($min: tablet-h) {
       flex-direction: row;
-      // gap: 18rem;
+      align-items: center;
+      gap: 12rem;
+    }
+
+    @include media($min: laptop) {
+      gap: 18rem;
+    }
+
+    @include media($min: hd) {
+      gap: 18rem;
     }
 
     .about-me__image {
@@ -33,6 +42,11 @@
 
       @include media($max: 360) {
         max-height: 30rem;
+      }
+
+      @include media($min: tablet-h) {
+        max-height: 46rem;
+        max-width: 44rem;
       }
     }
   }
