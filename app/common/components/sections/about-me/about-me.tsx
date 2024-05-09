@@ -7,6 +7,8 @@ import type { AboutMeProps } from "./about-me.types"
 import kreskaTop1 from "@/public/images/kreski/about-me-top-1.svg"
 import kreskaTop2 from "@/public/images/kreski/about-me-top-2.svg"
 import kreskaMiddle from "@/public/images/kreski/about-me-middle.svg"
+import kreskaBottom1 from "@/public/images/kreski/about-me-bottom-1.svg"
+import kreskaBottom2 from "@/public/images/kreski/about-me-bottom-2.svg"
 
 // TODO CMS - content from CMS
 const AboutMe = ({ content }: AboutMeProps) => {
@@ -87,7 +89,23 @@ const AboutMe = ({ content }: AboutMeProps) => {
             className="about-me__image about-me__image--centered about-me__image--second"
           />
         </div>
-      </Wrapper>
+      </Wrapper> 
+
+      <Image
+        src={kreskaBottom1}
+        width={270}
+        height={110}
+        alt="Kreska"
+        className="about-me__kreska-bottom--mobile"
+      />
+
+      <Image
+        src={kreskaBottom2}
+        width={170}
+        height={250}
+        alt="Kreska"
+        className="about-me__kreska-bottom--desktop"
+      />
     </section>
   )
 }

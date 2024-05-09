@@ -4,7 +4,7 @@
 .about-me {
   color: var(--color-brazowy);
   text-align: center;
-  margin-bottom: 8rem;
+  margin-bottom: 2rem;
 
   @include media($min: tablet-h) {
     text-align: left
@@ -45,6 +45,35 @@
 
       @include media($min: tablet-h) {
         display: block;
+      }
+    }
+
+    &-bottom {
+      &--mobile {
+        margin-top: 2rem;
+
+        @include media($min: tablet-h) {
+          display: none
+        }
+      }
+
+      &--desktop {
+        display: none;
+        margin-left: 40%;
+        margin-top: -5rem;
+
+        @include media($min: tablet-h) {
+          display: block
+        }
+
+        @include media($min: laptop) {
+          margin-top: -8rem;
+
+        }
+
+        @include media($min: hd) {
+          margin-left: 45%;
+        }
       }
     }
   }
