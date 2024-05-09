@@ -31,10 +31,24 @@
         }
       }
     }
+
+    &-middle {
+      display: none;
+      margin-left: 18%;
+      margin-bottom: -2rem;
+
+      @include media($min: tablet-h) {
+        display: block;
+      }
+    }
   }
 
   .wrapper {
     @include vertical-align();
+
+    @include media($min: tablet-h) {
+      gap: 0rem;
+    }
   }
 
   &__top {

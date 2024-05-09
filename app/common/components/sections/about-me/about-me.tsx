@@ -6,6 +6,7 @@ import type { AboutMeProps } from "./about-me.types"
 
 import kreskaTop1 from "@/public/images/kreski/about-me-top-1.svg"
 import kreskaTop2 from "@/public/images/kreski/about-me-top-2.svg"
+import kreskaMiddle from "@/public/images/kreski/about-me-middle.svg"
 
 // TODO CMS - content from CMS
 const AboutMe = ({ content }: AboutMeProps) => {
@@ -52,6 +53,14 @@ const AboutMe = ({ content }: AboutMeProps) => {
             </p>
           </div>
         </div>
+
+        <Image
+          src={kreskaMiddle}
+          width={560}
+          height={240}
+          alt="Kreska"
+          className="about-me__kreska-middle"
+        />
 
         <div className="about-me__bottom">
           <Image 
