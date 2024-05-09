@@ -116,24 +116,24 @@ const Navigation = () => {
       <nav className="desktop-navigation">
         <Wrapper isWide>
           <ul className="desktop-navigation__left">
-            <li><a href="#about-me">O mnie</a></li>
-            <li><a href="#qualifications">Kwalifikacje</a></li>
-            <li><a href="#behavioral-problems">Problemy behawioralne</a></li>
+            <li><a href="#about-me" aria-label="Learn more about me">O mnie</a></li>
+            <li><a href="#qualifications" aria-label="View my qualifications">Kwalifikacje</a></li>
+            <li><a href="#behavioral-problems" aria-label="Learn about behavioral problems I address">Problemy behawioralne</a></li>
           </ul>
 
-          <Link href="#hero" className='desktop-navigation__home'>
+          <Link href="#hero" className='desktop-navigation__home' aria-label="Go to the homepage">
             <Image
-               src={regularLogo}
-               width={1000}
-               height={1000}
-               alt='Logo punkt mruczenia'
+              src={regularLogo}
+              width={1000}
+              height={1000}
+              alt='Logo punkt mruczenia'
               />
           </Link>
 
           <div className="desktop-navigation__right">
             <ul>
-              <li><a href="#consultation">Konsultacja behawioralna</a></li>
-              <li><a href="#contact">Kontakt</a></li>
+              <li><a href="#consultation" aria-label="Book a consultation">Konsultacja behawioralna</a></li>
+              <li><a href="#contact" aria-label="Contact me">Kontakt</a></li>
             </ul>
 
             <div className="desktop-navigation__contact">
@@ -144,7 +144,7 @@ const Navigation = () => {
                 alt='Phone icon'
               />
 
-              <a href="tel:+48609198974" className="desktop-navigation__contact-link">
+              <a href="tel:+48609198974" className="desktop-navigation__contact-link" aria-label="Call us at +48 609 198 974">
                 <p>+48 609 198 974</p>
               </a>
             </div>
