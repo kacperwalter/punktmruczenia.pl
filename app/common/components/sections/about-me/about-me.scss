@@ -22,8 +22,14 @@
         display: none;
         margin-left: 20%;
 
+        @include media($min: 1500) {
+          margin-top: -10rem;
+
+        }
+
         @include media($min: hd) {
           margin-left: 25%;
+          // margin-top: -10rem;
         }
 
         @include media($min: tablet-h) {
