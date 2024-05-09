@@ -13,11 +13,14 @@ const Heading = ({ type = 'h2', text }: HeadingProps) => {
     h6: 'h6',
   }
 
+  // Determine the className and tabIndex based on the heading type
   const className = `heading ${typeClassMap[type] || ''}`
+  const tabIndex = (type === 'h1' || type === 'h2') ? 0 : undefined
 
   return (
     <Tag
       className={className}
+      tabIndex={tabIndex}
       dangerouslySetInnerHTML={{ __html: text }} 
     />
   )
