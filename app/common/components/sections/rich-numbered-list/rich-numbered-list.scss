@@ -26,6 +26,15 @@
     }
   }
 
+  &__kreska {
+    display: none;
+
+    @include media($min: tablet-h) {
+      display: block;
+      margin-left: 25%;
+    }
+  }
+
   .heading {
     // TODO heading styles to unify (find other instances)
     text-align: center;

@@ -1,6 +1,9 @@
 import Wrapper from "../../partials/wrapper/wrapper"
 import Heading from "../../partials/heading/heading"
 import "./rich-numbered-list.scss"
+import Image from "next/image"
+
+import kreska from "@/public/images/kreski/behavioral-problems.svg"
 
 const RichNumberedList = () => {
   // TODO that should come from CMS
@@ -15,10 +18,20 @@ const RichNumberedList = () => {
   return (
     <section className="rich-numbered-list" id="consultation">
       <Wrapper>
-        <Heading
-          type="h2" // TODO CMS
-          text="Konsultacja behawioralna" // TODO CMS
-        />
+        <div className="rich-numbered-list__extended-heading">
+          <Heading
+            type="h2" // TODO CMS
+            text="Konsultacja behawioralna" // TODO CMS
+          />
+
+          <Image
+            src={kreska}
+            width={271}
+            height={15}
+            alt="Kreska"
+            className="rich-numbered-list__kreska"
+          />
+        </div>
 
         <div className="rich-numbered-list__list">
           {sections.map((section, index) => (
