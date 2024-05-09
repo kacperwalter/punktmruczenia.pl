@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Punkt Mruczenia",
     images: [
       {
-        url: "/images/opengraph-image.png",
+        url: "https://www.punktmruczenia.pl/images/opengraph-image.png",
       }
     ]
   }
