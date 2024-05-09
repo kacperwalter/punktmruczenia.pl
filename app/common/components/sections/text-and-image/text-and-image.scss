@@ -2,7 +2,9 @@
 @import 'app/common/styles/mixins/vertical-align.scss';
 
 .text-and-image {
-  margin-bottom: 8rem;
+  @include media(tablet) {
+    margin-bottom: 8rem;
+  }
 
   &__kreska {
     &-top {
@@ -36,6 +38,16 @@
         @include media($min: hd) {
           margin-left: 35%;
         }
+      }
+    }
+
+    &-bottom {
+      display: none;
+
+      @include media($min: tablet-h) {
+        display: block;
+        margin-left: 60%;
+        margin-top: 4rem;
       }
     }
   }

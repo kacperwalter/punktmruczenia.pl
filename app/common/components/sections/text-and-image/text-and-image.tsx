@@ -6,6 +6,7 @@ import "./text-and-image.scss"
 
 import kreskaTop1 from "@/public/images/kreski/text-and-image-top-1.svg"
 import kreskaTop2 from "@/public/images/kreski/text-and-image-top-2.svg"
+import kreskaBottom from "@/public/images/kreski/text-and-image-bottom.svg"
 
 const TextAndImage = () => {
   return (
@@ -59,6 +60,14 @@ const TextAndImage = () => {
             </div>
           </div>
       </Wrapper>
+
+      <Image
+        src={kreskaBottom}
+        width={370}
+        height={90}
+        alt="Kreska"
+        className="text-and-image__kreska-bottom"
+      />
     </section>
   )
 }
