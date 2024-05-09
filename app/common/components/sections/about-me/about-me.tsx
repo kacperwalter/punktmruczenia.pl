@@ -4,10 +4,29 @@ import Heading from "../../partials/heading/heading"
 import "./about-me.scss"
 import type { AboutMeProps } from "./about-me.types"
 
+import kreskaTop1 from "@/public/images/kreski/about-me-top-1.svg"
+import kreskaTop2 from "@/public/images/kreski/about-me-top-2.svg"
+
 // TODO CMS - content from CMS
 const AboutMe = ({ content }: AboutMeProps) => {
   return (
     <section className="about-me" id="about-me">
+      <Image
+        src={kreskaTop1}
+        width={100}
+        height={130}
+        alt="Kreska"
+        className="about-me__kreska-top--mobile"
+      />
+
+      <Image
+        src={kreskaTop2}
+        width={560}
+        height={240}
+        alt="Kreska"
+        className="about-me__kreska-top--desktop"
+      />
+
       <Wrapper>
         <div className="about-me__top">
           <Image

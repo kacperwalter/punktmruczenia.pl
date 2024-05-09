@@ -10,6 +10,29 @@
     text-align: left
   }
 
+  &__kreska {
+    &-top {
+      &--mobile {
+        @include media($min: tablet-h) {
+          display: none
+        }
+      }
+
+      &--desktop {
+        display: none;
+        margin-left: 20%;
+
+        @include media($min: hd) {
+          margin-left: 25%;
+        }
+
+        @include media($min: tablet-h) {
+          display: block
+        }
+      }
+    }
+  }
+
   .wrapper {
     @include vertical-align();
   }
