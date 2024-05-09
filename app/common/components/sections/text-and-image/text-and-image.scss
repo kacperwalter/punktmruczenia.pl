@@ -4,25 +4,57 @@
 .text-and-image {
   margin-bottom: 8rem;
 
+  // .wrapper {
+  //   @include media($min: tablet-h) {
+  //     display: grid;
+  //     grid-template-columns: 1fr 1fr;
+  //   }
+  // }
+
   &__top {
     @include vertical-align();
-    align-items: center;
+    // align-items: center;
 
     @include media($min: tablet-h) {
       flex-direction: row-reverse;
       justify-content: space-between;
-      gap: 16rem;
+      // gap: 16rem;
+    }
+
+    @include media($min: laptop) {
+      gap: 10rem;
     }
   }
 
   &__image {
     object-fit: cover;
 
-    @include media($min: tablet-h) {
-      width: 55rem;
+    // @include media($min: tablet-h) {
+    //   max-width: 55rem;
+    // }
+
+
+    // 1137px zaczyna byc za waskie 
+    @include media($min: 1024) {
+      max-width: unset;
+      width: 40rem;
+      margin-right: -4rem;
     }
 
-    @include media($min: laptop) {
+    @include media($min: 1137) {
+      width: 50rem;
+      margin-right: -7rem;
+    }
+
+    @include media($min: 1440) {
+      max-width: unset;
+      width: 55rem;
+      margin-right: -10rem;
+    }
+
+    @include media($min: 1700) {
+      max-width: unset;
+      width: 60rem;
       margin-right: -15rem;
     }
   }
