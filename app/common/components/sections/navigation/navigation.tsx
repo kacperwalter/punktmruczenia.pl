@@ -114,8 +114,8 @@ const Navigation = () => {
       </nav>
 
       <nav className="desktop-navigation">
-        <Wrapper>
-          <ul>
+        <Wrapper isWide>
+          <ul className="desktop-navigation__left">
             <li><a href="#about-me">O mnie</a></li>
             <li><a href="#qualifications">Kwalifikacje</a></li>
             <li><a href="#behavioral-problems">Problemy behawioralne</a></li>
@@ -130,22 +130,24 @@ const Navigation = () => {
               />
           </Link>
 
-          <ul>
-            <li><a href="#consultation">Konsultacja behawioralna</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-          </ul>
+          <div className="desktop-navigation__right">
+            <ul>
+              <li><a href="#consultation">Konsultacja behawioralna</a></li>
+              <li><a href="#contact">Kontakt</a></li>
+            </ul>
 
-          <div className="desktop-navigation__contact">
-            <Image
-              src={regularPhoneIcon}
-              width={1000}
-              height={1000}
-              alt='Phone icon'
-            />
+            <div className="desktop-navigation__contact">
+              <Image
+                src={regularPhoneIcon}
+                width={1000}
+                height={1000}
+                alt='Phone icon'
+              />
 
-            <a href="tel:+48609198974" className="desktop-navigation__contact-link">
-              <p>+48 609 198 974</p>
-            </a>
+              <a href="tel:+48609198974" className="desktop-navigation__contact-link">
+                <p>+48 609 198 974</p>
+              </a>
+            </div>
           </div>
         </Wrapper>
       </nav>

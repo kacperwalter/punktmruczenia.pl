@@ -144,17 +144,41 @@
     display: block;
   }
 
+  --gap: 7rem;
+  --navigation-wrapper-gap: calc(var(--gap) + 2rem);
+
+  @include media($max: 1600) {
+    --gap: 3rem;
+  }
+
   .wrapper {
     --wrapper-max-width: 180rem;
-
     display: flex;
     justify-content: center;
-    // gap: 7rem;
+    gap: var(--navigation-wrapper-gap);
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+
+    ul {
+      display: flex;
+      align-items: center;  
+      gap: var(--gap);
+    }
   }
 
   ul {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
     // gap: 2rem;
 
     @include media($min: laptop) {
