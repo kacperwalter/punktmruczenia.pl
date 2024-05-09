@@ -8,7 +8,7 @@
   background-color: var(--color-bezowy);
   width: 100%;
 
-  @include media($min: tablet-h) {
+  @include media($min: laptop) {
     display: none;
   }
   
@@ -140,7 +140,7 @@
   background-color: var(--color-bezowy);
   z-index: 1000;
 
-  @include media($min: tablet-h) {
+  @include media($min: laptop) {
     display: block;
   }
 
@@ -149,16 +149,16 @@
 
     display: flex;
     justify-content: center;
-    gap: 7rem;
+    // gap: 7rem;
   }
 
   ul {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    // gap: 2rem;
 
     @include media($min: laptop) {
-      gap: 7rem;
+      // gap: 7rem;
     }
 
     li {
