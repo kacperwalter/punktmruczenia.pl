@@ -12,11 +12,11 @@
 
   &--primary {
     background-color: var(--color-brazowy);
-    color: var(--color-white) !important;
+    color: var(--color-white);
     border: 1px solid transparent;
 
     &:visited {
-      color: var(--color-white) !important;
+      color: var(--color-white);
     }
 
     .button__arrow {

@@ -31,7 +31,6 @@ const Hero = ({ content }: HeroProps) => {
             arrow arrowDirection="down"
             text={content.homepageHeroButton}
             as="link"
-            // TODO add proper href when will be ready
             href="#about-me"
           />
         </article>
