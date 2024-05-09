@@ -2,23 +2,62 @@
 @import 'app/common/styles/mixins/vertical-align.scss';
 
 .text-and-image {
-  margin-bottom: 8rem;
+  @include media(tablet) {
+    margin-bottom: 8rem;
+  }
 
-  // .wrapper {
-  //   @include media($min: tablet-h) {
-  //     display: grid;
-  //     grid-template-columns: 1fr 1fr;
-  //   }
-  // }
+  &__kreska {
+    &-top {
+      &--mobile {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 3rem;
+
+        @include media($min: tablet-h) {
+          display: none;
+        }
+      }
+
+      &--desktop {
+        display: none;
+        margin-left: 25%;
+        margin-bottom: -30rem;
+
+        @include media($min: tablet-h) {
+          display: block;
+        }
+
+        @include media($min: laptop) {
+          margin-left: 30%;
+        }
+
+        @include media($min: 1500) {
+          margin-left: 32%;
+        }
+
+        @include media($min: hd) {
+          margin-left: 35%;
+        }
+      }
+    }
+
+    &-bottom {
+      display: none;
+
+      @include media($min: tablet-h) {
+        display: block;
+        margin-left: 60%;
+        margin-top: 4rem;
+      }
+    }
+  }
 
   &__top {
     @include vertical-align();
-    // align-items: center;
 
     @include media($min: tablet-h) {
       flex-direction: row-reverse;
       justify-content: space-between;
-      // gap: 16rem;
     }
 
     @include media($min: laptop) {
@@ -28,11 +67,6 @@
 
   &__image {
     object-fit: cover;
-
-    // @include media($min: tablet-h) {
-    //   max-width: 55rem;
-    // }
-
 
     // 1137px zaczyna byc za waskie 
     @include media($min: 1024) {
@@ -72,6 +106,7 @@
 
       @include media($min: tablet-h) {
         text-align: left;
+        max-width: 48rem;
       }
     }
   }

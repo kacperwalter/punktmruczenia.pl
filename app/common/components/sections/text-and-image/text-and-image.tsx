@@ -4,9 +4,29 @@ import Heading from "../../partials/heading/heading"
 import kot from "@/public/images/kot-2.jpeg"
 import "./text-and-image.scss"
 
+import kreskaTop1 from "@/public/images/kreski/text-and-image-top-1.svg"
+import kreskaTop2 from "@/public/images/kreski/text-and-image-top-2.svg"
+import kreskaBottom from "@/public/images/kreski/text-and-image-bottom.svg"
+
 const TextAndImage = () => {
   return (
     <section className="text-and-image" id="behavioral-problems">
+      <Image
+        src={kreskaTop1}
+        width={220}
+        height={75}
+        alt="Kreska"
+        className="text-and-image__kreska-top--mobile"
+      />
+
+      <Image
+        src={kreskaTop2}
+        width={424}
+        height={512}
+        alt="Kreska"
+        className="text-and-image__kreska-top--desktop"
+      />
+
       <Wrapper>
         <div className="text-and-image__top">
             <Image
@@ -40,6 +60,14 @@ const TextAndImage = () => {
             </div>
           </div>
       </Wrapper>
+
+      <Image
+        src={kreskaBottom}
+        width={370}
+        height={90}
+        alt="Kreska"
+        className="text-and-image__kreska-bottom"
+      />
     </section>
   )
 }

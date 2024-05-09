@@ -4,14 +4,86 @@
 .about-me {
   color: var(--color-brazowy);
   text-align: center;
-  margin-bottom: 8rem;
+  margin-bottom: 2rem;
 
   @include media($min: tablet-h) {
     text-align: left
   }
 
+  &__kreska {
+    &-top {
+      &--mobile {
+        @include media($min: tablet-h) {
+          display: none
+        }
+      }
+
+      &--desktop {
+        display: none;
+        margin-left: 20%;
+
+        @include media($min: 1500) {
+          margin-top: -10rem;
+
+        }
+
+        @include media($min: hd) {
+          margin-left: 25%;
+          // margin-top: -10rem;
+        }
+
+        @include media($min: tablet-h) {
+          display: block
+        }
+      }
+    }
+
+    &-middle {
+      display: none;
+      margin-left: 18%;
+      margin-bottom: -2rem;
+
+      @include media($min: tablet-h) {
+        display: block;
+      }
+    }
+
+    &-bottom {
+      &--mobile {
+        margin-top: 2rem;
+
+        @include media($min: tablet-h) {
+          display: none
+        }
+      }
+
+      &--desktop {
+        display: none;
+        margin-left: 40%;
+        margin-top: -5rem;
+
+        @include media($min: tablet-h) {
+          display: block
+        }
+
+        @include media($min: laptop) {
+          margin-top: -8rem;
+
+        }
+
+        @include media($min: hd) {
+          margin-left: 45%;
+        }
+      }
+    }
+  }
+
   .wrapper {
     @include vertical-align();
+
+    @include media($min: tablet-h) {
+      gap: 0rem;
+    }
   }
 
   &__top {

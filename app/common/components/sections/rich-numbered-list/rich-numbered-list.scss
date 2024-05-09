@@ -26,6 +26,28 @@
     }
   }
 
+  &__kreska {
+    &-top {
+      display: none;
+
+      @include media($min: tablet-h) {
+        display: block;
+        margin-left: 25%;
+      }
+    }
+
+    &-bottom {
+      display: none;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      margin-top: 2rem;
+
+      @include media($min: tablet-h) {
+        display: block;
+      }
+    }
+  }
+
   .heading {
     // TODO heading styles to unify (find other instances)
     text-align: center;
