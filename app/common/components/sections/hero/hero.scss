@@ -68,6 +68,14 @@
       }
     }
 
+    .button {
+      color: white;
+      
+      &:hover {
+        color: var(--color-brazowy);
+      }
+    }
+
     .header,
     .button {
       @include media($min: tablet-h) {
