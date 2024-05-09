@@ -4,6 +4,7 @@ import "./rich-numbered-list.scss"
 import Image from "next/image"
 
 import kreska from "@/public/images/kreski/behavioral-problems.svg"
+import kreskaBottom from "@/public/images/kreski/behavioral-problems-bottom.svg"
 
 const RichNumberedList = () => {
   // TODO that should come from CMS
@@ -29,7 +30,7 @@ const RichNumberedList = () => {
             width={271}
             height={15}
             alt="Kreska"
-            className="rich-numbered-list__kreska"
+            className="rich-numbered-list__kreska-top"
           />
         </div>
 
@@ -47,6 +48,14 @@ const RichNumberedList = () => {
           ))}
         </div>
       </Wrapper>
+
+      <Image
+        src={kreskaBottom}
+        width={290}
+        height={60}
+        alt="Kreska"
+        className="rich-numbered-list__kreska-bottom"
+      />
     </section>
   )
 }

@@ -27,11 +27,24 @@
   }
 
   &__kreska {
-    display: none;
+    &-top {
+      display: none;
 
-    @include media($min: tablet-h) {
-      display: block;
-      margin-left: 25%;
+      @include media($min: tablet-h) {
+        display: block;
+        margin-left: 25%;
+      }
+    }
+
+    &-bottom {
+      display: none;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      margin-top: 2rem;
+
+      @include media($min: tablet-h) {
+        display: block;
+      }
     }
   }
 
