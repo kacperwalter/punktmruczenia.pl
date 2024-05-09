@@ -18,7 +18,7 @@
 
       &--desktop {
         display: none;
-        margin-left: 23%;
+        margin-left: 25%;
         margin-bottom: -30rem;
 
         @include media($min: tablet-h) {
@@ -27,6 +27,10 @@
 
         @include media($min: laptop) {
           margin-left: 30%;
+        }
+
+        @include media($min: 1500) {
+          margin-left: 32%;
         }
 
         @include media($min: hd) {
