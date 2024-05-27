@@ -11,10 +11,10 @@ import "@/app/common/styles/spacings.scss"
 import "@/app/common/components/partials/header/header.scss" // just temporary
 
 export const metadata: Metadata = {
-  title: "Punkt Mruczenia - kocia behawiorystka",
+  title: "Punkt Mruczenia - Natalia Szajowska-Tomczak kocia behawiorystka",
   description: "Jestem Natalia i jestem kocią behawiorystką. Pomogę Ci rozwiązać problem behawioralny u Twojego kota.",
   openGraph: {
-    title: "Punkt Mruczenia - kocia behawiorystka",
+    title: "Punkt Mruczenia - Natalia Szajowska-Tomczak kocia behawiorystka",
     description: "Jestem Natalia i jestem kocią behawiorystką. Pomogę Ci rozwiązać problem behawioralny u Twojego kota.",
     url: "puntmruczenia.pl",
     siteName: "Punkt Mruczenia",
