@@ -13,6 +13,9 @@ import "@/app/common/components/partials/header/header.scss" // just temporary
 export const metadata: Metadata = {
   title: "Punkt Mruczenia - Natalia Szajowska-Tomczak kocia behawiorystka",
   description: "Jestem Natalia i jestem kocią behawiorystką. Pomogę Ci rozwiązać problem behawioralny u Twojego kota.",
+  alternates: {
+    canonical: "https://www.punktmruczenia.pl",
+  },
   openGraph: {
     title: "Punkt Mruczenia - Natalia Szajowska-Tomczak kocia behawiorystka",
     description: "Jestem Natalia i jestem kocią behawiorystką. Pomogę Ci rozwiązać problem behawioralny u Twojego kota.",
