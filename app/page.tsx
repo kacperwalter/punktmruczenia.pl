@@ -11,14 +11,14 @@ import "@/app/common/styles/spacings.scss"
 import "@/app/common/components/partials/header/header.scss" // just temporary
 
 export const metadata: Metadata = {
-  title: "Punkt Mruczenia | Natalia Szajowska-Tomczak | Kocia behawiorystka",
-  description: "Problem behawioralny u kota? Skonsultuj się z dyplomowanym psychologiem zwierząt. Wizyty w Poznaniu i okolicach oraz online.",
+  title: "Kocia behawiorystka | Poznan | Konsultacje behawioralne",
+  description: "Rozwiąż problem behawioralny Twojego kota. Konsultacje w Poznaniu i okolicach oraz online.",
   alternates: {
     canonical: "https://www.punktmruczenia.pl",
   },
   openGraph: {
-    title: "Punkt Mruczenia | Natalia Szajowska-Tomczak | Kocia behawiorystka",
-    description: "Problem behawioralny u kota? Skonsultuj się z dyplomowanym psychologiem zwierząt. Wizyty w Poznaniu i okolicach oraz online.",
+    title: "Kocia behawiorystka | Poznan | Konsultacje behawioralne",
+    description: "Rozwiąż problem behawioralny Twojego kota. Konsultacje w Poznaniu i okolicach oraz online.",
     url: "puntmruczenia.pl",
     siteName: "Punkt Mruczenia",
     images: [
