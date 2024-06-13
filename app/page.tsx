@@ -11,14 +11,14 @@ import "@/app/common/styles/spacings.scss"
 import "@/app/common/components/partials/header/header.scss" // just temporary
 
 export const metadata: Metadata = {
-  title: "Kocia behawiorystka | Poznan | Konsultacje behawioralne",
-  description: "Rozwiąż problem behawioralny Twojego kota. Konsultacje w Poznaniu i okolicach oraz online.",
+  title: "Punkt Mruczenia | Koci behawiorysta | Poznań",
+  description: "Jestem kocią behawiorystką. Pomogę, jeśli Twój kot jest agresywny, lękliwy lub załatwia się poza kuwetą. Konsultacje behawioralne w Poznaniu oraz online.",
   alternates: {
     canonical: "https://www.punktmruczenia.pl",
   },
   openGraph: {
-    title: "Kocia behawiorystka | Poznan | Konsultacje behawioralne",
-    description: "Rozwiąż problem behawioralny Twojego kota. Konsultacje w Poznaniu i okolicach oraz online.",
+    title: "Punkt Mruczenia | Koci behawiorysta | Poznań",
+    description: "Jestem kocią behawiorystką. Pomogę, jeśli Twój kot jest agresywny, lękliwy lub załatwia się poza kuwetą. Konsultacje behawioralne w Poznaniu oraz online.",
     url: "puntmruczenia.pl",
     siteName: "Punkt Mruczenia",
     images: [
