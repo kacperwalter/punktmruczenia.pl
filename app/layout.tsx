@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Open_Sans } from 'next/font/google'
 import localFont from 'next/font/local'
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const openSans = Open_Sans({
   subsets: ['latin'],
@@ -35,7 +36,8 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <GoogleAnalytics gaId="G-JHQ7327M1J" />
-      
+      <GoogleTagManager gtmId="GTM-NS9HBLLD" />
+
       <body
         className={`
           ${openSans.variable}
