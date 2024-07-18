@@ -5,7 +5,7 @@ import "./tiles.scss"
 const Tiles = () => {
   const tiles = [
     {
-      heading: "Konsultacja stacjonarna <br> 160-200 zł",
+      heading: "Konsultacja stacjonarna <br> 250 zł",
       additionalInfo: `
         <ul>
           <li>Konsultacja w domu opiekuna (dojazd na terenie Chodzieży/Poznania, spotkanie trwa ok. 1,5-2 h)</li>
@@ -18,7 +18,7 @@ const Tiles = () => {
       image: '/images/kot-1.jpeg',
     },
     {
-      heading: "Konsultacja online <br> 150 zł",
+      heading: "Konsultacja online <br> 200-250 zł",
       additionalInfo: `
         <ul>
           <li>Konsultacja online za pomocą wybranej platformy (Skype, WhatsApp, Zoom lub Google Meet) spotkanie trwa ok. 45 minut, zazwyczaj proszę opiekuna o wirtualny spacer po miejscu zamieszkania kota, chcę zobaczyć, jak wygląda jego codzienne środowisko</li>
