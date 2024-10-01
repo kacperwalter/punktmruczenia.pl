@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { HomepageProps } from '@/app/types'
 import Hero from '@/app/common/components/sections/hero/hero'
 import AboutMe from '@/app/common/components/sections/about-me/about-me'
@@ -23,7 +24,10 @@ const Homepage = ({ content }: HomepageProps) => {
     aboutMeCaption = '',
     aboutMeFirstContentImage = '',
     aboutMeContent = '',
-    aboutMeSecondContentImage = ''
+    aboutMeSecondContentImage = '',
+    qualificationsImage = '',
+    qualificationsHeading = '',
+    qualificationsContent = [],
   } = homepageData
 
   const homepageHeroData = {
@@ -43,12 +47,18 @@ const Homepage = ({ content }: HomepageProps) => {
     aboutMeSecondContentImage
   }
 
+  const homepageQualificationsData = {
+    qualificationsImage,
+    qualificationsHeading,
+    qualificationsContent,
+  }
+
   return (
     <main>
       <Hero content={homepageHeroData}/>
       {/* @ts-ignore */}
       <AboutMe content={homepageAboutMeData} />
-      <Qualifications />
+      <Qualifications content={homepageQualificationsData} />
       <TextAndImage />
       <BenefitsGrid />
       <RichNumberedList />

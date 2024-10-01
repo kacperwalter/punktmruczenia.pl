@@ -25,7 +25,13 @@ export async function getHomepageData() {
         aboutMeCaption,
         "aboutMeFirstContentImage": aboutMeFirstContentImage.asset->url,
         aboutMeContent,
-        "aboutMeSecondContentImage": aboutMeSecondContentImage.asset->url
+        "aboutMeSecondContentImage": aboutMeSecondContentImage.asset->url,
+        "qualificationsImage": qualificationsImage.asset->url,
+        qualificationsHeading,
+        qualificationsContent[]{
+          year,
+          items
+        }
       }
     `
   )

@@ -6,12 +6,14 @@ const page = {
     { name: "hero", title: "Hero" },
     { name: "about-me", title: "About me" },
     { name: "SEO", title: "SEO" },
+    { name: 'qualifications', title: 'Qualifications' },
   ],
   groups: [
     { name: "hero", title: "Hero" },
     { name: "about-me", title: "About me" },
     { name: "SEO", title: "SEO", default: true },
     { name: "settings", title: "Settings" },
+    { name: 'qualifications', title: 'Qualifications' },
   ],
   fields: [
     {
@@ -115,6 +117,28 @@ const page = {
       type: "image",
       group: "about-me",
       fieldset: "about-me",
+    },
+    {
+      name: 'qualificationsImage',
+      title: 'Image',
+      type: 'image',
+      group: 'qualifications',
+      fieldset: 'qualifications',
+    },
+    {
+      name: 'qualificationsHeading',
+      title: 'Heading',
+      type: 'string',
+      group: 'qualifications',
+      fieldset: 'qualifications',
+    },
+    {
+      name: 'qualificationsContent',
+      title: 'Content',
+      type: 'array',
+      of: [{ type: 'qualificationsYear' }],
+      group: 'qualifications',
+      fieldset: 'qualifications',
     },
   ],
 }
