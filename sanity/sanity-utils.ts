@@ -35,7 +35,12 @@ export async function getHomepageData() {
         textAndImageHeading,
         textAndImageContent,
         "textAndImageImage": textAndImageImage.asset->url,
-        textAndImageList
+        textAndImageList,
+        benefitsGridHeading,
+        benefits[]{
+          "icon": icon.asset->url, // Fetch the icon's image URL
+          text
+        }
       }
     `
   )

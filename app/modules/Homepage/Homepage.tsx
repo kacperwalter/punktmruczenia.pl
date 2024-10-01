@@ -63,6 +63,8 @@ const Homepage = () => {
     textAndImageContent = [],
     textAndImageImage = '',
     textAndImageList = [],
+    benefitsGridHeading = '', // New heading for the benefits grid
+    benefits = [], // New benefits array
   } = homepageDataObject
 
   const homepageHeroData = {
@@ -95,14 +97,18 @@ const Homepage = () => {
     textAndImageList, // Pass the list to the component
   }
 
+  const homepageBenefitsData = {
+    benefitsGridHeading,
+    benefits, // Pass the list of benefits
+  }
+
   return (
     <main>
       <Hero content={homepageHeroData}/>
-      {/* @ts-ignore */}
       <AboutMe content={homepageAboutMeData} />
       <Qualifications content={homepageQualificationsData} />
       <TextAndImage content={homepageTextAndImageData} />
-      <BenefitsGrid />
+      <BenefitsGrid content={homepageBenefitsData} />
       <RichNumberedList />
       <Tiles />
       <Contact />
