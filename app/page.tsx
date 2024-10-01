@@ -29,13 +29,11 @@ export const metadata: Metadata = {
   }
 }
 
-const Home = async () => {
-  const homepageData = await getHomepageData()
-
+const Home = () => {
   return (
     <>
       <Navigation />
-      <Homepage content={homepageData} />
+      <Homepage />
     </>
   )
 }

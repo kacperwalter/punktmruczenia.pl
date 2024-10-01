@@ -7,6 +7,7 @@ const page = {
     { name: "about-me", title: "About me" },
     { name: "SEO", title: "SEO" },
     { name: 'qualifications', title: 'Qualifications' },
+    { name: 'textAndImage', title: 'Text and Image' },
   ],
   groups: [
     { name: "hero", title: "Hero" },
@@ -14,6 +15,7 @@ const page = {
     { name: "SEO", title: "SEO", default: true },
     { name: "settings", title: "Settings" },
     { name: 'qualifications', title: 'Qualifications' },
+    { name: 'textAndImage', title: 'Text and Image' },
   ],
   fields: [
     {
@@ -139,6 +141,36 @@ const page = {
       of: [{ type: 'qualificationsYear' }],
       group: 'qualifications',
       fieldset: 'qualifications',
+    },
+    {
+      name: 'textAndImageHeading',
+      title: 'Heading',
+      type: 'string',
+      group: 'textAndImage',
+      fieldset: 'textAndImage',
+    },
+    {
+      name: 'textAndImageContent',
+      title: 'Content',
+      type: 'array',
+      of: [{ type: 'block' }],
+      group: 'textAndImage',
+      fieldset: 'textAndImage',
+    },
+    {
+      name: 'textAndImageImage',
+      title: 'Image',
+      type: 'image',
+      group: 'textAndImage',
+      fieldset: 'textAndImage',
+    },
+    {
+      name: 'textAndImageList',
+      title: 'List of Problems',
+      type: 'array',
+      of: [{ type: 'string' }],
+      group: 'textAndImage',
+      fieldset: 'textAndImage',
     },
   ],
 }

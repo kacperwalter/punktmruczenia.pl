@@ -31,7 +31,11 @@ export async function getHomepageData() {
         qualificationsContent[]{
           year,
           items
-        }
+        },
+        textAndImageHeading,
+        textAndImageContent,
+        "textAndImageImage": textAndImageImage.asset->url,
+        textAndImageList
       }
     `
   )
