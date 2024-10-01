@@ -9,6 +9,7 @@ const page = {
     { name: 'qualifications', title: 'Qualifications' },
     { name: 'textAndImage', title: 'Text and Image' },
     { name: 'benefitsGrid', title: 'Benefits Grid' },
+    { name: 'richNumberedList', title: 'Rich Numbered List' },
   ],
   groups: [
     { name: "hero", title: "Hero" },
@@ -18,6 +19,7 @@ const page = {
     { name: 'qualifications', title: 'Qualifications' },
     { name: 'textAndImage', title: 'Text and Image' },
     { name: 'benefitsGrid', title: 'Benefits Grid' },
+    { name: 'richNumberedList', title: 'Rich Numbered List' },
   ],
   fields: [
     {
@@ -205,6 +207,21 @@ const page = {
       }],
       group: 'benefitsGrid',
       fieldset: 'benefitsGrid',
+    },
+    {
+      name: 'richNumberedListHeading',
+      title: 'Heading',
+      type: 'string',
+      group: 'richNumberedList',
+      fieldset: 'richNumberedList',
+    },
+    {
+      name: 'richNumberedListSections',
+      title: 'Sections',
+      type: 'array',
+      of: [{ type: 'object', fields: [{ name: 'text', title: 'Text', type: 'string' }] }],
+      group: 'richNumberedList',
+      fieldset: 'richNumberedList',
     },
   ],
 }

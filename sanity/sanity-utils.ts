@@ -40,6 +40,10 @@ export async function getHomepageData() {
         benefits[]{
           "icon": icon.asset->url, // Fetch the icon's image URL
           text
+        },
+        richNumberedListHeading,
+        richNumberedListSections[] {
+          text
         }
       }
     `

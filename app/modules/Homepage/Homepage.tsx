@@ -65,6 +65,8 @@ const Homepage = () => {
     textAndImageList = [],
     benefitsGridHeading = '', // New heading for the benefits grid
     benefits = [], // New benefits array
+    richNumberedListHeading = '', // New heading for the numbered list
+    richNumberedListSections = [], // New array for the numbered sections
   } = homepageDataObject
 
   const homepageHeroData = {
@@ -102,6 +104,11 @@ const Homepage = () => {
     benefits, // Pass the list of benefits
   }
 
+  const homepageRichNumberedListData = {
+    richNumberedListHeading,
+    richNumberedListSections,
+  }
+
   return (
     <main>
       <Hero content={homepageHeroData}/>
@@ -109,7 +116,7 @@ const Homepage = () => {
       <Qualifications content={homepageQualificationsData} />
       <TextAndImage content={homepageTextAndImageData} />
       <BenefitsGrid content={homepageBenefitsData} />
-      <RichNumberedList />
+      <RichNumberedList content={homepageRichNumberedListData} />
       <Tiles />
       <Contact />
       <Footer />
