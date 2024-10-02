@@ -10,6 +10,7 @@ const page = {
     { name: 'textAndImage', title: 'Text and Image' },
     { name: 'benefitsGrid', title: 'Benefits Grid' },
     { name: 'richNumberedList', title: 'Rich Numbered List' },
+    { name: 'tiles', title: 'Tiles' },
   ],
   groups: [
     { name: "hero", title: "Hero" },
@@ -20,6 +21,7 @@ const page = {
     { name: 'textAndImage', title: 'Text and Image' },
     { name: 'benefitsGrid', title: 'Benefits Grid' },
     { name: 'richNumberedList', title: 'Rich Numbered List' },
+    { name: 'tiles', title: 'Tiles' },
   ],
   fields: [
     {
@@ -222,6 +224,37 @@ const page = {
       of: [{ type: 'object', fields: [{ name: 'text', title: 'Text', type: 'string' }] }],
       group: 'richNumberedList',
       fieldset: 'richNumberedList',
+    },
+    {
+      name: 'tiles',
+      title: 'Tiles',
+      type: 'array',
+      of: [{
+        type: 'object',
+        fields: [
+          {
+            name: 'heading',
+            title: 'Heading',
+            type: 'string',
+          },
+          {
+            name: 'additionalInfo',
+            title: 'Additional Info',
+            type: 'array',
+            of: [{ type: 'string' }], // Array of strings for list items
+          },
+          {
+            name: 'image',
+            title: 'Image',
+            type: 'image',
+            options: {
+              hotspot: true, // Allow image cropping in Sanity
+            },
+          },
+        ],
+      }],
+      group: 'tiles',
+      fieldset: 'tiles',
     },
   ],
 }

@@ -67,6 +67,7 @@ const Homepage = () => {
     benefits = [], // New benefits array
     richNumberedListHeading = '', // New heading for the numbered list
     richNumberedListSections = [], // New array for the numbered sections
+    tiles = [],
   } = homepageDataObject
 
   const homepageHeroData = {
@@ -109,6 +110,10 @@ const Homepage = () => {
     richNumberedListSections,
   }
 
+  const homepageTilesData = {
+    tiles,
+  }
+
   return (
     <main>
       <Hero content={homepageHeroData}/>
@@ -117,7 +122,7 @@ const Homepage = () => {
       <TextAndImage content={homepageTextAndImageData} />
       <BenefitsGrid content={homepageBenefitsData} />
       <RichNumberedList content={homepageRichNumberedListData} />
-      <Tiles />
+      <Tiles content={homepageTilesData} />
       <Contact />
       <Footer />
     </main>

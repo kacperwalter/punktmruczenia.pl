@@ -44,6 +44,11 @@ export async function getHomepageData() {
         richNumberedListHeading,
         richNumberedListSections[] {
           text
+        },
+        tiles[] {
+          heading,
+          additionalInfo,
+          "image": image.asset->url
         }
       }
     `
