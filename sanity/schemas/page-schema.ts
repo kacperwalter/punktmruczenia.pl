@@ -289,7 +289,7 @@ const page = {
           fields: [
             { name: 'icon', title: 'Icon', type: 'image' },
             { name: 'text', title: 'Text', type: 'string' },
-            { name: 'href', title: 'Link', type: 'url' },
+            { name: 'href', title: 'Link', type: 'string' },
           ],
         },
       ],
