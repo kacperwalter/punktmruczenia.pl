@@ -11,6 +11,7 @@ const page = {
     { name: 'benefitsGrid', title: 'Benefits Grid' },
     { name: 'richNumberedList', title: 'Rich Numbered List' },
     { name: 'tiles', title: 'Tiles' },
+    { name: 'contact', title: 'Contact' },
   ],
   groups: [
     { name: "hero", title: "Hero" },
@@ -22,6 +23,7 @@ const page = {
     { name: 'benefitsGrid', title: 'Benefits Grid' },
     { name: 'richNumberedList', title: 'Rich Numbered List' },
     { name: 'tiles', title: 'Tiles' },
+    { name: 'contact', title: 'Contact' },
   ],
   fields: [
     {
@@ -255,6 +257,60 @@ const page = {
       }],
       group: 'tiles',
       fieldset: 'tiles',
+    },
+    {
+      name: 'contactHeading',
+      title: 'Contact Heading',
+      type: 'string',
+      group: 'contact',
+      fieldset: 'contact',
+    },
+    {
+      name: 'companyName',
+      title: 'Company Name',
+      type: 'string',
+      group: 'contact',
+      fieldset: 'contact',
+    },
+    {
+      name: 'contactName',
+      title: 'Contact Name',
+      type: 'string',
+      group: 'contact',
+      fieldset: 'contact',
+    },
+    {
+      name: 'contactInfo',
+      title: 'Contact Information',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            { name: 'icon', title: 'Icon', type: 'image' },
+            { name: 'text', title: 'Text', type: 'string' },
+            { name: 'href', title: 'Link', type: 'url' },
+          ],
+        },
+      ],
+      group: 'contact',
+      fieldset: 'contact',
+    },
+    {
+      name: 'socialLinks',
+      title: 'Social Links',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            { name: 'icon', title: 'Icon', type: 'image' },
+            { name: 'href', title: 'Link', type: 'url' },
+          ],
+        },
+      ],
+      group: 'contact',
+      fieldset: 'contact',
     },
   ],
 }

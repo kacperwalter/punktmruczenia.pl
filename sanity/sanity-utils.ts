@@ -49,6 +49,18 @@ export async function getHomepageData() {
           heading,
           additionalInfo,
           "image": image.asset->url
+        },
+        contactHeading,
+        companyName,
+        contactName,
+        contactInfo[] {
+          "icon": icon.asset->url,
+          text,
+          href
+        },
+        socialLinks[] {
+          "icon": icon.asset->url,
+          href
         }
       }
     `
