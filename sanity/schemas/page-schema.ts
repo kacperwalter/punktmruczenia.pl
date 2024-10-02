@@ -6,12 +6,24 @@ const page = {
     { name: "hero", title: "Hero" },
     { name: "about-me", title: "About me" },
     { name: "SEO", title: "SEO" },
+    { name: 'qualifications', title: 'Qualifications' },
+    { name: 'textAndImage', title: 'Text and Image' },
+    { name: 'benefitsGrid', title: 'Benefits Grid' },
+    { name: 'richNumberedList', title: 'Rich Numbered List' },
+    { name: 'tiles', title: 'Tiles' },
+    { name: 'contact', title: 'Contact' },
   ],
   groups: [
     { name: "hero", title: "Hero" },
     { name: "about-me", title: "About me" },
     { name: "SEO", title: "SEO", default: true },
     { name: "settings", title: "Settings" },
+    { name: 'qualifications', title: 'Qualifications' },
+    { name: 'textAndImage', title: 'Text and Image' },
+    { name: 'benefitsGrid', title: 'Benefits Grid' },
+    { name: 'richNumberedList', title: 'Rich Numbered List' },
+    { name: 'tiles', title: 'Tiles' },
+    { name: 'contact', title: 'Contact' },
   ],
   fields: [
     {
@@ -115,6 +127,190 @@ const page = {
       type: "image",
       group: "about-me",
       fieldset: "about-me",
+    },
+    {
+      name: 'qualificationsImage',
+      title: 'Image',
+      type: 'image',
+      group: 'qualifications',
+      fieldset: 'qualifications',
+    },
+    {
+      name: 'qualificationsHeading',
+      title: 'Heading',
+      type: 'string',
+      group: 'qualifications',
+      fieldset: 'qualifications',
+    },
+    {
+      name: 'qualificationsContent',
+      title: 'Content',
+      type: 'array',
+      of: [{ type: 'qualificationsYear' }],
+      group: 'qualifications',
+      fieldset: 'qualifications',
+    },
+    {
+      name: 'textAndImageHeading',
+      title: 'Heading',
+      type: 'string',
+      group: 'textAndImage',
+      fieldset: 'textAndImage',
+    },
+    {
+      name: 'textAndImageContent',
+      title: 'Content',
+      type: 'array',
+      of: [{ type: 'block' }],
+      group: 'textAndImage',
+      fieldset: 'textAndImage',
+    },
+    {
+      name: 'textAndImageImage',
+      title: 'Image',
+      type: 'image',
+      group: 'textAndImage',
+      fieldset: 'textAndImage',
+    },
+    {
+      name: 'textAndImageList',
+      title: 'List of Problems',
+      type: 'array',
+      of: [{ type: 'string' }],
+      group: 'textAndImage',
+      fieldset: 'textAndImage',
+    },
+    {
+      name: 'benefitsGridHeading',
+      title: 'Heading',
+      type: 'string',
+      group: 'benefitsGrid',
+      fieldset: 'benefitsGrid',
+    },
+    {
+      name: 'benefits',
+      title: 'Benefits List',
+      type: 'array',
+      of: [{
+        type: 'object',
+        fields: [
+          {
+            name: 'icon',
+            title: 'Icon',
+            type: 'image', // Use image type
+            options: {
+              hotspot: true, // Optional, allows for image cropping in Sanity
+            },
+          },
+          {
+            name: 'text',
+            title: 'Text',
+            type: 'string',
+          },
+        ],
+      }],
+      group: 'benefitsGrid',
+      fieldset: 'benefitsGrid',
+    },
+    {
+      name: 'richNumberedListHeading',
+      title: 'Heading',
+      type: 'string',
+      group: 'richNumberedList',
+      fieldset: 'richNumberedList',
+    },
+    {
+      name: 'richNumberedListSections',
+      title: 'Sections',
+      type: 'array',
+      of: [{ type: 'object', fields: [{ name: 'text', title: 'Text', type: 'string' }] }],
+      group: 'richNumberedList',
+      fieldset: 'richNumberedList',
+    },
+    {
+      name: 'tiles',
+      title: 'Tiles',
+      type: 'array',
+      of: [{
+        type: 'object',
+        fields: [
+          {
+            name: 'heading',
+            title: 'Heading',
+            type: 'string',
+          },
+          {
+            name: 'additionalInfo',
+            title: 'Additional Info',
+            type: 'array',
+            of: [{ type: 'string' }], // Array of strings for list items
+          },
+          {
+            name: 'image',
+            title: 'Image',
+            type: 'image',
+            options: {
+              hotspot: true, // Allow image cropping in Sanity
+            },
+          },
+        ],
+      }],
+      group: 'tiles',
+      fieldset: 'tiles',
+    },
+    {
+      name: 'contactHeading',
+      title: 'Contact Heading',
+      type: 'string',
+      group: 'contact',
+      fieldset: 'contact',
+    },
+    {
+      name: 'companyName',
+      title: 'Company Name',
+      type: 'string',
+      group: 'contact',
+      fieldset: 'contact',
+    },
+    {
+      name: 'contactName',
+      title: 'Contact Name',
+      type: 'string',
+      group: 'contact',
+      fieldset: 'contact',
+    },
+    {
+      name: 'contactInfo',
+      title: 'Contact Information',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            { name: 'icon', title: 'Icon', type: 'image' },
+            { name: 'text', title: 'Text', type: 'string' },
+            { name: 'href', title: 'Link', type: 'url' },
+          ],
+        },
+      ],
+      group: 'contact',
+      fieldset: 'contact',
+    },
+    {
+      name: 'socialLinks',
+      title: 'Social Links',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            { name: 'icon', title: 'Icon', type: 'image' },
+            { name: 'href', title: 'Link', type: 'url' },
+          ],
+        },
+      ],
+      group: 'contact',
+      fieldset: 'contact',
     },
   ],
 }

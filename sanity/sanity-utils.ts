@@ -1,7 +1,7 @@
 import { createClient, groq } from 'next-sanity'
 
 const client = createClient({
-  projectId: 'alrke5ve',
+  projectId: '8gffmcxk',
   dataset: 'production',
   apiVersion: '2024-04-10',
 })
@@ -25,7 +25,43 @@ export async function getHomepageData() {
         aboutMeCaption,
         "aboutMeFirstContentImage": aboutMeFirstContentImage.asset->url,
         aboutMeContent,
-        "aboutMeSecondContentImage": aboutMeSecondContentImage.asset->url
+        "aboutMeSecondContentImage": aboutMeSecondContentImage.asset->url,
+        "qualificationsImage": qualificationsImage.asset->url,
+        qualificationsHeading,
+        qualificationsContent[]{
+          year,
+          items
+        },
+        textAndImageHeading,
+        textAndImageContent,
+        "textAndImageImage": textAndImageImage.asset->url,
+        textAndImageList,
+        benefitsGridHeading,
+        benefits[]{
+          "icon": icon.asset->url, // Fetch the icon's image URL
+          text
+        },
+        richNumberedListHeading,
+        richNumberedListSections[] {
+          text
+        },
+        tiles[] {
+          heading,
+          additionalInfo,
+          "image": image.asset->url
+        },
+        contactHeading,
+        companyName,
+        contactName,
+        contactInfo[] {
+          "icon": icon.asset->url,
+          text,
+          href
+        },
+        socialLinks[] {
+          "icon": icon.asset->url,
+          href
+        }
       }
     `
   )

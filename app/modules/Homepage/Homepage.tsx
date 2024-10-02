@@ -1,3 +1,7 @@
+// @ts-nocheck
+'use client'
+
+import { useState, useEffect } from 'react'
 import { HomepageProps } from '@/app/types'
 import Hero from '@/app/common/components/sections/hero/hero'
 import AboutMe from '@/app/common/components/sections/about-me/about-me'
@@ -8,9 +12,37 @@ import RichNumberedList from '@/app/common/components/sections/rich-numbered-lis
 import Tiles from '@/app/common/components/sections/tiles/tiles'
 import Contact from '@/app/common/components/sections/contact/contact'
 import Footer from '@/app/common/components/sections/footer/footer'
+import { getHomepageData } from '@/sanity/sanity-utils'
 
-const Homepage = ({ content }: HomepageProps) => {
-  const homepageData = content[0] || {}
+const Homepage = () => {
+  const [homepageData, setHomepageData] = useState(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const fetchHomepageData = async () => {
+      try {
+        const data = await getHomepageData()
+        setHomepageData(data)
+        setLoading(false)
+      } catch (error) {
+        console.error('Failed to fetch homepage data:', error)
+        setLoading(false)
+      }
+    }
+  
+    fetchHomepageData()
+  }, [])
+
+  if (loading) {
+    return <div>Loading...</div>
+  }
+
+  if (!homepageData) {
+    return <div>Error loading homepage data.</div>
+  }
+
+  const homepageDataObject = homepageData[0] || {}
+  console.log(homepageDataObject)
 
   const {
     homepageHeroContent,
@@ -23,8 +55,25 @@ const Homepage = ({ content }: HomepageProps) => {
     aboutMeCaption = '',
     aboutMeFirstContentImage = '',
     aboutMeContent = '',
-    aboutMeSecondContentImage = ''
-  } = homepageData
+    aboutMeSecondContentImage = '',
+    qualificationsImage = '',
+    qualificationsHeading = '',
+    qualificationsContent = [],
+    textAndImageHeading = '',
+    textAndImageContent = [],
+    textAndImageImage = '',
+    textAndImageList = [],
+    benefitsGridHeading = '', // New heading for the benefits grid
+    benefits = [], // New benefits array
+    richNumberedListHeading = '', // New heading for the numbered list
+    richNumberedListSections = [], // New array for the numbered sections
+    tiles = [],
+    contactHeading = '',
+    companyName = '',
+    contactName = '',
+    contactInfo = [],
+    socialLinks = []
+  } = homepageDataObject
 
   const homepageHeroData = {
     homepageHeroContent,
@@ -43,17 +92,51 @@ const Homepage = ({ content }: HomepageProps) => {
     aboutMeSecondContentImage
   }
 
+  const homepageQualificationsData = {
+    qualificationsImage,
+    qualificationsHeading,
+    qualificationsContent,
+  }
+
+  const homepageTextAndImageData = {
+    textAndImageHeading,
+    textAndImageContent,
+    textAndImageImage,
+    textAndImageList, // Pass the list to the component
+  }
+
+  const homepageBenefitsData = {
+    benefitsGridHeading,
+    benefits, // Pass the list of benefits
+  }
+
+  const homepageRichNumberedListData = {
+    richNumberedListHeading,
+    richNumberedListSections,
+  }
+
+  const homepageTilesData = {
+    tiles,
+  }
+
+  const homepageContactData = {
+    contactHeading,
+    companyName,
+    contactName,
+    contactInfo,
+    socialLinks,
+  }
+
   return (
     <main>
       <Hero content={homepageHeroData}/>
-      {/* @ts-ignore */}
       <AboutMe content={homepageAboutMeData} />
-      <Qualifications />
-      <TextAndImage />
-      <BenefitsGrid />
-      <RichNumberedList />
-      <Tiles />
-      <Contact />
+      <Qualifications content={homepageQualificationsData} />
+      <TextAndImage content={homepageTextAndImageData} />
+      <BenefitsGrid content={homepageBenefitsData} />
+      <RichNumberedList content={homepageRichNumberedListData} />
+      <Tiles content={homepageTilesData} />
+      <Contact content={homepageContactData} />
       <Footer />
     </main>
   )

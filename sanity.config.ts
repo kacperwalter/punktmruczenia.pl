@@ -3,7 +3,7 @@ import { structureTool } from 'sanity/structure'
 import schemas from '@/sanity/schemas'
 
 const config = defineConfig({
-  projectId: 'alrke5ve',
+  projectId: '8gffmcxk',
   dataset: 'production',
   title: 'punktmruczenia.pl',
   apiVersion: '2024-04-10',
