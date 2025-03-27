@@ -5,12 +5,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-
-  // @include media($max: tablet) {
-  //   max-width: 18rem;
-  //   flex-direction: row;
-  //   width: 100%;
-  // }
+  align-self: flex-start;
 
   @include media($min: tablet) {
     width: 28rem;
@@ -27,13 +22,6 @@
   @include media(mobile) {
     width: 20rem;
   }
-
-  // img {
-  //   @include media($max: tablet) {
-  //     height: 5rem;
-  //     width: 5rem;
-  //   }
-  // }
 
   &__text {
     text-align: center;
