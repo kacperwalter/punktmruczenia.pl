@@ -10,6 +10,7 @@ export type ButtonType = 'button' | 'link'
 export interface HomepageData {
   _id: string
   _createdAt: string
+  _updatedAt: string
   slug: string
   title: string
   description: string
@@ -22,10 +23,42 @@ export interface HomepageData {
   aboutMeHeading: string;
   aboutMeCaption: string;
   aboutMeFirstContentImage: string;
-  aboutMeContent: any;  // Use a more specific type if available
+  aboutMeContent: string;
   aboutMeSecondContentImage: string;
-}
-
-export interface HomepageProps {
-  content: HomepageData[]
+  qualificationsImage: string
+  qualificationsHeading: string
+  qualificationsContent: Array<{
+    year: string
+    items: string[]
+  }>
+  textAndImageHeading: string
+  textAndImageContent: PortableTextBlock[]
+  textAndImageImage: string
+  textAndImageList: string[]
+  benefitsGridHeading: string
+  benefits: Array<{
+    icon: string
+    text: string
+  }>
+  richNumberedListHeading: string
+  richNumberedListSections: Array<{
+    text: string
+  }>
+  tiles: Array<{
+    heading: string
+    additionalInfo: string[]
+    image: string
+  }>
+  contactHeading: string
+  companyName: string
+  contactName: string
+  contactInfo: Array<{
+    icon: string
+    text: string
+    href: string
+  }>
+  socialLinks: Array<{
+    icon: string
+    href: string
+  }>
 }

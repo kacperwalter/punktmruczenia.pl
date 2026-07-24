@@ -1,17 +1,20 @@
+import 'server-only'
+
 import { createClient, groq } from 'next-sanity'
+import type { HomepageData } from '@/app/types'
 
 const client = createClient({
   projectId: '8gffmcxk',
   dataset: 'production',
   apiVersion: '2024-04-10',
+  useCdn: false,
 })
 
-export async function getHomepageData() {
-  return client.fetch(
-    groq`
-      *[_type == "page"] {
+const homepageQuery = groq`
+  *[_type == "page"] | order(_createdAt asc)[0] {
         _id,
         _createdAt,
+        _updatedAt,
         "slug": slug.current,
         title,
         description,
@@ -38,7 +41,7 @@ export async function getHomepageData() {
         textAndImageList,
         benefitsGridHeading,
         benefits[]{
-          "icon": icon.asset->url, // Fetch the icon's image URL
+          "icon": icon.asset->url,
           text
         },
         richNumberedListHeading,
@@ -63,6 +66,17 @@ export async function getHomepageData() {
           href
         }
       }
-    `
+`
+
+export async function getHomepageData(): Promise<HomepageData | null> {
+  return client.fetch<HomepageData | null>(
+    homepageQuery,
+    {},
+    {
+      next: {
+        revalidate: 3600,
+        tags: ['homepage'],
+      },
+    },
   )
 }
