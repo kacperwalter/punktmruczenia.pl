@@ -1,11 +1,9 @@
-import { PortableTextBlock } from 'next-sanity'
-
 export interface AboutMeContent {
   aboutMeTopImage: string
   aboutMeHeading: string
-  aboutMeCaption: PortableTextBlock[]
+  aboutMeCaption: string
   aboutMeFirstContentImage: string
-  aboutMeContent: PortableTextBlock | PortableTextBlock[]
+  aboutMeContent: string
   aboutMeSecondContentImage: string
 }
 

@@ -24,8 +24,16 @@ const freshMango = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Admin",
-  description: "",
+  metadataBase: new URL("https://www.punktmruczenia.pl"),
+  applicationName: "Punkt Mruczenia",
+  title: {
+    default: "Punkt Mruczenia | Koci behawiorysta | Poznań",
+    template: "%s | Punkt Mruczenia",
+  },
+  description: "Konsultacje behawioralne dla kotów w Poznaniu oraz online.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 }
 
 export default function RootLayout({

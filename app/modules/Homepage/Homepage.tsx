@@ -1,8 +1,4 @@
-// @ts-nocheck
-'use client'
-
-import { useState, useEffect } from 'react'
-import { HomepageProps } from '@/app/types'
+import type { HomepageData } from '@/app/types'
 import Hero from '@/app/common/components/sections/hero/hero'
 import AboutMe from '@/app/common/components/sections/about-me/about-me'
 import Qualifications from '@/app/common/components/sections/qualifications/qualifications'
@@ -12,38 +8,12 @@ import RichNumberedList from '@/app/common/components/sections/rich-numbered-lis
 import Tiles from '@/app/common/components/sections/tiles/tiles'
 import Contact from '@/app/common/components/sections/contact/contact'
 import Footer from '@/app/common/components/sections/footer/footer'
-import { getHomepageData } from '@/sanity/sanity-utils'
 
-const Homepage = () => {
-  const [homepageData, setHomepageData] = useState(null)
-  const [loading, setLoading] = useState(true)
+type HomepageProps = {
+  content: HomepageData
+}
 
-  useEffect(() => {
-    const fetchHomepageData = async () => {
-      try {
-        const data = await getHomepageData()
-        setHomepageData(data)
-        setLoading(false)
-      } catch (error) {
-        console.error('Failed to fetch homepage data:', error)
-        setLoading(false)
-      }
-    }
-  
-    fetchHomepageData()
-  }, [])
-
-  if (loading) {
-    return <div>Loading...</div>
-  }
-
-  if (!homepageData) {
-    return <div>Error loading homepage data.</div>
-  }
-
-  const homepageDataObject = homepageData[0] || {}
-  console.log(homepageDataObject)
-
+const Homepage = ({ content }: HomepageProps) => {
   const {
     homepageHeroContent,
     homepageHeroHeading = '',
@@ -73,7 +43,7 @@ const Homepage = () => {
     contactName = '',
     contactInfo = [],
     socialLinks = []
-  } = homepageDataObject
+  } = content
 
   const homepageHeroData = {
     homepageHeroContent,
