@@ -2,7 +2,6 @@
 import Benefit from "../../partials/benefit/benefit"
 import Heading from "../../partials/heading/heading"
 import Wrapper from "../../partials/wrapper/wrapper"
-import icons from "@/public/icons"
 import "./benefits-grid.scss"
 
 const BenefitsGrid = ({ content }) => {

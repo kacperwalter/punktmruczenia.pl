@@ -11,7 +11,7 @@ const Tile = ({ heading, additionalInfo, image }) => {
   const [isActive, setIsActive] = useState(false)
   const contentRef = useRef(null)
 
-  const toggleContent = useCallback((event) => {
+  const toggleContent = useCallback(() => {
     if (window.innerWidth > 1024) return
     setIsActive(prev => !prev)
 
