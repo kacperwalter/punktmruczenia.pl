@@ -10,8 +10,10 @@ const client = createClient({
   useCdn: false,
 })
 
+const HOMEPAGE_SLUG = '/'
+
 const homepageQuery = groq`
-  *[_type == "page"] | order(_createdAt asc)[0] {
+  *[_type == "page" && slug.current == $slug][0] {
         _id,
         _createdAt,
         _updatedAt,
@@ -71,7 +73,7 @@ const homepageQuery = groq`
 export async function getHomepageData(): Promise<HomepageData | null> {
   return client.fetch<HomepageData | null>(
     homepageQuery,
-    {},
+    { slug: HOMEPAGE_SLUG },
     {
       next: {
         revalidate: 3600,
